@@ -15,12 +15,12 @@ export const mtaExperience = {
     tr: 'Numune kodlama ve hazırlama, kurutma-tartım, pellet ve çözündürme iş akışları, referans çözelti/kalibrasyon çalışmaları ve sonuç inceleme aşamalarına katıldım. Stajın ilerleyen bölümünde gravimetrik-titrimetrik analizler ile kömür karakterizasyonu da yer aldı. XRD ve MLA ise uygulamalı cihaz kullanımı değil gözlem ziyaretleriydi.'
   },
   workflow: [
-    'Coding & traceability',
-    'Drying / loss on ignition',
-    'Pellet or digestion',
-    'Calibration / CRM',
-    'XRF / ICP analysis',
-    'Result review'
+    { en: 'Coding & traceability', tr: 'Kodlama / izlenebilirlik' },
+    { en: 'Drying / loss on ignition', tr: 'Kurutma / kızdırma kaybı' },
+    { en: 'Pellet or digestion', tr: 'Pellet / çözündürme' },
+    { en: 'Calibration / CRM', tr: 'Kalibrasyon / CRM' },
+    { en: 'XRF / ICP analysis', tr: 'XRF / ICP analizi' },
+    { en: 'Result review', tr: 'Sonuç değerlendirme' }
   ],
   methods: [
     'XRF',
