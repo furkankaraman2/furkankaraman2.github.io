@@ -15,12 +15,12 @@ export const dopingExperience = {
     tr: 'Numune hazırlama ve kalite kontrol basamaklarında çalıştım; farklı madde gruplarının neden LC veya GC tabanlı yöntemlere yönlendirildiğini, internal standard, kalibrasyon, tarama ve doğrulama adımlarının iz düzey kararları nasıl desteklediğini takip ettim. Kamuya açık bu vaka çalışmasında kurumsal SOP’leri adım adım paylaşmak yerine analitik mantığı anlatıyorum.'
   },
   workflow: [
-    'Sample reception',
-    'SG / pH quality checks',
-    'Aliquot & preparation',
-    'Extraction / hydrolysis / derivatization',
-    'LC- or GC-based screening',
-    'Confirmation & reporting'
+    { en: 'Sample reception', tr: 'Numune kabulü' },
+    { en: 'SG / pH quality checks', tr: 'Özgül ağırlık / pH kontrolleri' },
+    { en: 'Aliquot & preparation', tr: 'Aliquotlama / hazırlama' },
+    { en: 'Extraction / hydrolysis / derivatization', tr: 'Ekstraksiyon / hidroliz / türevlendirme' },
+    { en: 'LC- or GC-based screening', tr: 'LC veya GC tabanlı tarama' },
+    { en: 'Confirmation & reporting', tr: 'Doğrulama / raporlama' }
   ],
   methods: [
     'LC-MS/MS',
