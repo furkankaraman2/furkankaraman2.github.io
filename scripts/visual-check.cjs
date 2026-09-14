@@ -1,7 +1,7 @@
 const { chromium } = require('playwright')
 const fs = require('fs')
 
-const routes = ['/', '/research/spme-moi-ms', '/experience', '/experience/doping-control', '/experience/mta', '/experience/clinical-biochemistry', '/scientific-writing', '/about']
+const routes = ['/', '/research/spme-moi-ms', '/experience', '/experience/doping-control', '/experience/mta', '/experience/clinical-biochemistry', '/patent-research', '/about']
 
 async function run() {
   fs.mkdirSync('qa', { recursive: true })
@@ -22,7 +22,7 @@ async function run() {
         lang: document.documentElement.lang,
       }))
       const slug = route === '/' ? 'home' : route.slice(1).replaceAll('/', '-')
-      if (route === '/' || route === '/research/spme-moi-ms' || route === '/about') await page.screenshot({ path: `qa/${device.name}-${slug}.png`, fullPage: true })
+      await page.screenshot({ path: `qa/${device.name}-${slug}.png`, fullPage: true })
       results.push({ device: device.name, route, status: response?.status(), ...state, errors: [...errors] })
       errors.length = 0
     }
