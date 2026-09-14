@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import React from 'react'
-import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
+import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/vitest'
 import { MemoryRouter } from 'react-router-dom'
 import App from './App'
@@ -25,6 +25,8 @@ beforeAll(() => {
   global.cancelAnimationFrame = id => clearTimeout(id)
 })
 
+afterEach(() => cleanup())
+
 beforeEach(() => {
   localStorage.clear()
   document.documentElement.lang = 'en'
@@ -35,7 +37,7 @@ describe('portfolio functionality', () => {
     render(<MemoryRouter initialEntries={['/research/spme-moi-ms']}><App /></MemoryRouter>)
     const tab = screen.getByRole('tab', { name: /Desorption optimization/i })
     fireEvent.click(tab)
-    expect(screen.getByRole('heading', { name: /Releasing histidine meant deliberately weakening/i })).toBeInTheDocument()
+    expect(screen.getAllByRole('heading', { name: /Releasing histidine meant deliberately weakening/i }).length).toBeGreaterThan(0)
     expect(screen.getByText(/ACN\/MeOH\/H₂O \(40:40:20/i)).toBeInTheDocument()
   })
 
@@ -54,7 +56,7 @@ describe('portfolio functionality', () => {
 
   it('renders the professional analytical/R&D CTA without a GitHub call-to-action', () => {
     render(<MemoryRouter initialEntries={['/']}><App /></MemoryRouter>)
-    expect(screen.getByText(/My experience spans analytical chemistry, mass spectrometry/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/My experience spans analytical chemistry, mass spectrometry/i).length).toBeGreaterThan(0)
     expect(screen.queryByRole('link', { name: /GitHub/i })).not.toBeInTheDocument()
   })
 })
