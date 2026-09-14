@@ -202,7 +202,8 @@ export const researchStory = [
         'Asidik ortam karboksilat fonksiyonunun protonlanmasını artırarak iyonik çekimi zayıflatır. Daha sonra 1, 5, 10, 20 ve 30 dakikalık desorpsiyon süreleri karşılaştırıldı; en yüksek yanıt 1 dakikada elde edildi. İkinci desorpsiyonun birçok durumda daha yüksek sinyal vermesi ise raporda gecikmiş analit salımı ve PBS kaynaklı tuzların kısmen uzaklaşmasıyla azalan iyon baskılanması üzerinden tartışıldı.'
       ]
     },
-    art: 'solvent'
+    image: '/images/research/spme/desorption-time.webp',
+    caption: { en: 'Desorption-time comparison from the report; the highest response was obtained at 1 minute.', tr: 'Rapordaki desorpsiyon süresi karşılaştırması; en yüksek yanıt 1 dakikada elde edildi.' }
   },
   {
     id: 'final-workflow',
