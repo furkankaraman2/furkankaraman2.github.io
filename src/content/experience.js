@@ -3,10 +3,10 @@ import { mtaExperience } from './mta'
 
 const spmeExperience = {
   slug: 'spme-moi-ms', order: 1, visible: true, type: 'research', route: '/research/spme-moi-ms',
-  title: { en: 'Student Researcher · SPME–MOI–MS', tr: 'Öğrenci Araştırmacı · SPME–MOI–MS' },
+  title: { en: 'Student Researcher – SPME–MOI–MS Method Development', tr: 'Öğrenci Araştırmacı – SPME–MOI–MS Yöntem Geliştirme' },
   institution: { en: 'METU · Assoc. Prof. Dr. Ezel Boyacı Laboratory', tr: 'ODTÜ · Doç. Dr. Ezel Boyacı Laboratuvarı' },
   date: { en: 'Aug 2025 — Jan 2026', tr: 'Ağu 2025 — Oca 2026' },
-  summary: { en: 'Method development for L-histidine using PAN-bound SPME coatings and a direct MOI–MS interface.', tr: 'PAN bağlı SPME kaplamaları ve doğrudan MOI–MS arayüzü ile L-histidin için yöntem geliştirme.' },
+  summary: { en: 'A research project linking PAN-bound SPME coatings, extractive-phase selection and direct MOI–MS readout for L-histidine method development.', tr: 'PAN bağlı SPME kaplamalarını, ekstraktif faz seçimini ve doğrudan MOI–MS okumasını L-histidin yöntem geliştirme sürecinde birleştiren araştırma projesi.' },
   methods: ['SPME', 'MOI–MS', 'PAN coating', 'Calibration']
 }
 
@@ -17,7 +17,7 @@ const clinicalExperience = {
   date: { en: 'Jun — Jul 2019', tr: 'Haz — Tem 2019' },
   summary: { en: 'Early clinical-laboratory experience across bacterial culture, antimicrobial susceptibility, routine biochemistry, hemogram and coagulation testing.', tr: 'Bakteri kültürü, antimikrobiyal duyarlılık, rutin biyokimya, hemogram ve koagülasyon testlerini kapsayan erken dönem klinik laboratuvar deneyimi.' },
   role: { en: 'I worked with more than 80 bacterial isolates for susceptibility testing and took part in daily workflows exceeding 100 patient samples, including operation and calibration of routine analyzers.', tr: 'Duyarlılık testleri için 80’den fazla bakteriyel izolatla çalıştım; rutin analizörlerin kullanımı ve kalibrasyonu dahil günlük 100 hasta numunesini aşan iş akışlarına katıldım.' },
-  workflow: ['Clinical sample', 'Culture / identification', 'Disk diffusion / MIC', 'Routine biochemistry', 'Hemogram / coagulation', 'Quality checks'],
+  workflow: [{en:'Clinical sample',tr:'Klinik numune'},{en:'Culture / identification',tr:'Kültür / tanımlama'},{en:'Disk diffusion / MIC',tr:'Disk difüzyon / MIC'},{en:'Routine biochemistry',tr:'Rutin biyokimya'},{en:'Hemogram / coagulation',tr:'Hemogram / koagülasyon'},{en:'Quality checks',tr:'Kalite kontrolleri'}],
   methods: ['Bacterial culture', 'Disk diffusion', 'MIC', 'Biochemistry tests', 'Hemogram', 'Coagulation'],
   sections: []
 }
