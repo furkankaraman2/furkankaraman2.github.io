@@ -6,8 +6,8 @@ const spmeExperience = {
   title: { en: 'Student Researcher – SPME–MOI–MS Method Development', tr: 'Öğrenci Araştırmacı – SPME–MOI–MS Yöntem Geliştirme' },
   institution: { en: 'METU · Assoc. Prof. Dr. Ezel Boyacı Laboratory', tr: 'ODTÜ · Doç. Dr. Ezel Boyacı Laboratuvarı' },
   date: { en: 'Aug 2025 — Jan 2026', tr: 'Ağu 2025 — Oca 2026' },
-  summary: { en: 'A research project linking PAN-bound SPME coatings, extractive-phase selection and direct MOI–MS readout for L-histidine method development.', tr: 'PAN bağlı SPME kaplamalarını, ekstraktif faz seçimini ve doğrudan MOI–MS okumasını L-histidin yöntem geliştirme sürecinde birleştiren araştırma projesi.' },
-  methods: ['SPME', 'MOI–MS', 'PAN coating', 'Calibration']
+  summary: { en: 'A hands-on method-development project spanning polymer preparation, PAN-bound SPME fiber fabrication, HLB/HLB-SAX/PMAA phase comparison, extraction and desorption optimization, external calibration and direct MOI–MS evaluation of L-histidine.', tr: 'Polimer hazırlama, PAN bağlı SPME fiber üretimi, HLB/HLB-SAX/PMAA faz karşılaştırması, ekstraksiyon ve desorpsiyon optimizasyonu, dış kalibrasyon ve L-histidinin doğrudan MOI–MS ile değerlendirilmesini kapsayan uygulamalı yöntem geliştirme çalışması.' },
+  methods: ['SPME', 'MOI–MS', 'PAN coating', 'HLB-SAX', 'Calibration', 'Optimization']
 }
 
 const clinicalExperience = {
