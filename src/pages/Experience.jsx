@@ -1,12 +1,18 @@
 import { Link, useParams } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { copy, experiences } from '../content/portfolio'
+import { copy, experiences, researchStory } from '../content/portfolio'
 import { ContactStrip, Eyebrow, LineArt, MethodTags, NotFound, PageHero, SectionHead, StorySection } from '../site/components'
 import { t } from '../site/utils'
 
 export function ExperienceIndex({lang}) {
   const c=copy[lang]
-  return <><PageHero eyebrow="EXPERIENCE · ANALYTICAL WORKFLOWS" title={c.experience.title} intro={c.experience.intro} art="sample"/><section className="experience-list section-pad">{experiences.filter(e=>e.visible).sort((a,b)=>a.order-b.order).map((e,i)=><Link data-reveal to={e.route || '/experience/' + e.slug} className="experience-row" key={e.slug}><span>0{i+1}</span><div><small>{t(e.date,lang)}</small><h2>{t(e.title,lang)}</h2><p>{t(e.institution,lang)}</p></div><div className="row-tags">{e.methods.slice(0,4).map(m=><i key={m}>{m}</i>)}</div><ArrowRight/></Link>)}</section><ContactStrip lang={lang}/></>
+  const spme=experiences.find(x=>x.slug==='spme-moi-ms')
+  return <><PageHero eyebrow="EXPERIENCE · ANALYTICAL WORKFLOWS" title={c.experience.title} intro={c.experience.intro} art="sample"/>
+  <section className="experience-research-feature section-pad" data-reveal>
+    <div><Eyebrow>{lang==='en'?'FEATURED RESEARCH EXPERIENCE':'ÖNE ÇIKAN ARAŞTIRMA DENEYİMİ'}</Eyebrow><h2>{t(spme.title,lang)}</h2><p>{t(spme.summary,lang)}</p><Link className="button outline" to="/research/spme-moi-ms">{lang==='en'?'Open ten-part case study':'10 bölümlü çalışmayı aç'}<ArrowRight/></Link></div>
+    <div className="experience-research-steps">{[0,4,7,9].map(idx=><div key={researchStory[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(researchStory[idx].short,lang)}</strong><p>{t(researchStory[idx].title,lang)}</p></div>)}</div>
+  </section>
+  <section className="experience-list section-pad">{experiences.filter(e=>e.visible).sort((a,b)=>a.order-b.order).map((e,i)=><Link data-reveal to={e.route || '/experience/' + e.slug} className="experience-row" key={e.slug}><span>0{i+1}</span><div><small>{t(e.date,lang)}</small><h2>{t(e.title,lang)}</h2><p>{t(e.institution,lang)}</p></div><div className="row-tags">{e.methods.slice(0,4).map(m=><i key={m}>{m}</i>)}</div><ArrowRight/></Link>)}</section><ContactStrip lang={lang}/></>
 }
 
 export function ExperienceDetail({lang}) {

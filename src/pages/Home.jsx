@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Atom, Beaker, BookOpen, Check, Microscope, ShieldCheck } from 'lucide-react'
-import { copy, experiences, profile, researchMetrics } from '../content/portfolio'
+import { copy, experiences, profile, researchMetrics, researchStory } from '../content/portfolio'
 import { ContactStrip, Eyebrow, LineArt, SectionHead } from '../site/components'
 import { t } from '../site/utils'
 
@@ -23,6 +23,18 @@ export default function Home({ lang }) {
       <div className="research-feature" data-reveal>
         <div className="feature-media" data-parallax><img src="/images/research/spme/fiber-interface.webp" alt={lang==='en'?'SPME fiber photographed during the project':'Proje sırasında fotoğraflanan SPME fiber'}/><span>SPME · MOI–MS</span></div>
         <div className="feature-content"><span className="number">01</span><h3>{c.research.title}</h3><p>{c.research.contribution}</p><div className="metric-strip">{researchMetrics.map(m=><div key={m.value}><strong>{m.value}</strong><span>{t(m.label,lang)}</span></div>)}</div><Link className="text-link" to="/research/spme-moi-ms">{c.labels.readStory}<ArrowRight/></Link></div>
+      </div>
+    </section>
+
+    <section className="home-spme-journey section-pad">
+      <SectionHead eyebrow={lang==='en'?'SPME · TEN-PART STORY':'SPME · 10 BÖLÜMLÜ HİKÂYE'} title={lang==='en'?'The research page is structured as a scientific narrative, not a CV repeat.':'Araştırma sayfası CV tekrarı değil, bilimsel bir hikâye olarak kurgulandı.'} body={lang==='en'?'A visitor can move from the clinical motivation to coating chemistry, calibration, phase selection, desorption and the final compact workflow.':'Ziyaretçi klinik motivasyondan kaplama kimyasına, kalibrasyona, faz seçimine, desorpsiyona ve final kompakt iş akışına kadar süreci adım adım takip edebilir.'}/>
+      <div className="journey-grid">
+        {[0,2,4,6,9].map((idx)=><Link to={'/research/spme-moi-ms#story-'+researchStory[idx].id} className="journey-card" data-reveal key={researchStory[idx].id}>
+          <span>{String(idx+1).padStart(2,'0')}</span>
+          <strong>{t(researchStory[idx].short,lang)}</strong>
+          <p>{t(researchStory[idx].title,lang)}</p>
+          <ArrowRight/>
+        </Link>)}
       </div>
     </section>
 

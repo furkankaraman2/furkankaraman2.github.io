@@ -35,9 +35,9 @@ beforeEach(() => {
 describe('portfolio functionality', () => {
   it('opens substantive SPME workflow panels', () => {
     render(<MemoryRouter initialEntries={['/research/spme-moi-ms']}><App /></MemoryRouter>)
-    const tab = screen.getByRole('tab', { name: /Desorption optimization/i })
+    const tab = screen.getByRole('tab', { name: /Desorption/i })
     fireEvent.click(tab)
-    expect(screen.getAllByRole('heading', { name: /Releasing histidine meant deliberately weakening/i }).length).toBeGreaterThan(0)
+    expect(screen.getAllByRole('heading', { name: /The solvent had to disrupt the same ionic interaction/i }).length).toBeGreaterThan(0)
     expect(screen.getAllByText(/ACN\/MeOH\/H₂O \(40:40:20/i).length).toBeGreaterThan(0)
   })
 

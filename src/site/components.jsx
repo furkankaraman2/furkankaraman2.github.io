@@ -25,6 +25,11 @@ export function LineArt({ variant = 'spme', label }) {
     tto:<><circle {...c} cx="62" cy="88" r="27"/><circle {...c} cx="130" cy="45" r="27"/><circle {...c} cx="202" cy="88" r="27"/><circle {...c} cx="130" cy="135" r="27"/><path {...c} d="M86 72l21-14M153 59l26 14M179 104l-25 17M106 119l-21-16"/></>,
     spin:<><path {...c} d="M49 136V82h46v54M95 136V53h53v83M148 136V91h54v45M38 136h180"/><path {...c} d="M63 82V63h18v19M112 53V33h19v20M165 91V70h20v21"/></>,
     globe:<><circle {...c} cx="130" cy="87" r="65"/><path {...c} d="M65 87h130M130 22c-34 28-34 102 0 130M130 22c34 28 34 102 0 130M82 49c27 18 70 18 96 0M82 125c27-18 70-18 96 0"/></>,
+    workflow:<><circle {...c} cx="52" cy="90" r="25"/><circle {...c} cx="130" cy="90" r="25"/><circle {...c} cx="208" cy="90" r="25"/><path {...c} d="M77 90h28M102 84l7 6-7 6M155 90h28M180 84l7 6-7 6M45 79h14M45 90h14M45 101h14M124 78v24M136 78v24M199 79l18 11-18 11z"/></>,
+    selectivity:<><circle {...c} cx="130" cy="90" r="24"/><path {...c} d="M121 84l9-8 10 7-3 12-13 1zM130 66v-18M130 114v18M106 90H82M154 90h24"/><circle {...c} cx="64" cy="90" r="18"/><circle {...c} cx="196" cy="90" r="18"/><path {...c} d="M55 83h18M55 97h18M188 83h16M188 97h16M130 48c-10-14-22-20-36-18M130 132c12 13 25 19 39 16"/></>,
+    coating:<><path {...c} d="M72 24v124M64 38h16M62 111h20M105 42h72v72h-72zM116 55h50M116 68h50M116 81h50M116 94h50M72 82h33"/><path {...c} d="M191 41v70M183 49h16M183 103h16M191 111v35M176 146h30"/></>,
+    histidine:<><path {...c} d="M62 88l20-31h34l18 31-18 31H82zM116 57l22-17 24 12 4 28-21 17M166 80l26 14M192 94l18-10M192 94l17 11"/><text x="46" y="92" fill="currentColor" fontSize="14">NH₃⁺</text><text x="211" y="88" fill="currentColor" fontSize="14">COO⁻</text><text x="120" y="40" fill="currentColor" fontSize="13">imidazole</text></>,
+    solvent:<><path {...c} d="M93 32c0 0-36 43-36 76a36 36 0 0 0 72 0c0-33-36-76-36-76zM150 50h71M150 78h51M150 106h63M150 134h44"/><path {...c} d="M78 111c10 10 22 10 32 0M148 92l-13 10M135 102l8 8M135 102l-9-2"/></>,
     industry:<><path {...c} d="M41 140V78l46 24V72l50 29V56h76v84zM158 79h16M183 79h16M158 100h16M183 100h16M158 121h16M183 121h16M72 62V37h20v36"/></>
   }
   return <div className={'line-art line-art-' + variant} aria-label={label || ''} role="img" data-parallax><svg viewBox="0 0 260 180" aria-hidden="true">{arts[variant] || arts.spme}</svg></div>
@@ -41,12 +46,12 @@ export function StoryMedia({ item, lang }) {
 
 export function StorySection({ item, lang, index, dark=false }) {
   const paragraphs = item.paragraphs ? t(item.paragraphs,lang) : t(item.text,lang)
-  return <section className={'story-section section-pad ' + (index % 2 ? 'reverse ' : '') + (dark ? 'dark' : '')} data-reveal><div className="story-copy"><Eyebrow>{item.eyebrow}</Eyebrow><h2>{t(item.title,lang)}</h2>{paragraphs?.map((p,i)=><p key={i}>{p}</p>)}</div><StoryMedia item={item} lang={lang}/></section>
+  return <section id={item.id ? 'story-'+item.id : undefined} className={'story-section science-story section-pad ' + (index % 2 ? 'reverse ' : '') + (dark ? 'dark' : '')} data-reveal><div className="story-copy"><Eyebrow>{item.eyebrow}</Eyebrow><h2>{t(item.title,lang)}</h2>{paragraphs?.map((p,i)=><p key={i}>{p}</p>)}</div><StoryMedia item={item} lang={lang}/></section>
 }
 
 export function ContactStrip({lang}) {
   const c=copy[lang]
-  return <section className="contact-strip" data-reveal><div><Eyebrow>{c.labels.contact}</Eyebrow><h2>{c.about.contactBody}</h2><p>{c.about.privacy}</p></div><div className="contact-actions"><a href={'mailto:' + profile.email}><Mail/><span>{profile.email}</span></a><a href={'tel:' + profile.phone.replace(/s/g,'')}><Phone/><span>{profile.phone}</span></a><a href={profile.linkedin} target="_blank" rel="noreferrer"><ExternalLink/><span>LinkedIn</span></a></div></section>
+  return <section className="contact-strip" data-reveal><div><Eyebrow>{c.labels.contact}</Eyebrow><h2>{c.about.contactBody}</h2><p>{c.about.privacy}</p></div><div className="contact-actions"><a href={'mailto:' + profile.email}><Mail/><span>{profile.email}</span></a><a href={'tel:' + profile.phone.replace(/\s/g,'')}><Phone/><span>{profile.phone}</span></a><a href={profile.linkedin} target="_blank" rel="noreferrer"><ExternalLink/><span>LinkedIn</span></a></div></section>
 }
 
 export function NotFound({lang}) { return <section className="not-found"><h1>404</h1><p>{lang==='en'?'This page could not be found.':'Bu sayfa bulunamadı.'}</p><Link className="button primary" to="/">Home</Link></section> }
