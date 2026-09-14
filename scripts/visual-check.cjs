@@ -27,6 +27,7 @@ async function run() {
       errors.length = 0
     }
     await page.goto('http://127.0.0.1:5173/', { waitUntil: 'networkidle' })
+    if (device.name === 'mobile') await page.getByRole('button', { name: 'Toggle menu' }).click()
     await page.getByRole('button', { name: 'Türkçeye geç' }).click()
     results.push({ device: device.name, translation: await page.locator('h1').innerText(), storedLanguage: await page.evaluate(() => localStorage.getItem('portfolio-language')) })
     await page.close()
