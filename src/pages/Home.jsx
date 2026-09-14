@@ -21,7 +21,7 @@ export default function Home({ lang }) {
     <section className="home-research section-pad">
       <SectionHead eyebrow={c.labels.featured} title={c.home.researchTitle} body={c.home.researchBody}/>
       <div className="research-feature" data-reveal>
-        <div className="feature-media" data-parallax><img src="/images/research/spme/fiber-interface.webp" alt="SPME fiber at the experimental interface"/><span>SPME · MOI–MS</span></div>
+        <div className="feature-media feature-illustration" data-parallax><LineArt variant="spme" label="SPME and MOI-MS illustration"/><span>SPME · MOI–MS</span></div>
         <div className="feature-content"><span className="number">01</span><h3>{c.research.title}</h3><p>{c.research.contribution}</p><div className="metric-strip">{researchMetrics.map(m=><div key={m.value}><strong>{m.value}</strong><span>{t(m.label,lang)}</span></div>)}</div><Link className="text-link" to="/research/spme-moi-ms">{c.labels.readStory}<ArrowRight/></Link></div>
       </div>
     </section>
