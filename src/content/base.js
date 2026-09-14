@@ -11,13 +11,13 @@ export const profile = {
 
 export const copy = {
   en: {
-    nav: { home: 'Home', research: 'Research', experience: 'Experience', patents: 'Patent Research', about: 'About' },
+    nav: { home: 'Home', research: 'Research', experience: 'Experience', patents: 'Patents & Tech Transfer', about: 'About' },
     hero: {
       eyebrow: 'CHEMISTRY · ANALYTICAL SCIENCE · R&D',
       title: 'Analytical chemistry, from sample preparation to defensible evidence.',
       intro: 'Chemistry graduate with hands-on experience spanning SPME–MOI–MS method development, anti-doping analytical workflows, geochemical testing and clinical laboratory practice.',
       primary: 'Explore flagship research', secondary: 'View analytical experience',
-      availability: 'Interested in analytical chemistry, mass spectrometry and R&D teams where I can contribute and keep developing.'
+      availability: 'Open to analytical chemistry and R&D environments where careful laboratory work, mass-spectrometric thinking and method development are part of solving real measurement problems.'
     },
     labels: {
       featured: 'Featured research', selected: 'Selected analytical experience', workflow: 'Analytical workflow', methods: 'Methods & instruments', role: 'My contribution',
@@ -49,18 +49,18 @@ export const copy = {
     about: {
       title: 'A chemistry graduate interested in the reasoning behind analytical instruments.',
       intro: 'My strongest interests sit at the intersection of sample preparation, instrumental analysis and method development: understanding how each decision—from extraction chemistry to calibration and quality control—affects the reliability of a result.',
-      contactBody: 'I have hands-on experience in analytical chemistry, mass spectrometry, laboratory workflows and research-driven method development. I am interested in joining analytical or R&D teams where I can contribute these skills, learn from experienced colleagues and grow with the work.',
+      contactBody: 'My experience spans analytical chemistry, mass spectrometry, laboratory quality workflows and research-driven method development. I am interested in analytical and R&D teams where I can apply this hands-on background to real measurement problems while continuing to deepen my technical skills.',
       privacy: 'For professional opportunities, you can contact me by email or LinkedIn.'
     },
     footer: 'Analytical chemistry portfolio · Research and internship work presented as curated case studies'
   },
   tr: {
-    nav: { home: 'Ana Sayfa', research: 'Araştırma', experience: 'Deneyim', patents: 'Patent Araştırması', about: 'Hakkımda' },
+    nav: { home: 'Ana Sayfa', research: 'Araştırma', experience: 'Deneyim', patents: 'Patent & Teknoloji Transferi', about: 'Hakkımda' },
     hero: {
       eyebrow: 'KİMYA · ANALİTİK BİLİM · AR-GE', title: 'Numune hazırlamadan güvenilir analitik kanıta uzanan kimya deneyimi.',
       intro: 'SPME–MOI–MS yöntem geliştirme, doping kontrol analitiği, jeokimyasal testler ve klinik laboratuvar uygulamalarını kapsayan deneyime sahip kimya mezunu.',
       primary: 'Ana araştırmayı incele', secondary: 'Analitik deneyimleri gör',
-      availability: 'Analitik kimya, kütle spektrometrisi ve Ar-Ge alanlarında katkı sağlayabileceğim ve gelişmeye devam edebileceğim ekiplerle ilgileniyorum.'
+      availability: 'Titiz laboratuvar çalışması, kütle spektrometrisi ve yöntem geliştirmenin gerçek analitik problemlere dönüştüğü Ar-Ge ve analitik ekiplerle çalışmak istiyorum.'
     },
     labels: {
       featured: 'Öne çıkan araştırma', selected: 'Seçilmiş analitik deneyimler', workflow: 'Analitik iş akışı', methods: 'Yöntemler ve cihazlar', role: 'Kişisel katkım',
@@ -92,7 +92,7 @@ export const copy = {
     about: {
       title: 'Analitik cihazların arkasındaki karar mantığıyla ilgilenen bir kimya mezunu.',
       intro: 'En güçlü ilgi alanım numune hazırlama, cihazlı analiz ve yöntem geliştirmenin kesişimi: ekstraksiyon kimyasından kalibrasyon ve kalite kontrole kadar her kararın sonucun güvenilirliğini nasıl etkilediğini anlamak.',
-      contactBody: 'Analitik kimya, kütle spektrometrisi, laboratuvar iş akışları ve araştırma odaklı yöntem geliştirme alanlarında uygulamalı deneyime sahibim. Bu yetkinliklerle katkı sağlayabileceğim, deneyimli ekiplerden öğrenebileceğim ve Ar-Ge ya da analitik çalışmalar içinde gelişebileceğim fırsatlarla ilgileniyorum.',
+      contactBody: 'Analitik kimya, kütle spektrometrisi, laboratuvar kalite süreçleri ve araştırma odaklı yöntem geliştirme alanlarında uygulamalı deneyime sahibim. Bu birikimi gerçek analitik problemlere katkı sunmak için kullanabileceğim; aynı zamanda teknik yetkinliklerimi ileri taşıyabileceğim Ar-Ge ve analitik ekiplerde çalışmak istiyorum.',
       privacy: 'Profesyonel fırsatlar için e-posta veya LinkedIn üzerinden iletişime geçebilirsiniz.'
     },
     footer: 'Analitik kimya portföyü · Araştırma ve staj çalışmaları seçilmiş vaka çalışmaları olarak sunulmuştur'

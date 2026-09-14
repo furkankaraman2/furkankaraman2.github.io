@@ -1,0 +1,35 @@
+name: Visual portfolio QA
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - name: Start Vite dev server
+        run: |
+          npm run dev -- --host 127.0.0.1 > /tmp/portfolio-vite.log 2>&1 &
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:5173/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/portfolio-vite.log
+          exit 1
+      - name: Check desktop and mobile routes
+        run: node scripts/visual-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portfolio-visual-qa
+          path: qa/
+          if-no-files-found: ignore
