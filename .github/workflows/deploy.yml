@@ -33,6 +33,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # New user-site repositories may initially have the legacy branch-based
+      # Pages build enabled. Let that run settle, then publish the verified
+      # Vite artifact so it cannot overwrite the production deployment.
+      - name: Let legacy Pages build settle
+        run: sleep 30
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
