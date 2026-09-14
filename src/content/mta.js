@@ -99,11 +99,11 @@ export const mtaExperience = {
       },
       paragraphs: {
         en: [
-          'The ICP-OES portion of the diary includes reference-solution preparation, sample introduction, torch alignment, calibration curves and intensity-graph review. I took part in calibration work covering roughly 21 elements and followed how standards are used to translate element-specific emission signals into concentration information for unknown samples.',
+          'The ICP-OES portion of the diary includes reference-solution preparation, sample introduction, torch alignment, calibration curves and intensity-graph review. I took part in calibration work covering around 25 elements and followed how standards are used to translate element-specific emission signals into concentration information for unknown samples.',
           'The instrument-side learning connected each physical component to the result: the nebulizer converts solution into an aerosol, the plasma excites atoms and ions, and the optical system separates characteristic wavelengths. Torch alignment and spectral review showed why apparently small setup differences can affect sensitivity and why calibration quality has to be judged alongside the measured sample.'
         ],
         tr: [
-          'ICP-OES bölümünde referans çözelti hazırlama, numune girişi, torch alignment, kalibrasyon eğrileri ve intensity graph değerlendirmeleri yer aldı. Yaklaşık 21 elementi kapsayan kalibrasyon çalışmalarına katıldım ve standart çözeltilerden gelen elemente özgü emisyon sinyalinin bilinmeyen numunedeki konsantrasyona nasıl dönüştürüldüğünü takip ettim.',
+          'ICP-OES bölümünde referans çözelti hazırlama, numune girişi, torch alignment, kalibrasyon eğrileri ve intensity graph değerlendirmeleri yer aldı. Yaklaşık 25 elementi kapsayan kalibrasyon çalışmalarına katıldım ve standart çözeltilerden gelen elemente özgü emisyon sinyalinin bilinmeyen numunedeki konsantrasyona nasıl dönüştürüldüğünü takip ettim.',
           'Cihazın parçalarını sonuçla ilişkilendirmek bu bölümün en önemli tarafıydı: nebulizer çözeltiyi aerosole dönüştürüyor, plazma atom ve iyonları uyarıyor, optik sistem ise karakteristik dalga boylarını ayırıyordu. Torch alignment ve spektral incelemeler, küçük görünen kurulum farklılıklarının bile sensitivity üzerinde neden etkili olabildiğini ve kalibrasyon kalitesinin numuneyle birlikte değerlendirilmesi gerektiğini gösterdi.'
         ]
       },
