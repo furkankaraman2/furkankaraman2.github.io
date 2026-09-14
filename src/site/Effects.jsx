@@ -24,6 +24,8 @@ export function ScrollEffects() {
     const update = () => {
       const now = window.scrollY
       document.documentElement.dataset.scrollDirection = now >= lastY ? 'down' : 'up'
+      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight)
+      document.documentElement.style.setProperty('--scroll-progress', Math.min(1, Math.max(0, now / max)).toFixed(4))
       lastY = now
       document.querySelectorAll('[data-parallax]').forEach(el => {
         const rect = el.getBoundingClientRect()
