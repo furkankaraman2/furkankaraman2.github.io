@@ -38,7 +38,7 @@ describe('portfolio functionality', () => {
     const tab = screen.getByRole('tab', { name: /Desorption optimization/i })
     fireEvent.click(tab)
     expect(screen.getAllByRole('heading', { name: /Releasing histidine meant deliberately weakening/i }).length).toBeGreaterThan(0)
-    expect(screen.getByText(/ACN\/MeOH\/H₂O \(40:40:20/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/ACN\/MeOH\/H₂O \(40:40:20/i).length).toBeGreaterThan(0)
   })
 
   it('switches the research page naturally between English and Turkish', () => {
