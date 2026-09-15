@@ -33,3 +33,24 @@
 .doping-media-overlay .line-art{color:var(--cyan);min-height:105px}
 .doping-media-overlay .line-art:before{width:105px;height:105px}
 .doping-media-overlay span{font:700 9px/1.6 var(--display);letter-spacing:.13em;color:#c0d1d8;padding-bottom:12px}
+
+.home-mta-feature{display:grid;grid-template-columns:.92fr 1.08fr;gap:7vw;align-items:center;background:#f4efe5;position:relative;overflow:hidden}
+.home-mta-feature:before{content:'';position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle at 88% 16%,rgba(176,122,44,.11),transparent 24%),repeating-radial-gradient(ellipse at 18% 82%,transparent 0 34px,rgba(126,102,65,.05) 35px 36px);opacity:.8}
+.home-mta-media{position:relative;min-height:530px;overflow:hidden;background:#2a2a24;box-shadow:0 30px 70px rgba(65,48,26,.12);transform:translateY(var(--parallax-y,0));z-index:2}
+.home-mta-media>img{width:100%;height:530px;object-fit:cover;filter:saturate(.64) contrast(1.06);transform:scale(1.055)}
+.home-mta-media:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(38,35,27,.88))}
+.mta-media-overlay{position:absolute;z-index:3;left:22px;right:22px;bottom:18px;display:grid;grid-template-columns:118px 1fr;gap:18px;align-items:end;color:#fff}
+.mta-media-overlay .line-art{color:#f1c46f;min-height:110px}
+.mta-media-overlay .line-art:before{width:108px;height:108px}
+.mta-media-overlay span{font:700 9px/1.6 var(--display);letter-spacing:.13em;color:#f1e5cf;padding-bottom:12px}
+.home-mta-copy{position:relative;z-index:2}
+.home-mta-copy h2{font:600 clamp(31px,3.8vw,53px)/1.12 var(--display);letter-spacing:-.04em;margin:0 0 20px;max-width:790px}
+.home-mta-copy>p{font-size:14px;line-height:1.82;color:var(--muted);max-width:770px}
+.mta-mini-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d9cfbe;border:1px solid #d9cfbe;margin:28px 0}
+.mta-mini-flow a{background:#fffaf1;padding:18px 14px;min-height:98px;transition:.25s}
+.mta-mini-flow a:hover{background:#2e2b23;color:#fff;transform:translateY(-3px)}
+.mta-mini-flow span{display:block;font:700 8px var(--display);letter-spacing:.15em;color:#a36f26;margin-bottom:14px}
+.mta-mini-flow a:hover span{color:#f1c46f}
+.mta-mini-flow strong{font:700 10px/1.4 var(--display)}
+.home-mta-copy .button.outline{border-color:#6f624e}
+.home-mta-copy .button.outline:hover{background:#2e2b23;border-color:#2e2b23}
