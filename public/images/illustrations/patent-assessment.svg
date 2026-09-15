@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-labelledby="t d">
+<title id="t">Technology assessment decision matrix</title><desc id="d">Original editorial illustration of technical, market and strategic-financial assessment dimensions.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b2430"/><stop offset="1" stop-color="#123c48"/></linearGradient></defs>
+<rect width="1200" height="860" rx="38" fill="url(#bg)"/>
+<g opacity=".08" stroke="#bfecef"><path d="M0 150H1200M0 300H1200M0 450H1200M0 600H1200M0 750H1200"/><path d="M180 0V860M360 0V860M540 0V860M720 0V860M900 0V860M1080 0V860"/></g>
+<g transform="translate(120 130)"><rect width="960" height="570" rx="34" fill="#f7fbfb"/>
+<g transform="translate(70 75)"><circle cx="145" cy="145" r="118" fill="#dff1f1" stroke="#178a99" stroke-width="5"/><circle cx="145" cy="145" r="72" fill="#fff" stroke="#63cdd3" stroke-width="4"/><path d="M145 27V263M27 145H263M61 61l168 168M229 61L61 229" stroke="#87a8ae" stroke-width="2"/><path d="M145 54l44 56 65 36-55 42-26 68-59-41-69-12 27-66-11-70 70 5z" fill="#178a99" opacity=".22" stroke="#178a99" stroke-width="4"/></g>
+<g transform="translate(390 85)" font-family="Arial,sans-serif"><text x="0" y="0" font-size="18" font-weight="700" fill="#163b49">TECHNICAL</text><rect y="24" width="390" height="18" rx="9" fill="#dce8e8"/><rect y="24" width="312" height="18" rx="9" fill="#178a99"/><text x="0" y="90" font-size="18" font-weight="700" fill="#163b49">MARKET</text><rect y="114" width="390" height="18" rx="9" fill="#dce8e8"/><rect y="114" width="260" height="18" rx="9" fill="#4bbbc4"/><text x="0" y="180" font-size="18" font-weight="700" fill="#163b49">STRATEGIC / FINANCIAL</text><rect y="204" width="390" height="18" rx="9" fill="#dce8e8"/><rect y="204" width="292" height="18" rx="9" fill="#f0c56d"/>
+<g fill="#607b84" font-size="14"><text x="0" y="275">novelty · readiness · claims</text><text x="0" y="308">market size · competition · FTO</text><text x="0" y="341">portfolio fit · commitment · viability</text></g></g>
+<path d="M440 490h390" stroke="#d5e1e2" stroke-width="2"/><path d="M440 490c90-80 145-30 215-70s127 12 175-40" fill="none" stroke="#178a99" stroke-width="5"/></g>
+</svg>
