@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Atom, Beaker, BookOpen, Check, Microscope, ShieldCheck } from 'lucide-react'
 import { copy, experiences, profile, researchMetrics, researchStory } from '../content/portfolio'
-import { ContactStrip, Eyebrow, LineArt, MtaAtlasImage, SectionHead } from '../site/components'
+import { ContactStrip, Eyebrow, LineArt, SectionHead } from '../site/components'
 import { t } from '../site/utils'
 
 export default function Home({ lang }) {
@@ -23,7 +23,7 @@ export default function Home({ lang }) {
     <section className="home-research section-pad">
       <SectionHead eyebrow={c.labels.featured} title={c.home.researchTitle} body={c.home.researchBody}/>
       <div className="research-feature" data-reveal>
-        <div className="feature-media" data-parallax><img src="/images/research/spme/fiber-interface.webp" alt={lang==='en'?'SPME fiber photographed during the project':'Proje sırasında fotoğraflanan SPME fiber'}/><span>SPME · MOI–MS</span></div>
+        <div className="feature-media premium-illustration" data-parallax><img loading="lazy" decoding="async" width="1200" height="860" src="/images/illustrations/spme-editorial.svg" alt={lang==='en'?'Editorial scientific illustration of SPME extraction, desorption and MOI-MS detection':'SPME ekstraksiyonu, desorpsiyon ve MOI-MS tespitini anlatan bilimsel illüstrasyon'}/><span>SPME · MOI–MS</span></div>
         <div className="feature-content"><span className="number">01</span><h3>{c.research.title}</h3><p>{c.research.contribution}</p><div className="metric-strip">{researchMetrics.map(m=><div key={m.value}><strong>{m.value}</strong><span>{t(m.label,lang)}</span></div>)}</div><Link className="text-link" to="/research/spme-moi-ms">{c.labels.readStory}<ArrowRight/></Link></div>
       </div>
     </section>
@@ -47,11 +47,11 @@ export default function Home({ lang }) {
 
     <section className="home-doping-feature section-pad">
       <div className="home-doping-copy" data-reveal><Eyebrow>{lang==='en'?'ANTI-DOPING LABORATORY EXPERIENCE':'DOPİNG KONTROL LABORATUVAR DENEYİMİ'}</Eyebrow><h2>{lang==='en'?'One placement, multiple analytical languages':'Tek bir staj, birden fazla analitik yaklaşım'}</h2><p>{t(doping.summary,lang)}</p><div className="doping-mini-flow">{[0,3,7,9].map(idx=><Link to={'/experience/doping-control#story-'+doping.sections[idx].id} key={doping.sections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(doping.sections[idx].short,lang)}</strong></Link>)}</div><Link className="button outline" to="/experience/doping-control">{lang==='en'?'Explore the ten-part case study':'10 bölümlü vaka çalışmasını incele'}<ArrowRight/></Link></div>
-      <div className="home-doping-media" data-reveal data-parallax><img src="/images/experience/doping/lc-ms.webp" alt={lang==='en'?'LC-MS platform documented during the anti-doping placement':'Doping kontrol stajında belgelenen LC-MS platformu'}/><div className="doping-media-overlay"><LineArt variant="triplequad"/><span>LC-MS/MS · GC-MS/MS · LC-HRMS · GC-C-IRMS</span></div></div>
+      <div className="home-doping-media premium-illustration" data-reveal data-parallax><img loading="lazy" decoding="async" width="1200" height="860" src="/images/illustrations/doping-editorial.svg" alt={lang==='en'?'Editorial scientific illustration of anti-doping analytical workflows':'Doping kontrol analitik iş akışlarını anlatan bilimsel illüstrasyon'}/><div className="doping-media-overlay"><LineArt variant="triplequad"/><span>LC-MS/MS · GC-MS/MS · LC-HRMS · GC-C-IRMS</span></div></div>
     </section>
 
     <section className="home-mta-feature section-pad">
-      <div className="home-mta-media" data-reveal data-parallax><MtaAtlasImage alt={lang==='en'?'Selected MTA report photographs spanning sample preparation, digestion, wet chemistry and coal characterization':'Numune hazırlama, çözündürme, yaş kimya ve kömür karakterizasyonunu gösteren seçili MTA rapor fotoğrafları'}/><div className="mta-media-overlay"><LineArt variant="plasma"/><span>XRF · ICP-OES · ICP-MS · GRAVIMETRY · TGA</span></div></div>
+      <div className="home-mta-media premium-illustration" data-reveal data-parallax><img loading="lazy" decoding="async" width="1200" height="860" src="/images/illustrations/mta-editorial.svg" alt={lang==='en'?'Editorial scientific illustration of geochemical sample preparation and elemental analysis':'Jeokimyasal numune hazırlama ve elementel analizi anlatan bilimsel illüstrasyon'}/><div className="mta-media-overlay"><LineArt variant="plasma"/><span>XRF · ICP-OES · ICP-MS · GRAVIMETRY · TGA</span></div></div>
       <div className="home-mta-copy" data-reveal><Eyebrow>{lang==='en'?'GEOCHEMICAL & MATERIAL ANALYSIS':'JEOKİMYASAL & MALZEME ANALİZİ'}</Eyebrow><h2>{lang==='en'?'From coded geological samples to elemental and thermal characterization':'Kodlanmış jeolojik numuneden elementel ve termal karakterizasyona'}</h2><p>{t(mta.summary,lang)}</p><div className="mta-mini-flow">{[1,3,5,9].map(idx=><Link to={'/experience/mta#story-'+mta.sections[idx].id} key={mta.sections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(mta.sections[idx].short,lang)}</strong></Link>)}</div><Link className="button outline" to="/experience/mta">{lang==='en'?'Explore the ten-part MTA case study':'10 bölümlü MTA vaka çalışmasını incele'}<ArrowRight/></Link></div>
     </section>
 
