@@ -7,82 +7,119 @@ export const mtaExperience = {
   institution: { en: 'General Directorate of Mineral Research and Exploration (MTA)', tr: 'Maden Tetkik ve Arama Genel Müdürlüğü (MTA)' },
   date: { en: 'Jul — Aug 2024', tr: 'Tem — Ağu 2024' },
   summary: {
-    en: 'Thirty working days moving from geochemical sample preparation to XRF, ICP-OES, ICP-MS, classical wet chemistry and coal/material characterization.',
-    tr: 'Jeokimyasal numune hazırlamadan XRF, ICP-OES, ICP-MS, klasik yaş kimya ve kömür/malzeme karakterizasyonuna uzanan otuz iş günlük analitik kimya stajı.'
+    en: 'A 30-working-day rotation spanning geochemical sample preparation, XRF, ICP-MS digestion, ICP-OES calibration, classical wet chemistry and coal/material characterization.',
+    tr: 'Jeokimyasal numune hazırlama, XRF, ICP-MS öncesi çözündürme, ICP-OES kalibrasyonu, klasik yaş kimya ve kömür/malzeme karakterizasyonunu kapsayan 30 iş günlük laboratuvar rotasyonu.'
   },
   role: {
-    en: 'I participated in sample coding and preparation, drying and weighing, pellet and dissolution workflows, reference-solution and calibration work, and result review. The placement later broadened into gravimetric/titrimetric analysis and coal characterization. XRD and MLA were observation visits rather than hands-on operation.',
-    tr: 'Numune kodlama ve hazırlama, kurutma-tartım, pellet ve çözündürme iş akışları, referans çözelti/kalibrasyon çalışmaları ve sonuç inceleme aşamalarına katıldım. Stajın ilerleyen bölümünde gravimetrik-titrimetrik analizler ile kömür karakterizasyonu da yer aldı. XRD ve MLA ise uygulamalı cihaz kullanımı değil gözlem ziyaretleriydi.'
+    en: 'I participated in sample coding and preparation, drying and mass-control steps, pellet/fusion preparation, acid-digestion workflows, reference-solution and calibration work, and classical gravimetric/titrimetric analyses. The final rotation covered coal preparation, calorimetry, TGA, carbon/sulfur, CHN elemental analysis and helium-pycnometry density work. XRD and MLA were observation visits rather than hands-on instrument operation.',
+    tr: 'Numune kodlama ve hazırlama, kurutma ve kütle kontrolü, pellet/fusion hazırlama, asit çözündürme iş akışları, referans çözelti ve kalibrasyon çalışmaları ile klasik gravimetrik/titrimetrik analizlere katıldım. Son rotasyonda kömür numune hazırlama, kalorimetri, TGA, karbon/kükürt, CHN elementel analiz ve helyum piknometresiyle yoğunluk çalışmalarını takip ettim. XRD ve MLA ise uygulamalı cihaz kullanımı değil, gözlem ziyaretleriydi.'
   },
   workflow: [
     { en: 'Coding & traceability', tr: 'Kodlama / izlenebilirlik' },
-    { en: 'Drying / loss on ignition', tr: 'Kurutma / kızdırma kaybı' },
-    { en: 'Pellet or digestion', tr: 'Pellet / çözündürme' },
-    { en: 'Calibration / CRM', tr: 'Kalibrasyon / CRM' },
-    { en: 'XRF / ICP analysis', tr: 'XRF / ICP analizi' },
-    { en: 'Result review', tr: 'Sonuç değerlendirme' }
+    { en: 'Drying / homogenization', tr: 'Kurutma / homojenizasyon' },
+    { en: 'Pellet, fusion or digestion', tr: 'Pellet, fusion / çözündürme' },
+    { en: 'Standards & calibration', tr: 'Standart / kalibrasyon' },
+    { en: 'XRF / ICP / wet chemistry', tr: 'XRF / ICP / yaş kimya' },
+    { en: 'Material characterization', tr: 'Malzeme karakterizasyonu' }
   ],
   methods: [
     'XRF',
     'ICP-OES',
     'ICP-MS',
-    'TGA',
-    'CHNS / elemental analysis',
+    'Acid digestion',
+    'Gravimetry & titrimetry',
+    'Electrogravimetry',
     'Bomb calorimetry',
-    'Density measurement',
-    'Gravimetry & titrimetry'
+    'TGA',
+    'C/S analysis',
+    'CHN elemental analysis',
+    'Helium pycnometry'
   ],
   sections: [
     {
-      eyebrow: '03 · LABORATORY ENVIRONMENT',
+      id: 'laboratory-scope',
+      short: { en: 'Laboratory scope', tr: 'Laboratuvar kapsamı' },
+      eyebrow: '01 · CONTEXT / LABORATORY ROTATION',
       title: {
-        en: 'One internship, several analytical laboratories',
-        tr: 'Tek staj, birbiriyle bağlantılı farklı analitik laboratuvarlar'
+        en: 'Thirty working days connected geochemical analysis, wet chemistry and material characterization',
+        tr: 'Otuz iş günü jeokimyasal analiz, yaş kimya ve malzeme karakterizasyonunu aynı stajda birleştirdi'
       },
       paragraphs: {
         en: [
-          'The 30-day diary moves through MTA’s geochemistry and analytical laboratories rather than staying at one bench. I was introduced first to sample identity and preparation, then to XRF, dissolution workflows feeding ICP-MS and ICP-OES, classical wet-chemistry determinations, and finally coal and fuel characterization.',
-          'That rotation was valuable because it showed how the same geological material can be approached with different analytical questions. Bulk oxide composition, trace-element determination, thermal behavior and fuel properties require different sample states and different instruments, but they all depend on the same fundamentals: traceability, representative preparation and quality control.'
+          'My MTA placement moved through several analytical environments rather than staying at a single bench. The diary begins with sample identity and geochemical preparation, continues through XRF and dissolution workflows supporting ICP-MS and ICP-OES, then shifts into classical analytical chemistry and finishes in the coal laboratory.',
+          'That progression helped me understand method selection as a response to the analytical question. Bulk elemental composition, trace-element determination, oxide analysis, thermal behavior and fuel properties require different sample states and different instruments, but all of them depend on representative preparation, traceability and disciplined quality control.'
         ],
         tr: [
-          'Otuz günlük staj günlüğüm tek bir laboratuvarda değil, MTA’nın jeokimya ve analitik laboratuvarları arasında ilerliyor. İlk aşamada numune kimliği ve hazırlama süreçlerini gördüm; ardından XRF, ICP-MS ve ICP-OES’e giden çözündürme iş akışları, klasik yaş kimya analizleri ve son bölümde kömür/yakıt karakterizasyonu yer aldı.',
-          'Bu rotasyon benim için özellikle değerliydi; çünkü aynı jeolojik malzemenin farklı analitik sorularla nasıl ele alındığını gösterdi. Ana oksit bileşimi, iz element tayini, termal davranış veya yakıt özellikleri farklı numune formları ve farklı cihazlar gerektiriyor; ancak hepsinin temelinde izlenebilirlik, temsil edici numune hazırlama ve kalite kontrol bulunuyor.'
+          'MTA stajım tek bir laboratuvar tezgâhında ilerlemedi; birbirini tamamlayan farklı analitik ortamlardan geçti. Günlük, numune kimliği ve jeokimyasal hazırlamayla başlıyor; XRF ile ICP-MS/ICP-OES öncesi çözündürme iş akışlarına geçiyor, ardından klasik analitik kimya uygulamalarına ve son olarak kömür laboratuvarına uzanıyor.',
+          'Bu ilerleyiş yöntem seçimini analitik soruya verilen bir cevap olarak görmemi sağladı. Ana element/oksit bileşimi, iz element tayini, termal davranış veya yakıt özellikleri farklı numune formları ve farklı cihazlar gerektiriyor; ancak hepsinin temelinde temsil edici numune hazırlama, izlenebilirlik ve kontrollü laboratuvar disiplini bulunuyor.'
         ]
       },
       art: 'rock'
     },
     {
-      eyebrow: '04 · SAMPLE PREPARATION / TRACEABILITY',
+      id: 'sample-traceability',
+      short: { en: 'Sample preparation', tr: 'Numune hazırlama' },
+      eyebrow: '02 · TRACEABILITY / DRYING / MASS CONTROL',
       title: {
-        en: 'The analytical result starts with the sample code',
-        tr: 'Analitik sonuç numune koduyla başlıyor'
+        en: 'The analytical result begins with sample identity, controlled drying and reliable weighing',
+        tr: 'Analitik sonuç numune kimliği, kontrollü kurutma ve güvenilir tartımla başlar'
       },
       paragraphs: {
         en: [
-          'Soil samples entered the workflow with unique codes, origin information and requested analyses. The diary emphasizes this documentation because preparation history has to remain connected to the final instrumental result. Samples were transferred into weighing containers, dried in an oven at 105 °C and cooled in a desiccator before weighing so that moisture would not distort subsequent calculations.',
-          'Loss-on-ignition work added another mass-balance step. In the reported procedure, prepared portions were heated at high temperature and the mass difference was recorded before later XRF interpretation. The practical lesson was simple but important: a value produced by an instrument is only meaningful if the preparation steps and mass changes that preceded it are controlled and documented.'
+          'Incoming soil samples were categorized by origin, assigned unique codes and linked to the requested analyses. This documentation preserved the connection between the original material, every preparation step and the final analytical result. The samples were transferred to weighing containers, dried at about 105 °C and cooled in a desiccator before weighing so that moisture uptake would not distort the mass.',
+          'Loss-on-ignition work added a second mass-control layer. Prepared portions were exposed to high temperature, cooled again under dry conditions and reweighed. The exercise made a basic but important principle very concrete: before an instrument can generate meaningful data, sample history, moisture and mass changes have to be controlled.'
         ],
         tr: [
-          'Toprak numuneleri benzersiz kod, kaynak bilgisi ve istenen analizlerle birlikte iş akışına giriyordu. Günlükte bu kayıt sistemi özellikle vurgulanıyor; çünkü numunenin hazırlama geçmişinin son cihaz sonucuyla bağlantısı korunmak zorunda. Numuneler tartım kaplarına alınarak 105 °C etüvde kurutuluyor, yeniden nem almadan oda sıcaklığına gelmeleri için desikatörde soğutuluyor ve ardından tartılıyordu.',
-          'Kızdırma kaybı çalışmaları bu kütle takibine ikinci bir basamak ekliyordu. Rapordaki yöntemde hazırlanmış numune yüksek sıcaklığa maruz bırakılıyor ve oluşan kütle farkı sonraki XRF değerlendirmesiyle ilişkilendiriliyordu. Benim için temel kazanım şuydu: cihazın ürettiği sayı, ancak öncesindeki hazırlama ve kütle değişimleri kontrollü ve kayıtlıysa anlamlıdır.'
+          'Laboratuvara gelen toprak numuneleri kaynaklarına göre sınıflandırılıyor, benzersiz kodlarla kaydediliyor ve istenen analizlerle ilişkilendiriliyordu. Böylece orijinal numune, uygulanan hazırlama basamakları ve final analitik sonuç arasındaki izlenebilirlik korunuyordu. Numuneler tartım kaplarına alınarak yaklaşık 105 °C’de kurutuluyor, yeniden nem almadan soğumaları için desikatörde bekletiliyor ve ardından tartılıyordu.',
+          'Ateş zayiatı / loss-on-ignition çalışmaları bu kütle takibine ikinci bir katman ekliyordu. Hazırlanan numuneler yüksek sıcaklığa maruz bırakılıyor, kuru koşullarda yeniden soğutuluyor ve tekrar tartılıyordu. Bu süreç bana çok temel ama kritik bir gerçeği gösterdi: bir cihazın ürettiği veri ancak öncesindeki numune geçmişi, nem ve kütle değişimleri kontrol altındaysa anlamlıdır.'
         ]
       },
-      art: 'sample'
+      image: '/images/experience/mta/sample-preparation.webp',
+      caption: {
+        en: 'Coded geological samples documented during the sample-preparation stage at MTA.',
+        tr: 'MTA’daki numune hazırlama aşamasında belgelenen kodlanmış jeolojik numuneler.'
+      }
     },
     {
-      eyebrow: '05 · XRF',
+      id: 'xrf-preparation',
+      short: { en: 'XRF preparation', tr: 'XRF hazırlığı' },
+      eyebrow: '03 · HOMOGENIZATION / PELLET / FUSION',
       title: {
-        en: 'Preparing a reproducible solid surface for X-ray fluorescence',
-        tr: 'X-ışını floresansı için tekrarlanabilir bir katı yüzey hazırlamak'
+        en: 'A reproducible XRF result starts by creating a reproducible solid sample',
+        tr: 'Tekrarlanabilir XRF sonucu, tekrarlanabilir bir katı numune hazırlamakla başlar'
       },
       paragraphs: {
         en: [
-          'XRF was one of the first instrumental techniques I followed in depth. Powdered geological material was converted into a stable presentation form such as a pressed pellet before measurement. Primary X-rays excite atoms in the sample; the energies of the emitted characteristic X-rays identify elements, while signal intensity supports quantitative evaluation.',
-          'The instrument therefore cannot be separated from the pellet that enters it. Particle size, homogeneity, pressing quality and loss-on-ignition information all influence the quality of a bulk solid analysis. Working through preparation and measurement together made the matrix effect and sample-presentation problem much more concrete than learning XRF only from a schematic.'
+          'For pressed-pellet preparation, powdered material was mixed with cellulose binder, homogenized and compressed under a 60-ton press. The report also records ash-sample homogenization and representative subsampling, both aimed at minimizing the effect of local inhomogeneity on the final measurement.',
+          'When particle-size or matrix effects made pressed-pellet results less consistent, fusion provided another route. Flux-assisted high-temperature melting was used to produce a smoother, more homogeneous glass-like presentation. Seeing both approaches side by side made sample presentation a practical analytical variable rather than an abstract “matrix effect” from a textbook.'
         ],
         tr: [
-          'XRF, stajda ayrıntılı biçimde takip ettiğim ilk cihazlı tekniklerden biriydi. Toz halindeki jeolojik malzeme ölçüm öncesinde preslenmiş pellet gibi kararlı ve tekrarlanabilir bir forma getiriliyordu. Birincil X-ışınları numunedeki atomları uyarıyor; yayılan karakteristik X-ışınlarının enerjileri element kimliği, sinyal şiddeti ise nicel değerlendirme için bilgi sağlıyordu.',
-          'Bu nedenle cihazı, içine giren pelletten bağımsız düşünmek mümkün değil. Partikül boyutu, homojenlik, pres kalitesi ve kızdırma kaybı bilgisi katı numunenin son XRF sonucunu etkileyebiliyor. Hazırlama ile ölçümü aynı zincir içinde görmek, matrix effect ve sample presentation kavramlarını ders kitabındaki şemadan çok daha somut hale getirdi.'
+          'Preslenmiş pellet hazırlığında toz numune selüloz bağlayıcıyla karıştırılıyor, homojenize ediliyor ve 60 tonluk pres altında sıkıştırılıyordu. Raporda ash sample homojenizasyonu ve farklı bölgelerden temsilî alt numune alma basamakları da yer alıyor; amaç, lokal heterojenliğin final ölçümü etkilemesini mümkün olduğunca azaltmaktı.',
+          'Partikül boyutu veya matrix effect nedeniyle preslenmiş pellet sonuçları yeterince tutarlı olmadığında fusion başka bir hazırlama yolu sunuyordu. Flux destekli yüksek sıcaklık eritme ile daha düzgün ve homojen, cam benzeri bir analiz yüzeyi hazırlanıyordu. İki yaklaşımı aynı laboratuvar zincirinde görmek, “matrix effect” kavramını ders kitabındaki soyut bir terim olmaktan çıkarıp gerçek bir numune hazırlama problemine dönüştürdü.'
+        ]
+      },
+      image: '/images/experience/mta/xrf-preparation.webp',
+      caption: {
+        en: 'Pressed-pellet preparation and fusion equipment documented during the XRF workflow.',
+        tr: 'XRF iş akışı sırasında belgelenen pellet presleme ve fusion ekipmanları.'
+      }
+    },
+    {
+      id: 'xrf-analysis',
+      short: { en: 'XRF analysis', tr: 'XRF analizi' },
+      eyebrow: '04 · X-RAY FLUORESCENCE',
+      title: {
+        en: 'Characteristic X-ray energy identifies the element; signal intensity supports quantification',
+        tr: 'Karakteristik X-ışını enerjisi elementi tanımlar; sinyal şiddeti nicel değerlendirmeyi destekler'
+      },
+      paragraphs: {
+        en: [
+          'XRF was one of the first instrumental techniques I followed in depth. Primary X-rays remove inner-shell electrons from atoms in the sample; when higher-energy electrons fill those vacancies, element-specific fluorescence X-rays are emitted. Their energies identify the elements, while measured intensity is related to their abundance in the prepared sample.',
+          'The report links that physical principle to calibration with standard reference materials. Known concentrations are used to establish signal–concentration relationships, and unknown samples are interpreted against those references. This connected solid-sample preparation, instrument physics and quantitative calibration within a single workflow.'
+        ],
+        tr: [
+          'XRF, stajda ayrıntılı biçimde takip ettiğim ilk cihazlı tekniklerden biriydi. Birincil X-ışınları numunedeki atomların iç kabuk elektronlarını uzaklaştırıyor; daha yüksek enerji seviyesindeki elektronlar bu boşlukları doldurduğunda elemente özgü fluorescence X-rays oluşuyordu. Bu ışınların enerjisi element kimliğini, ölçülen şiddeti ise hazırlanan numunedeki miktarla ilişkili bilgiyi sağlıyordu.',
+          'Raporda bu fiziksel prensip Standard Reference Material kullanılarak yapılan kalibrasyonla ilişkilendiriliyor. Bilinen konsantrasyonlar sinyal–konsantrasyon ilişkisini oluşturuyor, bilinmeyen numuneler de bu referanslara göre değerlendiriliyordu. Böylece katı numune hazırlama, cihaz fiziği ve nicel kalibrasyon aynı analitik iş akışında birleşti.'
         ]
       },
       image: '/images/experience/mta/xrf.webp',
@@ -92,76 +129,140 @@ export const mtaExperience = {
       }
     },
     {
-      eyebrow: '06 · ICP-OES',
+      id: 'digestion-icpms',
+      short: { en: 'Digestion → ICP-MS', tr: 'Çözündürme → ICP-MS' },
+      eyebrow: '05 · ACID DIGESTION / ICP-MS PREPARATION',
       title: {
-        en: 'Calibration connects plasma emission to concentration',
-        tr: 'Plazma emisyonunu konsantrasyona bağlayan basamak kalibrasyon'
+        en: 'Different geological matrices required different routes into the liquid phase before ICP-MS',
+        tr: 'Farklı jeolojik matrisler ICP-MS öncesinde sıvı faza geçmek için farklı çözündürme yolları gerektirdi'
       },
       paragraphs: {
         en: [
-          'The ICP-OES portion of the diary includes reference-solution preparation, sample introduction, torch alignment, calibration curves and intensity-graph review. I took part in calibration work covering around 25 elements and followed how standards are used to translate element-specific emission signals into concentration information for unknown samples.',
-          'The instrument-side learning connected each physical component to the result: the nebulizer converts solution into an aerosol, the plasma excites atoms and ions, and the optical system separates characteristic wavelengths. Torch alignment and spectral review showed why apparently small setup differences can affect sensitivity and why calibration quality has to be judged alongside the measured sample.'
+          'Several days were devoted to converting solid geological samples into solutions suitable for ICP-MS. The report documents aqua-regia-based work for selected sample groups and multi-acid digestion strategies involving nitric, hydrochloric and perchloric acids, with HF used when a more complete dissolution of resistant mineral matrices was required.',
+          'After digestion, dilution, settling and transfer of the clear liquid fraction helped reduce the risk of particulate interference before instrumental measurement. The broader lesson was that ICP-MS sensitivity is the end of a preparation chain: incomplete dissolution, contamination or uncontrolled dilution can limit the value of even a highly sensitive detector.'
         ],
         tr: [
-          'ICP-OES bölümünde referans çözelti hazırlama, numune girişi, torch alignment, kalibrasyon eğrileri ve intensity graph değerlendirmeleri yer aldı. Yaklaşık 25 elementi kapsayan kalibrasyon çalışmalarına katıldım ve standart çözeltilerden gelen elemente özgü emisyon sinyalinin bilinmeyen numunedeki konsantrasyona nasıl dönüştürüldüğünü takip ettim.',
-          'Cihazın parçalarını sonuçla ilişkilendirmek bu bölümün en önemli tarafıydı: nebulizer çözeltiyi aerosole dönüştürüyor, plazma atom ve iyonları uyarıyor, optik sistem ise karakteristik dalga boylarını ayırıyordu. Torch alignment ve spektral incelemeler, küçük görünen kurulum farklılıklarının bile sensitivity üzerinde neden etkili olabildiğini ve kalibrasyon kalitesinin numuneyle birlikte değerlendirilmesi gerektiğini gösterdi.'
+          'Stajın birkaç günü katı jeolojik numuneleri ICP-MS için uygun çözeltilere dönüştürmeye ayrıldı. Raporda seçili numune grupları için aqua regia temelli çalışmalar; HNO₃, HCl ve HClO₄ içeren multi-acid digestion yaklaşımları ve dirençli mineral matrislerinde daha tam çözünme gerektiğinde HF kullanılan süreçler yer alıyor.',
+          'Çözündürmeden sonra seyreltme, bekletme ve berrak sıvı fazın ayrılması cihaz öncesinde partikül kaynaklı sorunları azaltmaya yardımcı oluyordu. Bu bölümün en önemli dersi şuydu: ICP-MS’in yüksek sensitivity özelliği uzun bir hazırlama zincirinin sonundadır; eksik çözündürme, kontaminasyon veya kontrolsüz seyreltme en gelişmiş dedektörün sağladığı avantajı bile sınırlayabilir.'
         ]
       },
-      art: 'plasma'
+      image: '/images/experience/mta/digestion.webp',
+      caption: {
+        en: 'Acid-digestion samples and dilution racks documented during ICP-oriented preparation work.',
+        tr: 'ICP odaklı hazırlama çalışmaları sırasında belgelenen asit çözündürme numuneleri ve seyreltme rack’leri.'
+      }
     },
     {
-      eyebrow: '07 · ICP-MS / DISSOLUTION',
+      id: 'icp-oes',
+      short: { en: 'ICP-OES', tr: 'ICP-OES' },
+      eyebrow: '06 · REFERENCE SOLUTIONS / TORCH / CALIBRATION',
       title: {
-        en: 'Before trace-element detection comes dissolution chemistry',
-        tr: 'İz element ölçümünden önce çözündürme kimyası geliyor'
+        en: 'ICP-OES connected solution preparation, plasma alignment, wavelength selection and calibration',
+        tr: 'ICP-OES; çözelti hazırlama, plazma hizalama, dalga boyu seçimi ve kalibrasyonu aynı zincirde birleştirdi'
       },
       paragraphs: {
         en: [
-          'Several days of the diary are devoted not to the ICP-MS itself but to getting geological samples into a suitable liquid phase. Different coded sample groups required different dissolution approaches, including acid digestion workflows for gold-, arsenic- and rare-earth-related analyses.',
-          'This made contamination and incomplete dissolution very tangible analytical risks. The objective was to move target elements into solution while keeping particulate material and matrix-related problems under control before introduction to the instrument. I therefore learned to see ICP-MS sensitivity as the end of a preparation chain, not as a substitute for good digestion chemistry.'
+          'The ICP-OES rotation included preparation of multi-level reference solutions, sample introduction, torch alignment and calibration-curve work. Liquid samples are converted to an aerosol by the nebulizer and carried into an argon plasma, where atoms and ions are excited and emit light at characteristic wavelengths.',
+          'I also followed how torch position and spectral review affect the reliability of the measurement. Multi-element calibration curves linked known concentration levels to emission intensity, while wavelength/intensity graphs were examined for interference before converting the measured signal into concentration. This was where instrument setup, optical spectroscopy and quantitative analysis became one connected problem.'
         ],
         tr: [
-          'Staj günlüğünde birkaç gün doğrudan ICP-MS cihazından çok, jeolojik numuneyi uygun bir sıvı faza taşıma problemine ayrılmış durumda. Altın, arsenik ve nadir toprak elementleri gibi farklı analiz gruplarında numuneye göre değişen asit çözündürme yaklaşımları izlendi.',
-          'Bu bölüm kontaminasyon ve eksik çözündürmenin neden gerçek analitik riskler olduğunu çok net gösterdi. Amaç hedef elementleri çözeltiye alırken partikül yükünü ve matrix kaynaklı problemleri cihaz öncesinde kontrol altında tutmaktı. Böylece ICP-MS’in yüksek sensitivity özelliğini iyi numune hazırlamanın alternatifi değil, doğru hazırlanmış bir zincirin son basamağı olarak görmeyi öğrendim.'
+          'ICP-OES rotasyonunda farklı konsantrasyon seviyelerinde referans çözelti hazırlama, sample introduction, torch alignment ve calibration curve çalışmaları yer aldı. Sıvı numune nebulizer ile aerosole dönüştürülüyor ve argon plazmaya taşınıyor; burada atom ve iyonlar uyarılarak karakteristik dalga boylarında ışık yayıyordu.',
+          'Torch konumunun ve spektral incelemenin ölçüm güvenilirliğini nasıl etkilediğini de takip ettim. Çok elementli kalibrasyon eğrileri bilinen konsantrasyon seviyelerini emission intensity ile ilişkilendiriyor, wavelength/intensity grafiklerinde girişimler değerlendirilerek ölçülen sinyal konsantrasyona dönüştürülüyordu. Bu bölüm cihaz ayarı, optik spektroskopi ve nicel analizin aynı problemin parçaları olduğunu gösterdi.'
         ]
       },
-      art: 'icp'
+      image: '/images/experience/mta/icp-oes.webp',
+      caption: {
+        en: 'ICP-OES instrumentation documented during the multi-element calibration and torch-alignment rotation.',
+        tr: 'Çok elementli kalibrasyon ve torch-alignment rotasyonu sırasında belgelenen ICP-OES cihazı.'
+      }
     },
     {
-      eyebrow: '08 · CLASSICAL ANALYTICAL CHEMISTRY',
+      id: 'wet-chemistry-foundation',
+      short: { en: 'Oxides & gravimetry', tr: 'Oksitler ve gravimetri' },
+      eyebrow: '07 · CLASSICAL ANALYTICAL CHEMISTRY',
       title: {
-        en: 'Wet chemistry remained relevant beside advanced instruments',
-        tr: 'İleri cihazların yanında klasik analitik kimya önemini koruyor'
+        en: 'SiO₂, Fe₂O₃/Al₂O₃, CaO and MgO showed why classical separations still matter',
+        tr: 'SiO₂, Fe₂O₃/Al₂O₃, CaO ve MgO analizleri klasik ayırmaların neden hâlâ önemli olduğunu gösterdi'
       },
       paragraphs: {
         en: [
-          'The analytical-laboratory rotation included determinations for components such as SiO₂, Fe₂O₃, Al₂O₃, CaO, MgO, copper, total iron, tungsten, Fe²⁺ and boron. These days brought gravimetric and titrimetric reasoning back into the same workflow as ICP and XRF.',
-          'That combination was useful because it prevented me from treating instrumentation as a black box. Stoichiometry, separation, precipitation, endpoint logic and mass balance still underpin many reference or complementary measurements. Advanced instrumentation expands what can be measured, but classical analytical discipline remains essential for checking whether a result is chemically plausible.'
+          'The analytical-laboratory rotation moved from instrument-centered work into gravimetric and precipitation-based determinations. SiO₂ analysis combined acid treatment, filtration, furnace treatment and sequential weighing, while Fe₂O₃/Al₂O₃ preparation used acid dissolution before ICP-OES when the expected amount was low.',
+          'CaO and MgO determinations relied on controlled precipitation, filtration, furnace treatment and mass difference. Working through these procedures beside XRF and ICP helped me understand that modern instrumentation does not eliminate classical analytical chemistry; separation chemistry and mass balance still provide complementary information and important checks on a result.'
         ],
         tr: [
-          'Analitik laboratuvar rotasyonunda SiO₂, Fe₂O₃, Al₂O₃, CaO, MgO, bakır, toplam demir, tungsten, Fe²⁺ ve bor gibi bileşenlere yönelik çalışmalar yer aldı. Bu günlerde gravimetrik ve titrimetrik düşünme biçimi, ICP ve XRF gibi cihazlı tekniklerle aynı staj akışının içine girdi.',
-          'Bu birliktelik, cihazları “sayı veren kara kutular” gibi görmemi engelledi. Stokiyometri, ayırma, çöktürme, endpoint mantığı ve kütle dengesi birçok referans veya tamamlayıcı ölçümün hâlâ temelini oluşturuyor. İleri cihazlar ölçebildiğimiz aralığı genişletiyor; ancak sonucun kimyasal olarak anlamlı olup olmadığını sorgulamak klasik analitik disipline dayanıyor.'
+          'Analitik laboratuvar rotasyonu cihaz merkezli çalışmalardan gravimetrik ve çöktürmeye dayalı tayinlere geçti. SiO₂ analizinde asit işlemi, filtrasyon, fırınlama ve ardışık tartım basamakları birlikte kullanılırken; Fe₂O₃/Al₂O₃ hazırlığında düşük miktarların belirlenmesi için asit çözündürme sonrasında ICP-OES’e geçiliyordu.',
+          'CaO ve MgO tayinlerinde kontrollü çöktürme, filtrasyon, fırınlama ve kütle farkı temel rol oynuyordu. Bu prosedürleri XRF ve ICP çalışmalarının yanında görmek, modern cihazların klasik analitik kimyayı ortadan kaldırmadığını gösterdi; ayırma kimyası ve kütle dengesi hâlâ tamamlayıcı bilgi ve önemli bir sonuç kontrolü sağlıyor.'
         ]
       },
-      art: 'xrf'
+      art: 'titration'
     },
     {
-      eyebrow: '09 · COAL / MATERIAL CHARACTERIZATION',
+      id: 'wet-chemistry-diversity',
+      short: { en: 'Cu, Fe, W & B', tr: 'Cu, Fe, W ve B' },
+      eyebrow: '08 · ELECTROGRAVIMETRY / TITRIMETRY / PRECIPITATION',
       title: {
-        en: 'The final rotation connected composition with material performance',
-        tr: 'Son rotasyon bileşimi malzeme performansıyla ilişkilendirdi'
+        en: 'Copper, iron, tungsten and boron required different chemical strategies for the same goal: reliable quantification',
+        tr: 'Bakır, demir, tungsten ve bor için aynı hedefe farklı kimyasal yollarla ulaşıldı: güvenilir nicel tayin'
       },
       paragraphs: {
         en: [
-          'The final days moved into coal and fuel characterization. I followed sample preparation, bomb calorimetry, thermogravimetric analysis, carbon/sulfur and elemental analysis, and density measurement. These measurements ask a different question from trace-element work: not only what is present, but how the material behaves as it is heated or used as a fuel.',
-          'Across the whole placement, the analytical path widened from physical preparation to spectrometric measurement and then to thermal and bulk-property characterization. That breadth is what made the internship especially useful for me: it built a practical understanding of how method choice follows the matrix, concentration range and decision that the laboratory needs to make.'
+          'Copper analysis combined dissolution, chemical separation and electrolysis: copper was deposited on a weighed platinum cathode and the mass increase was used for calculation. Total iron and Fe²⁺ determinations used redox chemistry with dichromate titration, while tungsten was isolated through precipitation and gravimetric weighing.',
+          'Boron analysis introduced another sequence of pH control, precipitation, filtration and titration in the presence of mannitol or sorbitol. The diversity of these methods was one of the strongest parts of the placement for me because it showed that analytical chemistry is not defined by one instrument; the chemistry of the analyte determines the most useful measurement strategy.'
         ],
         tr: [
-          'Stajın son günleri kömür ve yakıt karakterizasyonuna ayrıldı. Numune hazırlama, bomba kalorimetrisi, termogravimetrik analiz, karbon/kükürt ve elementel analiz ile yoğunluk ölçümlerini takip ettim. Bu yöntemler iz element analizinden farklı bir soruya cevap veriyor: yalnızca “numunede ne var?” değil, “malzeme ısındığında veya yakıt olarak değerlendirildiğinde nasıl davranıyor?” sorusuna da bakılıyor.',
-          'Stajın tamamında analitik yol fiziksel numune hazırlamadan spektrometrik ölçümlere, oradan termal ve bulk-property karakterizasyonuna genişledi. Benim için bu deneyimi değerli kılan da bu genişlik oldu; yöntem seçiminin matris, konsantrasyon aralığı ve laboratuvarın vermesi gereken karara göre nasıl değiştiğini uygulamalı olarak görmemi sağladı.'
+          'Bakır analizinde çözündürme, kimyasal ayırma ve elektroliz birlikte kullanılıyordu; bakır önceden tartılmış platin katot üzerinde biriktiriliyor ve kütle artışından hesaplama yapılıyordu. Total iron ve Fe²⁺ tayinlerinde dichromate titration ile redoks kimyası kullanılırken, tungsten çöktürme ve gravimetrik tartımla belirleniyordu.',
+          'Boron analizinde ise pH kontrolü, çöktürme, filtrasyon ve mannitol veya sorbitol varlığında titrasyondan oluşan farklı bir sıra vardı. Bu yöntem çeşitliliği stajın benim için en güçlü taraflarından biriydi; analitik kimyanın tek bir cihazla tanımlanmadığını, analitin kimyasının en uygun ölçüm stratejisini belirlediğini gösterdi.'
         ]
       },
-      art: 'coal'
+      image: '/images/experience/mta/wet-chemistry.webp',
+      caption: {
+        en: 'Wet-chemistry work documented during precipitation, titration and separation-based analyses.',
+        tr: 'Çöktürme, titrasyon ve ayırmaya dayalı analizler sırasında belgelenen yaş kimya çalışmaları.'
+      }
+    },
+    {
+      id: 'coal-thermal',
+      short: { en: 'Coal & thermal analysis', tr: 'Kömür ve termal analiz' },
+      eyebrow: '09 · COAL LAB / CALORIMETRY / TGA',
+      title: {
+        en: 'The final rotation shifted from elemental concentration to how a material behaves as a fuel',
+        tr: 'Son rotasyon element konsantrasyonundan malzemenin yakıt olarak nasıl davrandığına geçti'
+      },
+      paragraphs: {
+        en: [
+          'Coal samples were crushed, sieved and ground to controlled particle sizes before analysis. I also visited the mineralogy/petrography area to learn about XRD and MLA; these were observation visits rather than hands-on instrument operation. The main coal-laboratory work then moved into bomb calorimetry and thermogravimetric analysis.',
+          'Bomb calorimetry linked controlled combustion to calorific value, while TGA separated the material response into moisture, volatile matter and ash stages under controlled temperature and gas conditions. This widened the analytical question from “what elements are present?” to “how does the material respond when heated or burned?”'
+        ],
+        tr: [
+          'Kömür numuneleri analiz öncesinde kontrollü partikül boyutlarına ulaşmak için kırılıyor, eleniyor ve öğütülüyordu. Mineralogy/petrography bölümünde XRD ve MLA hakkında bilgi edinmek için gözlem ziyareti de yaptım; bunlar uygulamalı cihaz kullanımı değil gözlem niteliğindeydi. Kömür laboratuvarındaki ana çalışma daha sonra bomb calorimetry ve thermogravimetric analysis yönüne geçti.',
+          'Bomb kalorimetrisi kontrollü yanmayı calorific value ile ilişkilendirirken, TGA numunenin davranışını kontrollü sıcaklık ve gaz koşullarında moisture, volatile matter ve ash aşamalarına ayırıyordu. Böylece analitik soru “numunede hangi elementler var?” düzeyinden “malzeme ısıtıldığında veya yakıldığında nasıl davranıyor?” sorusuna genişledi.'
+        ]
+      },
+      art: 'thermal'
+    },
+    {
+      id: 'coal-characterization',
+      short: { en: 'C/S, CHN & density', tr: 'C/S, CHN ve yoğunluk' },
+      eyebrow: '10 · COMPOSITION / DENSITY / INTEGRATED TAKEAWAY',
+      title: {
+        en: 'Carbon–sulfur, CHN and helium pycnometry completed a broad material-characterization toolkit',
+        tr: 'Karbon–kükürt, CHN ve helyum piknometresi geniş bir malzeme karakterizasyon setini tamamladı'
+      },
+      paragraphs: {
+        en: [
+          'The final days added carbon/sulfur analysis with the LECO SC-144DR, CHN elemental analysis with the LECO CHN628 and density measurement with the Quantachrome Pentapyc 5200e. These techniques combined combustion chemistry, gas detection and helium-displacement volume measurement to describe different aspects of the coal sample.',
+          'Across the full placement, the workflow expanded from sample traceability and physical preparation to dissolution, calibration, instrumental measurement, classical wet chemistry and material-property characterization. The most transferable lesson was that a trustworthy analytical result is built by the whole chain—not by the name of a single instrument.'
+        ],
+        tr: [
+          'Stajın son günlerinde LECO SC-144DR ile carbon/sulfur analizi, LECO CHN628 ile CHN elementel analiz ve Quantachrome Pentapyc 5200e ile yoğunluk ölçümü eklendi. Bu teknikler combustion chemistry, gaz tespiti ve helyum deplasmanıyla hacim ölçümü gibi farklı prensipleri kullanarak kömür numunesinin farklı özelliklerini tanımlıyordu.',
+          'Stajın tamamında iş akışı numune izlenebilirliği ve fiziksel hazırlamadan çözündürmeye, kalibrasyona, cihazlı ölçüme, klasik yaş kimyaya ve malzeme özelliği karakterizasyonuna kadar genişledi. Benim için en taşınabilir ders, güvenilir bir analitik sonucun tek bir cihazın isminden değil bütün zincirin kalitesinden doğduğuydu.'
+        ]
+      },
+      image: '/images/experience/mta/coal-characterization.webp',
+      caption: {
+        en: 'Selected coal-characterization systems documented during the final laboratory rotation: TGA, C/S analysis, CHN elemental analysis and density measurement.',
+        tr: 'Son laboratuvar rotasyonunda belgelenen seçili kömür karakterizasyon sistemleri: TGA, C/S analizi, CHN elementel analiz ve yoğunluk ölçümü.'
+      }
     }
   ]
 }
