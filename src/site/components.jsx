@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom'
 import { ExternalLink, Mail, Phone } from 'lucide-react'
 import { copy, profile } from '../content/portfolio'
 import { t } from './utils'
+import { mtaAtlasDataUri } from './mtaAtlas'
 
 export function Eyebrow({ children }) { return <p className="eyebrow"><span/>{children}</p> }
 export function SectionHead({ eyebrow, title, body }) { return <div className="section-head" data-reveal>{eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}<h2>{title}</h2>{body && <p>{body}</p>}</div> }
 export function MethodTags({ items }) { return <div className="tags">{items.map(x => <span key={x}>{x}</span>)}</div> }
+export function MtaAtlasImage({ alt, className='' }) { return <img className={className} src={mtaAtlasDataUri} alt={alt}/> }
 
 export function LineArt({ variant = 'spme', label }) {
   const c = { fill:'none', stroke:'currentColor', strokeWidth:1.7, strokeLinecap:'round', strokeLinejoin:'round' }
@@ -51,7 +53,7 @@ export function PageHero({ eyebrow, title, intro, art='spme' }) {
 }
 
 export function StoryMedia({ item, lang }) {
-  if (item.image && item.imageCrop) return <figure className="story-figure" data-parallax><div className={'image-frame story-crop crop-' + item.imageCrop}><div className="mta-report-atlas" role="img" aria-label={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
+  if (item.image && item.imageCrop) return <figure className="story-figure" data-parallax><div className={'image-frame story-crop crop-' + item.imageCrop}><div className="mta-report-atlas" style={{backgroundImage:`url(${mtaAtlasDataUri})`}} role="img" aria-label={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
   if (item.image) return <figure className="story-figure" data-parallax><div className="image-frame"><img src={item.image} alt={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
   return <LineArt variant={item.art || 'spme'} label={t(item.title,lang)}/>
 }
