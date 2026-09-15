@@ -124,11 +124,7 @@ export const mtaExperience = {
           'Raporda bu fiziksel prensip Standard Reference Material kullanılarak yapılan kalibrasyonla ilişkilendiriliyor. Bilinen konsantrasyonlar sinyal–konsantrasyon ilişkisini oluşturuyor, bilinmeyen numuneler de bu referanslara göre değerlendiriliyordu. Böylece katı numune hazırlama, cihaz fiziği ve nicel kalibrasyon aynı analitik iş akışında birleşti.'
         ]
       },
-      image: '/images/experience/mta/xrf.webp',
-      caption: {
-        en: 'XRF instrumentation documented during my MTA geochemistry placement.',
-        tr: 'MTA jeokimya stajım sırasında belgelenen XRF cihazı.'
-      }
+      art: 'xrf'
     },
     {
       id: 'digestion-icpms',
