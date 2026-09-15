@@ -70,10 +70,10 @@ export const researchStory = [
         'Bu projede küçük fiber geometrisi özellikle avantajlıydı; çünkü örnekleme, matriks temizleme ve zenginleştirme işlevleri tek bir küçük elemanda birleşebiliyor. Ayrıca karmaşık biyolojik ortamlarda analitik sisteme taşınan matriks miktarını azaltma potansiyeli sunuyor.'
       ]
     },
-    image: '/images/research/spme/fiber-interface.webp',
+    image: '/images/illustrations/spme-editorial.svg',
     caption: {
-      en: 'SPME fiber / experimental interface photographed during the project.',
-      tr: 'Proje sırasında fotoğraflanan SPME fiber / deneysel arayüz.'
+      en: 'Resolution-independent editorial illustration of the SPME extraction–desorption–MOI-MS concept.',
+      tr: 'SPME ekstraksiyon–desorpsiyon–MOI-MS yaklaşımını anlatan çözünürlükten bağımsız bilimsel illüstrasyon.'
     }
   },
   {
@@ -154,7 +154,7 @@ export const researchStory = [
         'Raporda regresyon denklemi y = 1505,6x − 36145 ve R² = 0,987 olarak verildi. Bu sonuç sonraki SPME deneyleri için nicel bir referans oluşturdu ve ekstraksiyon ya da desorpsiyon koşullarındaki değişikliklerin kararlı bir MOI-MS yanıtı üzerinden değerlendirilebildiğini gösterdi.'
       ]
     },
-    image: '/images/research/spme/calibration.webp',
+    image: '/images/illustrations/spme-calibration-vector.svg',
     caption: {
       en: 'Six-point L-histidine external calibration reported for the MOI-MS platform (R² = 0.987).',
       tr: 'MOI-MS platformu için raporlanan altı noktalı L-histidin dış kalibrasyonu (R² = 0,987).'
@@ -178,7 +178,7 @@ export const researchStory = [
         'HLB-SAX ise 6,10 ng elüe edilen miktar, 0,16 recovery ve %13 ile en düşük değişkenliği sağladı. Bu nedenle çalışmada tek başına en yüksek recovery yerine hassasiyet ve tekrarlanabilirlik önceliklendirildi. Numuneleri tutarlı biçimde karşılaştırmayı hedefleyen bir yöntem için bu denge HLB-SAX’ı sonraki optimizasyonların en güçlü adayı haline getirdi.'
       ]
     },
-    image: '/images/research/spme/phase-comparison.webp',
+    image: '/images/illustrations/spme-phase-comparison-vector.svg',
     caption: {
       en: 'Report comparison of HLB, PMAA and HLB-SAX by %RSD, eluted amount and recovery.',
       tr: 'HLB, PMAA ve HLB-SAX fazlarının %RSD, elüe edilen miktar ve recovery açısından rapor karşılaştırması.'
@@ -202,8 +202,8 @@ export const researchStory = [
         'Asidik ortam karboksilat fonksiyonunun protonlanmasını artırarak iyonik çekimi zayıflatır. Daha sonra 1, 5, 10, 20 ve 30 dakikalık desorpsiyon süreleri karşılaştırıldı; en yüksek yanıt 1 dakikada elde edildi. İkinci desorpsiyonun birçok durumda daha yüksek sinyal vermesi ise raporda gecikmiş analit salımı ve PBS kaynaklı tuzların kısmen uzaklaşmasıyla azalan iyon baskılanması üzerinden tartışıldı.'
       ]
     },
-    image: '/images/research/spme/desorption-time.webp',
-    caption: { en: 'Desorption-time comparison from the report; the highest response was obtained at 1 minute.', tr: 'Rapordaki desorpsiyon süresi karşılaştırması; en yüksek yanıt 1 dakikada elde edildi.' }
+    image: '/images/illustrations/spme-desorption-vector.svg',
+    caption: { en: 'Vector summary of the report’s desorption-time screening; 1 minute produced the highest response.', tr: 'Rapordaki desorpsiyon süresi taramasının vektörel özeti; en yüksek yanıt 1 dakikada elde edildi.' }
   },
   {
     id: 'final-workflow',

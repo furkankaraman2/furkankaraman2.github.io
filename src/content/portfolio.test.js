@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { existsSync, readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readdirSync } from 'node:fs'
 import { copy, experiences, patentSections, phases, profile, researchMetrics, researchStory, researchWorkflow } from './portfolio'
 
 describe('portfolio content integrity', () => {
@@ -63,19 +63,16 @@ describe('portfolio content integrity', () => {
     }
   })
 
-  it('uses curated report visuals that are actually present in public assets', () => {
+  it('uses scalable premium scientific visuals that are actually present in public assets', () => {
     for (const path of [
-      'public/images/research/spme/fiber-interface.webp',
-      'public/images/research/spme/calibration.webp',
-      'public/images/research/spme/phase-comparison.webp',
-      'public/images/experience/doping/lc-ms.webp',
-      'public/images/experience/mta/xrf.webp',
-      'public/images/patent/dermalix.webp',
+      'public/images/illustrations/spme-editorial.svg',
+      'public/images/illustrations/doping-editorial.svg',
+      'public/images/illustrations/mta-editorial.svg',
+      'public/images/illustrations/patent-editorial.svg',
+      'public/images/illustrations/spme-calibration-vector.svg',
+      'public/images/illustrations/spme-phase-comparison-vector.svg',
+      'public/images/illustrations/spme-desorption-vector.svg',
     ]) expect(existsSync(path)).toBe(true)
-    expect(existsSync('src/assets/mta-report-atlas.b64')).toBe(true)
-    const atlas = readFileSync('src/assets/mta-report-atlas.b64', 'utf8').trim()
-    expect(atlas.startsWith('UklG')).toBe(true)
-    expect(atlas.length).toBeGreaterThan(60000)
   })
 
   it('expands patent research into a multi-part technology-transfer case study', () => {

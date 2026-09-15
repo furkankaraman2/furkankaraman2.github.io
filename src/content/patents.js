@@ -69,10 +69,10 @@ export const patentSections = [
         'Vakanın benim için asıl değeri yalnızca ortaya çıkan ürün değil. Bilimsel bir sonucun gerçek bir teknoloji transferi fırsatına dönüşmeden önce patentlenebilirlik, fikri mülkiyet sahipliği, pazar değerlendirmesi, regülasyon planlaması ve finansman basamaklarından geçmesi gerektiğini somut biçimde gösteriyor.'
       ]
     },
-    image: '/images/patent/dermalix.webp',
+    image: '/images/illustrations/patent-editorial.svg',
     caption: {
-      en: 'Dermalix product image reproduced from the case-study material discussed in my term paper; the product and IP belong to the case-study organizations, not to me.',
-      tr: 'Dönem çalışmamda incelediğim vaka materyalindeki Dermalix ürün görseli; ürün ve fikri mülkiyet vaka kurumlarına aittir, bana ait değildir.'
+      en: 'Editorial illustration of the research-to-commercialization pathway discussed in the case study; it is not a reproduction of the product or its intellectual property.',
+      tr: 'Vaka çalışmasında ele alınan araştırmadan ticarileşmeye geçiş yolunu anlatan özgün editoryal illüstrasyon; ürünün veya fikri mülkiyetinin bir reprodüksiyonu değildir.'
     }
   },
   {
