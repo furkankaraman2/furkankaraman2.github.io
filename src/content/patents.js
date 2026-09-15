@@ -1,130 +1,220 @@
 export const patentSections = [
   {
-    eyebrow: '01 · INTERNATIONAL PATENT FRAMEWORK',
+    id: 'research-question',
+    short: { en: 'Research question', tr: 'Araştırma sorusu' },
+    eyebrow: '01 · RESEARCH QUESTION / CONTEXT',
     title: {
-      en: 'Patent strategy starts before a product reaches the market',
-      tr: 'Patent stratejisi ürün pazara çıkmadan çok önce başlıyor'
+      en: 'How does university research become a real healthcare product?',
+      tr: 'Üniversite araştırması gerçek bir sağlık ürününe nasıl dönüşür?'
     },
     paragraphs: {
       en: [
-        'My term paper begins with the international patent framework because university technologies often have to preserve options before their commercial value is fully known. WIPO coordinates international intellectual-property cooperation, while the Patent Cooperation Treaty (PCT) provides a coordinated filing route rather than a single worldwide patent.',
-        'The paper highlights two practical consequences of the PCT route: access to more than 150 member states through an international filing framework and a roughly 30–31 month period before many national-phase decisions must be taken. For an early-stage technology, that time can be strategically important because scientific validation, market assessment and financing are still evolving.'
+        'My elective-course term paper examines university–pharmaceutical industry collaboration in Türkiye through a technology-transfer lens. The central question is what has to happen after a scientific result leaves the laboratory: how is it protected, assessed, financed, developed and finally connected with a company capable of bringing it to patients?',
+        'Technology Transfer Offices (TTOs) sit at the center of that transition. The Dermis Pharma / Dermalix case gives the paper a concrete timeline and shows how academic science, intellectual property, entrepreneurship, investment and an established pharmaceutical partner can become parts of one commercialization pathway.'
       ],
       tr: [
-        'Dönem çalışmam uluslararası patent çerçevesiyle başlıyor; çünkü üniversite kaynaklı bir teknoloji henüz ticari değerini tam olarak kanıtlamadan gelecekteki koruma seçeneklerini kaybetmemeli. WIPO uluslararası fikri mülkiyet iş birliğini koordine ederken, Patent Cooperation Treaty (PCT) tek bir “dünya patenti” vermiyor; bunun yerine koordine edilmiş bir uluslararası başvuru yolu sağlıyor.',
-        'Çalışmada PCT sisteminin iki pratik sonucu öne çıkıyor: 150’den fazla üye devleti kapsayan uluslararası başvuru altyapısı ve birçok ulusal faz kararından önce yaklaşık 30–31 aylık değerlendirme süresi. Erken aşamadaki bir teknoloji için bu zaman; bilimsel doğrulama, pazar analizi ve finansman henüz şekillenirken önemli bir stratejik alan yaratabiliyor.'
-      ]
-    },
-    art: 'patent'
-  },
-  {
-    eyebrow: '02 · TÜRKİYE / TÜRKPATENT',
-    title: {
-      en: 'Protection in Türkiye combines legal criteria with filing strategy',
-      tr: 'Türkiye’de koruma hukuki kriterlerle başvuru stratejisini birlikte gerektiriyor'
-    },
-    paragraphs: {
-      en: [
-        'The Türkiye section reviews Industrial Property Law No. 6769 and the role of the Turkish Patent and Trademark Office (TÜRKPATENT). The paper frames patentability around novelty, inventive step and industrial applicability, and discusses Türkiye’s first-to-file logic.',
-        'This matters for academic research because publication and protection do not always move at the same speed. A researcher may be focused on papers and experiments, while a commercialization pathway requires invention disclosure, filing timing, claim scope and decisions about national or international coverage.'
-      ],
-      tr: [
-        'Türkiye bölümü 6769 sayılı Sınai Mülkiyet Kanunu’nu ve Türk Patent ve Marka Kurumu’nun (TÜRKPATENT) rolünü ele alıyor. Çalışmada patentlenebilirlik; yenilik, buluş basamağı ve sanayiye uygulanabilirlik çerçevesinde değerlendiriliyor ve Türkiye’deki first-to-file yaklaşımı tartışılıyor.',
-        'Bu konu akademik araştırma açısından önemli; çünkü yayın takvimi ile koruma stratejisi her zaman aynı hızda ilerlemiyor. Araştırmacı deney ve makaleye odaklanırken ticarileştirme tarafında buluş bildirimi, başvuru zamanı, claim kapsamı ve ulusal/uluslararası koruma kararları eş zamanlı yönetilmek zorunda.'
-      ]
-    },
-    art: 'patent'
-  },
-  {
-    eyebrow: '03 · TECHNOLOGY TRANSFER OFFICES',
-    title: {
-      en: 'The TTO translates scientific potential into a commercialization pathway',
-      tr: 'TTO bilimsel potansiyeli ticarileştirme yoluna çeviren ara yüz'
-    },
-    paragraphs: {
-      en: [
-        'A Technology Transfer Office sits between the research group, the university and the market. In my paper, TTO functions include invention disclosure, patent strategy, market analysis, licensing, partner discovery, entrepreneurship support and access to funding. The role is therefore broader than “filing a patent”.',
-        'The EBİLTEM-TTO case at Ege University is used to show how legal, commercial and technical questions can be evaluated together. Researchers may understand the science deeply, but commercialization also requires freedom-to-operate thinking, market size, competitor positioning, financing and negotiation—areas where a TTO can reduce uncertainty.'
-      ],
-      tr: [
-        'Teknoloji Transfer Ofisi; araştırma grubu, üniversite ve pazar arasında çalışan bir ara yüz. Çalışmamda TTO’nun görevleri yalnızca “patent başvurusu yapmak” ile sınırlı değil; buluş bildirimi, patent stratejisi, pazar analizi, lisanslama, sektör ortağı bulma, girişimcilik desteği ve finansmana erişim gibi başlıkları birlikte kapsıyor.',
-        'Ege Üniversitesi EBİLTEM-TTO vakası, hukuki, ticari ve teknik soruların aynı değerlendirme içinde nasıl ele alınabileceğini göstermek için kullanılıyor. Araştırmacı bilimi çok iyi biliyor olabilir; fakat ticarileştirme aynı zamanda freedom-to-operate, pazar büyüklüğü, rakipler, finansman ve müzakere bilgisi gerektiriyor. TTO bu belirsizliklerin azaltılmasında önemli rol oynuyor.'
-      ]
-    },
-    art: 'tto'
-  },
-  {
-    eyebrow: '04 · DERMALIX / DERMIS PHARMA CASE',
-    title: {
-      en: 'A wound-healing research idea becomes a commercialization case study',
-      tr: 'Yara iyileştirme araştırmasının ticarileştirme vakasına dönüşmesi'
-    },
-    paragraphs: {
-      en: [
-        'The central case follows a team of Ege University researchers working on wound-healing technologies based on biocompatible and biodegradable matrices and resveratrol-loaded microparticles. Market research directed attention toward diabetic foot ulcers, and the concept developed into the Dermalix wound-care product described in the paper.',
-        'The point of the case is not the product alone. It shows how a scientific result has to pass through patentability assessment, intellectual-property ownership decisions, market evaluation, regulatory planning and financing before it can become a viable technology-transfer opportunity.'
-      ],
-      tr: [
-        'Çalışmanın merkezindeki vaka, Ege Üniversitesi’nde biyouyumlu/biyobozunur matrisler ve resveratrol yüklü mikropartiküller üzerine çalışan araştırmacı ekibinin yara iyileştirme teknolojisini izliyor. Pazar araştırması ekibin diyabetik ayak ülserlerine yönelmesinde etkili oluyor ve fikir zamanla çalışmada anlatılan Dermalix yara bakım ürününe dönüşüyor.',
-        'Vakanın benim için asıl değeri yalnızca ortaya çıkan ürün değil. Bilimsel bir sonucun gerçek bir teknoloji transferi fırsatına dönüşmeden önce patentlenebilirlik, fikri mülkiyet sahipliği, pazar değerlendirmesi, regülasyon planlaması ve finansman basamaklarından geçmesi gerektiğini somut biçimde gösteriyor.'
+        'Seçmeli ders dönem çalışmam, Türkiye’de üniversite–ilaç sanayii iş birliğini teknoloji transferi açısından inceliyor. Temel soru, bilimsel bir sonuç laboratuvardan çıktıktan sonra nelerin gerçekleşmesi gerektiği: nasıl korunuyor, nasıl değerlendiriliyor, nasıl finanse ediliyor, nasıl geliştiriliyor ve sonunda ürünü hastalara ulaştırabilecek bir şirketle nasıl buluşuyor?',
+        'Bu geçişin merkezinde Teknoloji Transfer Ofisleri (TTO) yer alıyor. Dermis Pharma / Dermalix vakası çalışmaya somut bir zaman çizgisi kazandırıyor ve akademik bilim, fikri mülkiyet, girişimcilik, yatırım ve yerleşik bir ilaç şirketinin tek bir ticarileştirme yolunun parçaları hâline nasıl gelebileceğini gösteriyor.'
       ]
     },
     image: '/images/illustrations/patent-editorial.svg',
     caption: {
-      en: 'Editorial illustration of the research-to-commercialization pathway discussed in the case study; it is not a reproduction of the product or its intellectual property.',
-      tr: 'Vaka çalışmasında ele alınan araştırmadan ticarileşmeye geçiş yolunu anlatan özgün editoryal illüstrasyon; ürünün veya fikri mülkiyetinin bir reprodüksiyonu değildir.'
+      en: 'Original editorial illustration of the research-to-commercialization pathway studied in the term paper.',
+      tr: 'Dönem çalışmasında incelenen araştırmadan ticarileşmeye geçiş yolunun özgün editoryal illüstrasyonu.'
     }
   },
   {
-    eyebrow: '05 · TECHNOLOGY ASSESSMENT',
+    id: 'patent-framework',
+    short: { en: 'Patent framework', tr: 'Patent çerçevesi' },
+    eyebrow: '02 · WIPO / PCT / TÜRKPATENT / MARKET ACCESS',
     title: {
-      en: 'Good science is necessary, but commercial readiness requires a wider assessment',
-      tr: 'İyi bilim gerekli; fakat ticari hazırlık daha geniş bir değerlendirme istiyor'
+      en: 'Patent strategy creates time and options before commercial value is fully known',
+      tr: 'Patent stratejisi ticari değer tam bilinmeden önce zaman ve seçenek yaratır'
     },
     paragraphs: {
       en: [
-        'Before the university committed resources to the patent and commercialization route, the invention was evaluated across technical, market and strategic-financial dimensions. My paper discusses readiness, scientific feasibility, novelty, potential claim coverage, development needs, market size, competitive environment, inventor commitment and fit with the university’s IP strategy.',
-        'The case also references IPscore, an evaluation tool associated with the European Patent Office, as a way to structure that assessment. This part of the research was especially useful because it reframed “innovation” as something that can be interrogated systematically rather than accepted simply because the underlying science is interesting.'
+        'The paper first maps the international and Turkish patent framework. WIPO coordinates international intellectual-property cooperation, while the Patent Cooperation Treaty (PCT) offers a coordinated filing route across more than 150 member states. The paper emphasizes the practical value of the roughly 30–31 month international phase because market potential, scientific validation and financing can still be evolving during that period.',
+        'In Türkiye, patent protection is discussed through Industrial Property Law No. 6769 and TÜRKPATENT, together with novelty, inventive step, industrial applicability and first-to-file logic. The same section also considers CE marking and venture capital as complementary parts of the route to market: protection, regulatory access and financing have to be considered together rather than as isolated tasks.'
       ],
       tr: [
-        'Üniversite patent ve ticarileştirme sürecine kaynak ayırmadan önce teknoloji; teknik, pazar ve stratejik-finansal boyutlarda değerlendiriliyor. Çalışmamda teknoloji hazırlık düzeyi, bilimsel uygulanabilirlik, yenilik, olası claim kapsamı, geliştirme ihtiyacı, pazar büyüklüğü, rekabet ortamı, araştırmacı bağlılığı ve üniversitenin IP stratejisiyle uyum gibi kriterler ele alınıyor.',
-        'Vaka, bu değerlendirmeyi yapılandırmak için Avrupa Patent Ofisi ile ilişkilendirilen IPscore aracını da tartışıyor. Bu bölüm benim için özellikle öğreticiydi; çünkü “inovasyon” kavramını yalnızca bilimsel olarak ilginç bir fikir olmaktan çıkarıp sistematik biçimde sorgulanabilen bir teknoloji portföyü kararına dönüştürüyor.'
+        'Çalışmanın ilk kısmı uluslararası ve Türkiye’deki patent çerçevesini haritalıyor. WIPO uluslararası fikri mülkiyet iş birliğini koordine ederken Patent Cooperation Treaty (PCT), 150’den fazla üye devleti kapsayan koordine edilmiş bir başvuru yolu sağlıyor. Raporda yaklaşık 30–31 aylık uluslararası fazın pratik değeri özellikle vurgulanıyor; çünkü bu sürede pazar potansiyeli, bilimsel doğrulama ve finansman hâlâ gelişiyor olabilir.',
+        'Türkiye’de patent koruması 6769 sayılı Sınai Mülkiyet Kanunu ve TÜRKPATENT üzerinden; yenilik, buluş basamağı, sanayiye uygulanabilirlik ve first-to-file mantığıyla ele alınıyor. Aynı bölümde CE işaretlemesi ve venture capital da pazara giden yolun tamamlayıcı parçaları olarak inceleniyor: koruma, düzenleyici erişim ve finansman birbirinden kopuk görevler değil.'
+      ]
+    },
+    art: 'globe'
+  },
+  {
+    id: 'tto-ebiltem',
+    short: { en: 'TTO & EBİLTEM', tr: 'TTO & EBİLTEM' },
+    eyebrow: '03 · TECHNOLOGY TRANSFER OFFICE',
+    title: {
+      en: 'The TTO turns scientific potential into a structured commercialization pathway',
+      tr: 'TTO bilimsel potansiyeli yapılandırılmış bir ticarileştirme yoluna dönüştürür'
+    },
+    paragraphs: {
+      en: [
+        'A TTO is presented as much more than a patent-filing office. In the paper its role spans invention disclosure, IP strategy, market analysis, licensing, partner discovery, entrepreneurship, funding and negotiation. That breadth is important because researchers may understand the science deeply while commercialization introduces legal, strategic and financial questions that require different expertise.',
+        'EBİLTEM-TTO at Ege University is used as the institutional example. Its role in IP management, university–industry collaboration, R&D commercialization, funding guidance and entrepreneurship support illustrates how a TTO can bridge the gap between academic output and an investable, partner-ready technology.'
+      ],
+      tr: [
+        'TTO çalışmada yalnızca patent başvurusu yapan bir ofis olarak ele alınmıyor. Buluş bildirimi, IP stratejisi, pazar analizi, lisanslama, sektör ortağı bulma, girişimcilik, fon ve müzakere süreçleri aynı yapının parçası. Bu genişlik önemli; çünkü araştırmacı bilimi çok iyi bilse de ticarileştirme hukuki, stratejik ve finansal sorularla birlikte ilerliyor.',
+        'Ege Üniversitesi EBİLTEM-TTO kurumsal örnek olarak kullanılıyor. Fikri mülkiyet yönetimi, üniversite–sanayi iş birliği, Ar-Ge ticarileştirmesi, fon rehberliği ve girişimcilik desteği; bir TTO’nun akademik çıktıyı yatırım yapılabilir ve sektör ortağına hazır bir teknolojiye dönüştürürken nasıl köprü kurabildiğini gösteriyor.'
       ]
     },
     art: 'tto'
   },
   {
-    eyebrow: '06 · LICENSE, PARTNER OR SPIN-OFF?',
+    id: 'dermalix-science',
+    short: { en: 'Scientific origin', tr: 'Bilimsel köken' },
+    eyebrow: '04 · DERMALIX / SCIENTIFIC ORIGIN',
     title: {
-      en: 'Commercialization is a sequence of decisions, not a single hand-off',
-      tr: 'Ticarileştirme tek seferlik devir değil, birbirini izleyen kararlar dizisi'
+      en: 'A wound-healing research program becomes a technology-transfer opportunity',
+      tr: 'Yara iyileştirme araştırması teknoloji transferi fırsatına dönüşüyor'
     },
     paragraphs: {
       en: [
-        'The case compares early licensing, development partnership and university spin-off routes. Initial attempts to license or co-develop the technology did not resolve the risk of an early-stage healthcare product, so the researchers moved toward an entrepreneurial route and established Dermis Pharma.',
-        'This shift illustrates a general commercialization principle: the preferred route changes with technology maturity, financing needs and the risk appetite of potential partners. A spin-off can keep development moving when an external company is not yet ready to absorb the technical and regulatory uncertainty.'
+        'The central case follows four Ege University researchers who began studying wound-healing technologies based on biocompatible and biodegradable matrices and resveratrol-loaded microparticles. Market research drew attention to diabetic foot ulcers as a major health problem, creating a clearer connection between the laboratory concept and an unmet clinical need.',
+        'The Dermalix concept is described as a wound-care patch designed to support healing while the material gradually disintegrates or dissolves as tissue repairs. In the term paper, this stage is important because it marks the point where scientific novelty, patient need and market relevance begin to converge.'
       ],
       tr: [
-        'Vaka erken lisanslama, geliştirme ortağı bulma ve üniversite spin-off’u seçeneklerini karşılaştırıyor. Erken aşamadaki sağlık teknolojisinin riskleri nedeniyle ilk lisanslama ve ortak geliştirme girişimleri beklenen sonucu vermeyince araştırmacılar girişimcilik yoluna yönelerek Dermis Pharma’yı kuruyor.',
-        'Bu değişim ticarileştirme açısından genel bir prensibi gösteriyor: doğru model, teknolojinin olgunluğu, finansman ihtiyacı ve potansiyel ortakların risk iştahına göre değişiyor. Dışarıdaki bir şirket teknik ve düzenleyici belirsizliği henüz üstlenmek istemediğinde spin-off modeli geliştirme sürecinin devam etmesini sağlayabiliyor.'
+        'Vakanın merkezinde, biyouyumlu ve biyobozunur matrisler ile resveratrol yüklü mikropartiküller üzerinde yara iyileştirme teknolojileri geliştiren dört Ege Üniversitesi araştırmacısı bulunuyor. Pazar araştırması, diyabetik ayak ülserlerini önemli bir sağlık problemi olarak öne çıkarıyor ve laboratuvar fikriyle karşılanmamış klinik ihtiyaç arasındaki bağı güçlendiriyor.',
+        'Dermalix çalışmada, doku iyileştikçe zamanla parçalanabilen veya çözünebilen bir yara bakım yaması olarak anlatılıyor. Bu aşama benim dönem çalışmam açısından kritik; çünkü bilimsel yenilik, hasta ihtiyacı ve pazar gereksinimi ilk kez aynı noktada birleşmeye başlıyor.'
+      ]
+    },
+    image: '/images/illustrations/patent-science.svg',
+    caption: {
+      en: 'Representative scientific illustration of biomaterial research evolving toward a wound-care product concept.',
+      tr: 'Biyomalzeme araştırmasının yara bakım ürünü fikrine dönüşmesini anlatan temsilî bilimsel illüstrasyon.'
+    }
+  },
+  {
+    id: 'ip-protection',
+    short: { en: 'IP protection', tr: 'IP koruması' },
+    eyebrow: '05 · INVENTION DISCLOSURE / PATENT PROTECTION',
+    title: {
+      en: 'Patent protection becomes the bridge between a promising result and investable development',
+      tr: 'Patent koruması umut veren sonuç ile yatırım yapılabilir geliştirme arasında köprü kuruyor'
+    },
+    paragraphs: {
+      en: [
+        'By 2015, the research team recognized that commercialization would require robust intellectual-property protection. In healthcare, product development, regulatory work and clinical testing can be expensive and slow; a company is less likely to commit resources if the underlying technology cannot be protected with confidence.',
+        'EBİLTEM guided the team through invention disclosure and an initial patentability assessment. The paper then describes the decision to assign the IP rights to Ege University so that university resources could support patent expenses and the researchers could access more systematic TTO assistance. Patent protection is therefore framed not as paperwork, but as infrastructure for later investment and collaboration.'
+      ],
+      tr: [
+        'Araştırma ekibi 2015’e gelindiğinde ticarileştirme için güçlü fikri mülkiyet korumasının gerekli olduğunu fark ediyor. Sağlık teknolojilerinde ürün geliştirme, regülasyon ve klinik çalışmalar pahalı ve uzun süreçler; temel teknoloji güvenle korunamıyorsa bir şirketin bu riske kaynak ayırma isteği de azalıyor.',
+        'EBİLTEM ekibi buluş bildirimi ve ilk patentlenebilirlik değerlendirmesi boyunca yönlendiriyor. Raporda daha sonra fikri mülkiyet haklarının Ege Üniversitesi’ne devredilmesiyle patent masraflarının üniversite kaynaklarından karşılanabilmesi ve TTO desteğinin daha sistematik hâle gelmesi anlatılıyor. Bu nedenle patent, yalnızca evrak değil; sonraki yatırım ve iş birliğinin altyapısı olarak ele alınıyor.'
+      ]
+    },
+    art: 'patent'
+  },
+  {
+    id: 'technology-assessment',
+    short: { en: 'Commercial readiness', tr: 'Ticari hazırlık' },
+    eyebrow: '06 · TECHNICAL / MARKET / STRATEGIC ASSESSMENT',
+    title: {
+      en: 'Good science is necessary, but commercial readiness has to be tested systematically',
+      tr: 'İyi bilim gerekli; ancak ticari hazırlık sistematik biçimde test edilmeli'
+    },
+    paragraphs: {
+      en: [
+        'Before university resources were committed to the patent and commercialization pathway, the invention was assessed across three dimensions: technical, market and strategic-financial. The paper discusses readiness, scientific feasibility, novelty, potential patent-claim coverage, additional development needs, market size, competitive environment, value proposition, freedom to operate, inventor commitment and strategic fit.',
+        'EBİLTEM used IPscore, a European Patent Office evaluation tool referenced in the case study, to structure that review. This section was especially useful to me because it reframed innovation as something that can be compared, scored and prioritized rather than assumed to be commercially valuable simply because the science is interesting.'
+      ],
+      tr: [
+        'Üniversite patent ve ticarileştirme yoluna kaynak ayırmadan önce buluş üç boyutta değerlendiriliyor: teknik, pazar ve stratejik-finansal. Çalışmada hazırlık düzeyi, bilimsel uygulanabilirlik, yenilik, olası patent claim kapsamı, ek geliştirme ihtiyacı, pazar büyüklüğü, rekabet ortamı, değer önerisi, freedom to operate, araştırmacı bağlılığı ve stratejik uyum inceleniyor.',
+        'EBİLTEM bu değerlendirmeyi yapılandırmak için vaka çalışmasında Avrupa Patent Ofisi ile ilişkilendirilen IPscore aracından yararlanıyor. Bu bölüm benim için özellikle öğreticiydi; çünkü inovasyonu yalnızca “bilimsel olarak ilginç” olmaktan çıkarıp karşılaştırılabilen, puanlanabilen ve önceliklendirilebilen bir teknoloji portföyü kararına dönüştürüyor.'
+      ]
+    },
+    image: '/images/illustrations/patent-assessment.svg',
+    caption: {
+      en: 'Representative decision matrix for technical, market and strategic-financial technology assessment.',
+      tr: 'Teknik, pazar ve stratejik-finansal teknoloji değerlendirmesini anlatan temsilî karar matrisi.'
+    }
+  },
+  {
+    id: 'commercialization-options',
+    short: { en: 'License / partner / spin-off', tr: 'Lisans / ortak / spin-off' },
+    eyebrow: '07 · COMMERCIALIZATION OPTIONS',
+    title: {
+      en: 'Licensing, partnership and spin-off are different answers to the same development risk',
+      tr: 'Lisanslama, ortaklık ve spin-off aynı geliştirme riskine verilen farklı cevaplar'
+    },
+    paragraphs: {
+      en: [
+        'The team and TTO evaluated early licensing and development-partner routes, while also using the PCT process to preserve international flexibility. Those approaches did not initially solve the problem: pharmaceutical companies considered the technology too early and too risky, and cooperative R&D attempts also stalled.',
+        'The response was to change the commercialization model rather than abandon the science. The team moved toward a university spin-off so development could continue under an entrepreneurial structure until the technology became mature enough for stronger partners and larger capital commitments.'
+      ],
+      tr: [
+        'Ekip ve TTO erken lisanslama ile geliştirme ortağı bulma seçeneklerini değerlendirirken PCT süreciyle uluslararası esnekliği de koruyor. Ancak ilk aşamada bu yollar sorunu çözmüyor: ilaç şirketleri teknolojiyi çok erken ve riskli görüyor, ortak Ar-Ge girişimleri de ilerlemiyor.',
+        'Bunun üzerine bilimden vazgeçmek yerine ticarileştirme modeli değiştiriliyor. Teknoloji daha güçlü ortaklara ve daha büyük sermaye yatırımlarına hazır hâle gelene kadar geliştirmeyi sürdürebilmek için ekip üniversite spin-off modeline yöneliyor.'
       ]
     },
     art: 'spin'
   },
   {
-    eyebrow: '07 · FUNDING / INDUSTRY PARTNERSHIP',
+    id: 'dermis-pharma',
+    short: { en: 'Dermis Pharma', tr: 'Dermis Pharma' },
+    eyebrow: '08 · SPIN-OFF / FUNDING / TECHNOLOGY READINESS',
     title: {
-      en: 'Capital matters, but an industry partner can contribute more than capital',
-      tr: 'Sermaye önemli; ancak sektör ortağı yalnızca para sağlamıyor'
+      en: 'Public funding and a new company move the project from academic research toward product development',
+      tr: 'Kamu desteği ve yeni şirket projeyi akademik araştırmadan ürün geliştirmeye taşıyor'
     },
     paragraphs: {
       en: [
-        'The later stages of the case focus on the cost of clinical development, regulatory work and scale-up. Venture capital can provide financing and credibility, but the paper also emphasizes why a mature pharmaceutical partner may add manufacturing capacity, regulatory experience and market access.',
-        'The case ultimately reaches an industry partnership and market-entry phase, illustrating the full arc of technology transfer: research, IP protection, assessment, financing, organizational model, negotiation and commercialization. My main conclusion was that university–industry collaboration works best when the science and the business pathway mature together.'
+        'Through an entrepreneurship initiative linked with EBİLTEM, the team secured TRY 150,000 in public funding in 2015 and established Dermis Pharma. The stated development objective was to move the technology from TRL 4 toward TRL 6, bringing the wound-care concept closer to a stage where industrial development and market adoption would become realistic.',
+        'The paper also describes an equity-oriented relationship between the university and the spin-off, with the patented technology transferred into the new company structure while EBİLTEM continued supporting the researchers’ entrepreneurial development. The case therefore becomes an early example of university–startup collaboration within the Turkish innovation ecosystem.'
       ],
       tr: [
-        'Vakanın ilerleyen aşamalarında klinik geliştirme, düzenleyici süreçler ve ölçek büyütmenin maliyeti öne çıkıyor. Venture capital finansman ve görünürlük sağlayabilir; ancak olgun bir ilaç şirketi üretim altyapısı, regülasyon deneyimi ve pazar erişimi gibi yalnızca parayla karşılanamayacak kapasitelere de sahip.',
-        'Vaka sonunda sektör ortaklığı ve pazara çıkış aşamasına ilerliyor. Böylece teknoloji transferinin bütün yayı görünür hale geliyor: araştırma, IP koruması, değerlendirme, finansman, organizasyon modeli, müzakere ve ticarileştirme. Çalışmadan çıkardığım temel sonuç, üniversite–sanayi iş birliğinin bilimsel gelişim ile iş modelinin birlikte olgunlaştığı durumda daha güçlü olduğudur.'
+        'EBİLTEM bağlantılı bir girişimcilik programı üzerinden ekip 2015 yılında 150.000 TL kamu desteği alıyor ve Dermis Pharma’yı kuruyor. Geliştirme hedefi teknolojiyi TRL 4’ten TRL 6’ya taşıyarak yara bakım konseptini endüstriyel geliştirme ve pazar kabulünün daha gerçekçi olduğu bir seviyeye yaklaştırmak.',
+        'Çalışmada üniversite ile spin-off arasında equity odaklı bir ilişki de anlatılıyor; patentli teknoloji yeni şirket yapısına aktarılırken EBİLTEM araştırmacıların girişimcilik gelişimini desteklemeye devam ediyor. Böylece vaka, Türkiye’de üniversite–startup iş birliğinin erken örneklerinden biri hâline geliyor.'
+      ]
+    },
+    image: '/images/illustrations/patent-spinout.svg',
+    caption: {
+      en: 'Representative illustration of the transition from university research to a funded spin-off company.',
+      tr: 'Üniversite araştırmasından fonlanan bir spin-off şirkete geçişi anlatan temsilî illüstrasyon.'
+    }
+  },
+  {
+    id: 'global-ip-partnership',
+    short: { en: 'Global IP & pharma partner', tr: 'Global IP & ilaç ortağı' },
+    eyebrow: '09 · GLOBAL PATENT ROADMAP / VC / INDUSTRY PARTNER',
+    title: {
+      en: 'Global IP strategy and venture capital prepare the technology for a pharmaceutical partnership',
+      tr: 'Global IP stratejisi ve yatırım teknolojiyi ilaç sektörü ortaklığına hazırlıyor'
+    },
+    paragraphs: {
+      en: [
+        'As the PCT international phase approached its end, the team had to prioritize where national patent protection would create the most commercial value. The case describes using expert networks such as the Enterprise Europe Network, European IP Helpdesk and LESI to inform those choices, followed by filings in major markets across North America, Europe, Asia and other regions.',
+        'Venture-capital support helped advance development, clinical work and patent protection, but full-scale production, regulatory expansion and international sales required a partner with deeper infrastructure. The paper identifies Abdi İbrahim as that strategic pharmaceutical partner, bringing manufacturing capacity, regulatory knowledge and market reach to complement the academic and startup capabilities.'
+      ],
+      tr: [
+        'PCT uluslararası fazı sona yaklaşırken ekip hangi ülkelerde ulusal patent korumasının en yüksek ticari değeri yaratacağını seçmek zorunda kalıyor. Vaka; Enterprise Europe Network, European IP Helpdesk ve LESI gibi uzman ağlardan bilgi alınarak bu kararların desteklenmesini ve ardından Kuzey Amerika, Avrupa, Asya ve diğer önemli pazarlarda başvurular yapılmasını anlatıyor.',
+        'Venture capital desteği geliştirme, klinik çalışmalar ve patent korumasının ilerlemesine yardımcı oluyor; ancak tam ölçekli üretim, regülasyon genişlemesi ve uluslararası satış için daha güçlü altyapıya sahip bir sektör ortağı gerekiyor. Çalışmada Abdi İbrahim, üretim kapasitesi, düzenleyici bilgi ve pazar erişimiyle akademik ekip ve startup’ın yetkinliklerini tamamlayan stratejik ilaç şirketi olarak öne çıkıyor.'
+      ]
+    },
+    image: '/images/illustrations/patent-global-partnership.svg',
+    caption: {
+      en: 'Representative illustration of global IP prioritization, investment and pharmaceutical partnership.',
+      tr: 'Global IP önceliklendirmesi, yatırım ve ilaç sektörü ortaklığını anlatan temsilî illüstrasyon.'
+    }
+  },
+  {
+    id: 'market-impact',
+    short: { en: 'From science to market', tr: 'Bilimden pazara' },
+    eyebrow: '10 · TECHNOLOGY TRANSFER / MARKET IMPACT',
+    title: {
+      en: 'The final lesson: commercialization works when science, IP, capital and industry mature together',
+      tr: 'Son ders: bilim, IP, sermaye ve sanayi birlikte olgunlaştığında ticarileştirme güçlenir'
+    },
+    paragraphs: {
+      en: [
+        'In the conclusion, the paper follows the case into negotiations with Abdi İbrahim and the later division of roles: Dermis Pharma remained focused on research and development while the pharmaceutical partner received patent rights and supported the route to market. The paper reports that Dermalix was introduced in Türkiye in June 2021 after CE certification.',
+        'My main conclusion is broader than this single product. Technology transfer creates a structured link between university research and practical impact. Universities gain visibility, research impact and entrepreneurial capacity; industry gains access to new technologies and an innovation pipeline; and patients can ultimately benefit when scientific discoveries are translated into usable solutions.'
+      ],
+      tr: [
+        'Sonuç bölümünde çalışma, Abdi İbrahim ile yapılan görüşmelere ve daha sonra oluşan görev paylaşımına kadar ilerliyor: Dermis Pharma araştırma ve geliştirmeye odaklanırken ilaç şirketi patent haklarını alıyor ve pazara geçişi destekliyor. Raporda Dermalix’in CE sürecinin ardından Haziran 2021’de Türkiye’de pazara sunulduğu belirtiliyor.',
+        'Benim temel sonucum tek bir ürünün ötesinde. Teknoloji transferi, üniversite araştırması ile pratik etki arasında yapılandırılmış bir bağ kuruyor. Üniversite görünürlük, araştırma etkisi ve girişimcilik kapasitesi kazanırken; sanayi yeni teknolojilere ve inovasyon hattına erişiyor. Bilimsel keşifler kullanılabilir çözümlere dönüştüğünde nihai fayda hastalara ulaşabiliyor.'
       ]
     },
     art: 'industry'
