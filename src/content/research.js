@@ -203,7 +203,7 @@ export const researchStory = [
       ]
     },
     image: '/images/illustrations/spme-desorption-vector.svg',
-    caption: { en: 'Vector summary of the report's desorption-time screening; 1 minute produced the highest response.', tr: 'Rapordaki desorpsiyon süresi taramasının vektörel özeti; en yüksek yanıt 1 dakikada elde edildi.' }
+    caption: { en: 'Vector summary of the report’s desorption-time screening; 1 minute produced the highest response.', tr: 'Rapordaki desorpsiyon süresi taramasının vektörel özeti; en yüksek yanıt 1 dakikada elde edildi.' }
   },
   {
     id: 'final-workflow',
