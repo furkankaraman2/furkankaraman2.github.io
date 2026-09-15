@@ -54,3 +54,8 @@
 .mta-mini-flow strong{font:700 10px/1.4 var(--display)}
 .home-mta-copy .button.outline{border-color:#6f624e}
 .home-mta-copy .button.outline:hover{background:#2e2b23;border-color:#2e2b23}
+
+.feature-media.premium-illustration img,.home-doping-media.premium-illustration>img,.home-mta-media.premium-illustration>img{filter:none;object-fit:cover;object-position:center;image-rendering:auto}
+.feature-media.premium-illustration img{transform:translateY(var(--parallax-y,0)) scale(1.01)}
+.home-doping-media.premium-illustration>img,.home-mta-media.premium-illustration>img{transform:scale(1.015)}
+.home-doping-media.premium-illustration:before,.home-mta-media.premium-illustration:before,.feature-media.premium-illustration:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.04),transparent 45%)}
