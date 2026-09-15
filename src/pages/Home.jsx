@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Atom, Beaker, BookOpen, Check, Microscope, ShieldCheck } from 'lucide-react'
 import { copy, experiences, profile, researchMetrics, researchStory } from '../content/portfolio'
-import { ContactStrip, Eyebrow, LineArt, SectionHead } from '../site/components'
+import { ContactStrip, Eyebrow, LineArt, MtaAtlasImage, SectionHead } from '../site/components'
 import { t } from '../site/utils'
 
 export default function Home({ lang }) {
@@ -51,7 +51,7 @@ export default function Home({ lang }) {
     </section>
 
     <section className="home-mta-feature section-pad">
-      <div className="home-mta-media" data-reveal data-parallax><img src="/images/experience/mta/mta-report-atlas.webp" alt={lang==='en'?'ICP-OES instrumentation documented during the MTA placement':'MTA stajında belgelenen ICP-OES cihazı'}/><div className="mta-media-overlay"><LineArt variant="plasma"/><span>XRF · ICP-OES · ICP-MS · GRAVIMETRY · TGA</span></div></div>
+      <div className="home-mta-media" data-reveal data-parallax><MtaAtlasImage alt={lang==='en'?'Selected MTA report photographs spanning sample preparation, digestion, wet chemistry and coal characterization':'Numune hazırlama, çözündürme, yaş kimya ve kömür karakterizasyonunu gösteren seçili MTA rapor fotoğrafları'}/><div className="mta-media-overlay"><LineArt variant="plasma"/><span>XRF · ICP-OES · ICP-MS · GRAVIMETRY · TGA</span></div></div>
       <div className="home-mta-copy" data-reveal><Eyebrow>{lang==='en'?'GEOCHEMICAL & MATERIAL ANALYSIS':'JEOKİMYASAL & MALZEME ANALİZİ'}</Eyebrow><h2>{lang==='en'?'From coded geological samples to elemental and thermal characterization':'Kodlanmış jeolojik numuneden elementel ve termal karakterizasyona'}</h2><p>{t(mta.summary,lang)}</p><div className="mta-mini-flow">{[1,3,5,9].map(idx=><Link to={'/experience/mta#story-'+mta.sections[idx].id} key={mta.sections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(mta.sections[idx].short,lang)}</strong></Link>)}</div><Link className="button outline" to="/experience/mta">{lang==='en'?'Explore the ten-part MTA case study':'10 bölümlü MTA vaka çalışmasını incele'}<ArrowRight/></Link></div>
     </section>
 
