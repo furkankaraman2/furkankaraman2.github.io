@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { copy, experiences, researchStory } from '../content/portfolio'
-import { ContactStrip, Eyebrow, LineArt, MethodTags, NotFound, PageHero, SectionHead, StorySection } from '../site/components'
+import { ContactStrip, Eyebrow, LineArt, MethodTags, MtaAtlasImage, NotFound, PageHero, SectionHead, StorySection } from '../site/components'
 import { t } from '../site/utils'
 
 export function ExperienceIndex({lang}) {
@@ -20,7 +20,7 @@ export function ExperienceIndex({lang}) {
   </section>
   <section className="experience-mta-feature section-pad" data-reveal>
     <div className="mta-feature-copy"><Eyebrow>{lang==='en'?'FEATURED GEOCHEMICAL PLACEMENT':'ÖNE ÇIKAN JEOKİMYA STAJI'}</Eyebrow><h2>{t(mta.title,lang)}</h2><p>{t(mta.summary,lang)}</p><div className="mta-step-grid">{[1,3,5,9].map(idx=><div key={mta.sections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(mta.sections[idx].short,lang)}</strong><p>{t(mta.sections[idx].title,lang)}</p></div>)}</div><Link className="button outline" to="/experience/mta">{lang==='en'?'Open ten-part geochemical case study':'10 bölümlü jeokimya çalışmasını aç'}<ArrowRight/></Link></div>
-    <div className="mta-feature-media"><img src="/images/experience/mta/mta-report-atlas.webp" alt={lang==='en'?'Pellet pressing and fusion preparation documented during the MTA placement':'MTA stajında belgelenen pellet presleme ve fusion hazırlığı'}/><div><LineArt variant="xrf"/><span>XRF · ICP-OES · ICP-MS · WET CHEMISTRY · TGA</span></div></div>
+    <div className="mta-feature-media"><MtaAtlasImage alt={lang==='en'?'Selected MTA report photographs spanning XRF preparation, ICP work, wet chemistry and coal characterization':'XRF hazırlığı, ICP çalışmaları, yaş kimya ve kömür karakterizasyonunu gösteren seçili MTA rapor fotoğrafları'}/><div><LineArt variant="xrf"/><span>XRF · ICP-OES · ICP-MS · WET CHEMISTRY · TGA</span></div></div>
   </section>
   <section className="experience-list section-pad">{experiences.filter(e=>e.visible).sort((a,b)=>a.order-b.order).map((e,i)=><Link data-reveal to={e.route || '/experience/' + e.slug} className="experience-row" key={e.slug}><span>0{i+1}</span><div><small>{t(e.date,lang)}</small><h2>{t(e.title,lang)}</h2><p>{t(e.institution,lang)}</p></div><div className="row-tags">{e.methods.slice(0,4).map(m=><i key={m}>{m}</i>)}</div><ArrowRight/></Link>)}</section><ContactStrip lang={lang}/></>
 }
