@@ -20,3 +20,7 @@
 @media(max-width:1120px){.journey-grid{grid-template-columns:repeat(3,1fr)}.story-index{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:950px){.experience-research-feature{grid-template-columns:1fr}.journey-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.journey-grid,.experience-research-steps,.story-index{grid-template-columns:1fr}.journey-card{min-height:165px}.experience-research-steps div{min-height:135px}}
+
+@media(max-width:1050px){.experience-placement-feature{grid-template-columns:1fr}.placement-feature-media{min-height:430px}.home-doping-feature{grid-template-columns:1fr}.home-doping-media{max-width:760px;width:100%}}
+@media(max-width:760px){.placement-step-grid,.doping-mini-flow{grid-template-columns:1fr 1fr}.home-doping-media,.home-doping-media>img{min-height:390px;height:390px}.doping-story:before,.doping-story:after{display:none}}
+@media(max-width:520px){.placement-step-grid,.doping-mini-flow{grid-template-columns:1fr}.placement-feature-copy{padding:42px 21px}.placement-feature-media{min-height:330px}.home-doping-media,.home-doping-media>img{min-height:320px;height:320px}.doping-media-overlay{grid-template-columns:86px 1fr}.doping-media-overlay .line-art{min-height:80px}}

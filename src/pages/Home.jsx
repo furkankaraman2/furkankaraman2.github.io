@@ -6,6 +6,7 @@ import { t } from '../site/utils'
 
 export default function Home({ lang }) {
   const c=copy[lang]
+  const doping=experiences.find(x=>x.slug==='doping-control')
   return <>
     <section className="hero">
       <div className="hero-grid"/>
@@ -41,6 +42,11 @@ export default function Home({ lang }) {
     <section className="experience-teaser section-pad">
       <SectionHead eyebrow={c.labels.selected} title={c.home.expTitle} body={c.home.expBody}/>
       <div className="experience-grid">{experiences.filter(e=>e.visible).sort((a,b)=>a.order-b.order).map((e,i)=><Link data-reveal className={'experience-card ' + e.type} to={e.route || '/experience/' + e.slug} key={e.slug}><span className="card-num">0{i+1}</span><div className="icon-ring">{e.type==='research'?<Atom/>:e.type==='biological'?<Microscope/>:e.type==='geochemical'?<Beaker/>:<BookOpen/>}</div><small>{t(e.date,lang)}</small><h3>{t(e.title,lang)}</h3><h4>{t(e.institution,lang)}</h4><p>{t(e.summary,lang)}</p><span className="card-arrow"><ArrowRight/></span></Link>)}</div>
+    </section>
+
+    <section className="home-doping-feature section-pad">
+      <div className="home-doping-copy" data-reveal><Eyebrow>{lang==='en'?'ANTI-DOPING LABORATORY EXPERIENCE':'DOPİNG KONTROL LABORATUVAR DENEYİMİ'}</Eyebrow><h2>{lang==='en'?'One placement, multiple analytical languages':'Tek bir staj, birden fazla analitik yaklaşım'}</h2><p>{t(doping.summary,lang)}</p><div className="doping-mini-flow">{[0,3,7,9].map(idx=><Link to={'/experience/doping-control#story-'+doping.sections[idx].id} key={doping.sections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(doping.sections[idx].short,lang)}</strong></Link>)}</div><Link className="button outline" to="/experience/doping-control">{lang==='en'?'Explore the ten-part case study':'10 bölümlü vaka çalışmasını incele'}<ArrowRight/></Link></div>
+      <div className="home-doping-media" data-reveal data-parallax><img src="/images/experience/doping/lc-ms.webp" alt={lang==='en'?'LC-MS platform documented during the anti-doping placement':'Doping kontrol stajında belgelenen LC-MS platformu'}/><div className="doping-media-overlay"><LineArt variant="triplequad"/><span>LC-MS/MS · GC-MS/MS · LC-HRMS · GC-C-IRMS</span></div></div>
     </section>
 
     <section className="integrity section-pad" data-reveal><ShieldCheck/><div><Eyebrow>{c.labels.evidence}</Eyebrow><h2>{c.home.principlesTitle}</h2><p>{c.home.principlesBody}</p></div><div className="integrity-list"><span><Check/>{lang==='en'?'Report-grounded technical claims':'Rapor temelli teknik iddialar'}</span><span><Check/>{lang==='en'?'Original figures used selectively':'Orijinal görseller seçici kullanılır'}</span><span><Check/>{lang==='en'?'Raw reports remain unpublished':'Ham raporlar yayımlanmaz'}</span></div></section>

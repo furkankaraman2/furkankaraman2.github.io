@@ -7,20 +7,20 @@ export const dopingExperience = {
   institution: { en: 'Hacettepe University Turkish Doping Control Center', tr: 'Hacettepe Üniversitesi Türkiye Doping Kontrol Merkezi' },
   date: { en: 'Jul — Aug 2025', tr: 'Tem — Ağu 2025' },
   summary: {
-    en: 'A 20-day laboratory placement tracing anti-doping analysis from sample acceptance and wet-chemistry preparation to LC-MS/MS, GC-MS/MS, LC-HRMS and GC-C-IRMS workflows.',
-    tr: 'Numune kabulünden yaş kimya hazırlıklarına; LC-MS/MS, GC-MS/MS, LC-HRMS ve GC-C-IRMS iş akışlarına kadar doping kontrol analitiğinin bütün zincirini izlediğim 20 günlük laboratuvar stajı.'
+    en: 'A 20-day laboratory placement following the anti-doping analytical chain from sample reception and quality checks to sample preparation, targeted MS workflows, isotope-ratio analysis, EPO testing and hematological monitoring.',
+    tr: 'Numune kabulü ve kalite kontrollerinden numune hazırlamaya, hedefli MS iş akışlarına, izotop oranı analizine, EPO testlerine ve hematolojik izlemeye uzanan doping kontrol zincirini takip ettiğim 20 günlük laboratuvar stajı.'
   },
   role: {
-    en: 'I worked through sample-preparation and quality-control stages, followed how different substance classes were routed to LC- or GC-based methods, and studied how internal standards, calibration, screening and confirmation support trace-level decisions. The public case study intentionally explains the analytical logic without reproducing institutional SOPs step by step.',
-    tr: 'Numune hazırlama ve kalite kontrol basamaklarında çalıştım; farklı madde gruplarının neden LC veya GC tabanlı yöntemlere yönlendirildiğini, internal standard, kalibrasyon, tarama ve doğrulama adımlarının iz düzey kararları nasıl desteklediğini takip ettim. Kamuya açık bu vaka çalışmasında kurumsal SOP’leri adım adım paylaşmak yerine analitik mantığı anlatıyorum.'
+    en: 'I followed sample-reception, quality-control and preparation stages; observed how different prohibited-substance classes are routed to LC-MS/MS, GC-MS/MS, LC-HRMS and GC-C-IRMS workflows; and studied how controls, internal standards, calibration, confirmation and result interpretation support trace-level decisions. The public case study summarizes the analytical logic without reproducing institutional SOPs step by step.',
+    tr: 'Numune kabulü, kalite kontrol ve hazırlama basamaklarını takip ettim; farklı yasaklı madde gruplarının LC-MS/MS, GC-MS/MS, LC-HRMS ve GC-C-IRMS iş akışlarına nasıl yönlendirildiğini gözlemledim; kontrol örnekleri, internal standard, kalibrasyon, doğrulama ve sonuç yorumlamanın iz düzey kararları nasıl desteklediğini inceledim. Kamuya açık bu vaka çalışması kurumsal SOP’leri adım adım yayımlamak yerine analitik mantığı özetler.'
   },
   workflow: [
     { en: 'Sample reception', tr: 'Numune kabulü' },
-    { en: 'SG / pH quality checks', tr: 'Özgül ağırlık / pH kontrolleri' },
+    { en: 'SG / pH & QC', tr: 'Özgül ağırlık / pH ve QC' },
     { en: 'Aliquot & preparation', tr: 'Aliquotlama / hazırlama' },
     { en: 'Extraction / hydrolysis / derivatization', tr: 'Ekstraksiyon / hidroliz / türevlendirme' },
-    { en: 'LC- or GC-based screening', tr: 'LC veya GC tabanlı tarama' },
-    { en: 'Confirmation & reporting', tr: 'Doğrulama / raporlama' }
+    { en: 'LC / GC / HRMS screening', tr: 'LC / GC / HRMS taraması' },
+    { en: 'Confirmation & interpretation', tr: 'Doğrulama / yorumlama' }
   ],
   methods: [
     'LC-MS/MS',
@@ -30,120 +30,214 @@ export const dopingExperience = {
     'HPLC',
     'SPE',
     'MSTFA derivatization',
-    'Internal-standard calibration'
+    'Internal-standard calibration',
+    'SAR-PAGE / Immunoblotting',
+    'Athlete Biological Passport'
   ],
   sections: [
     {
-      eyebrow: '03 · CONTEXT / LABORATORY ENVIRONMENT',
+      id: 'laboratory-chain',
+      short: { en: 'Laboratory chain', tr: 'Laboratuvar zinciri' },
+      eyebrow: '01 · CONTEXT / ANTI-DOPING WORKFLOW',
       title: {
-        en: 'Trace analysis inside a regulated anti-doping workflow',
-        tr: 'Düzenlenmiş bir doping kontrol sisteminde iz düzey analiz'
+        en: 'Anti-doping analysis is a controlled evidence chain, not a single instrument result',
+        tr: 'Doping kontrol analizi tek bir cihaz sonucundan değil, kontrollü bir kanıt zincirinden oluşur'
       },
       paragraphs: {
         en: [
-          'The internship took place at Hacettepe University Turkish Doping Control Center, where athlete samples enter an anonymized analytical workflow. The report describes urine and blood samples as following different paths, while urine is divided into aliquots according to the prohibited-substance groups that need to be screened.',
-          'What made this environment different from a teaching laboratory was the importance of traceability and decision support. A result is not built from a single peak: sample identity, acceptance checks, controls, internal standards, calibration, screening and confirmation all form part of the analytical evidence.'
+          'My 20-day placement at Hacettepe University Turkish Doping Control Center showed me how athlete samples move through a regulated analytical system. Urine and blood follow different pathways, while urine is divided into aliquots according to the prohibited-substance groups that need to be screened. The analytical route begins well before an LC-MS or GC-MS injection.',
+          'Across the placement I followed the larger sequence from sample reception and preparation through screening, instrumental analysis, internal-standard calibration, confirmation and result reporting. This was the first time I could see several advanced techniques—GC-MS/MS, LC-MS/MS, LC-HRMS and GC-C-IRMS—as connected parts of one laboratory decision process.'
         ],
         tr: [
-          'Stajımı sporcu numunelerinin kimliksizleştirilmiş bir analitik iş akışına girdiği Hacettepe Üniversitesi Türkiye Doping Kontrol Merkezi’nde yaptım. Raporumda idrar ve kan numunelerinin farklı süreçlere ayrıldığı; idrar numunelerinin ise taranacak yasaklı madde gruplarına göre farklı aliquot’lara bölündüğü anlatılıyor.',
-          'Bu ortamı eğitim laboratuvarından ayıran temel nokta izlenebilirlik ve karar güvenilirliğiydi. Sonuç tek bir kromatografik veya MS pikinden ibaret değildi; numune kabulü, kalite kontrolleri, internal standardlar, kalibrasyon, tarama ve gerektiğinde doğrulama aynı analitik kanıt zincirinin parçalarıydı.'
+          'Hacettepe Üniversitesi Türkiye Doping Kontrol Merkezi’ndeki 20 günlük stajım, sporcu numunelerinin düzenlenmiş bir analitik sistem içinde nasıl ilerlediğini görmemi sağladı. İdrar ve kan numuneleri farklı yollardan ilerlerken, idrar örnekleri taranacak yasaklı madde gruplarına göre farklı aliquot’lara ayrılıyordu. Analitik süreç bir LC-MS veya GC-MS enjeksiyonundan çok daha önce başlıyordu.',
+          'Staj boyunca numune kabulü ve hazırlamadan taramaya, cihazlı analizden internal-standard kalibrasyonuna, doğrulama ve sonuç raporlamaya kadar daha büyük zinciri takip ettim. GC-MS/MS, LC-MS/MS, LC-HRMS ve GC-C-IRMS gibi ileri teknikleri ilk kez tek bir laboratuvar karar sürecinin birbirini tamamlayan parçaları olarak görebildim.'
         ]
       },
       art: 'doping'
     },
     {
-      eyebrow: '04 · SAMPLE INTEGRITY',
+      id: 'front-end-quality',
+      short: { en: 'Front-end QC', tr: 'Ön kalite kontrol' },
+      eyebrow: '02 · SAMPLE INTEGRITY / FRONT-END QC',
       title: {
-        en: 'Quality control begins before extraction',
-        tr: 'Kalite kontrol ekstraksiyondan önce başlar'
+        en: 'Specific gravity, pH and control checks establish analytical discipline before extraction',
+        tr: 'Özgül ağırlık, pH ve kontrol ölçümleri ekstraksiyondan önce analitik disiplini kurar'
       },
       paragraphs: {
         en: [
-          'Specific-gravity and pH checks introduced me to the front end of the workflow. The report records temperature-controlled handling, instrument checks and routine QC measurements before samples progress to the more complex analytical stages.',
-          'These measurements are chemically simple compared with mass spectrometry, but they taught an important lesson: high-end instrumentation cannot compensate for poorly controlled sample handling. Reproducible trace analysis starts with consistent preparation, documented conditions and a clear chain of custody.'
+          'The front end of the workflow included specific-gravity and pH measurements, temperature checks, instrument verification and routine quality-control samples. These measurements are chemically simpler than mass spectrometry, yet they are essential because a trace-level method is only as reliable as the sample handling and verification that precede it.',
+          'This part of the placement reinforced a fundamental laboratory principle for me: expensive instrumentation cannot compensate for inconsistent preparation. Reproducible analysis begins with controlled conditions, clean handling, verified instruments and documented QC behavior.'
         ],
         tr: [
-          'Özgül ağırlık ve pH kontrolleri, iş akışının cihaz öncesindeki kalite kontrol bölümünü görmemi sağladı. Raporda sıcaklığın takip edildiği, cihaz kontrollerinin yapıldığı ve numuneler daha karmaşık analizlere ilerlemeden önce QC ölçümlerinin uygulandığı bir düzen bulunuyor.',
-          'Bu ölçümler kütle spektrometrisine göre kimyasal olarak daha basit görünse de önemli bir prensibi gösterdi: ileri seviye cihaz, kontrolsüz numune işlemenin yarattığı hatayı sonradan düzeltemez. İz düzey analizin güvenilirliği; tutarlı hazırlama, kayıtlı koşullar ve izlenebilir numune yönetimiyle başlıyor.'
+          'İş akışının ön bölümünde özgül ağırlık ve pH ölçümleri, sıcaklık takibi, cihaz doğrulaması ve rutin kalite kontrol örnekleri yer alıyordu. Bu ölçümler kütle spektrometrisine göre daha basit görünse de iz düzey bir yöntemin güvenilirliği, cihaz öncesindeki numune yönetimi ve doğrulama kadar güçlü olabilir.',
+          'Bu bölüm bende temel bir laboratuvar prensibini pekiştirdi: pahalı ve ileri bir cihaz, tutarsız numune hazırlamanın yarattığı problemi sonradan telafi edemez. Tekrarlanabilir analiz; kontrollü koşullar, temiz çalışma, doğrulanmış cihaz ve kayıtlı QC davranışıyla başlar.'
         ]
       },
       art: 'qc'
     },
     {
-      eyebrow: '05 · SAMPLE PREPARATION',
+      id: 'controls-calibration',
+      short: { en: 'Controls & calibration', tr: 'Kontrol ve kalibrasyon' },
+      eyebrow: '03 · QUALITY SYSTEM / CALIBRATION',
       title: {
-        en: 'Preparation chemistry changes with the analyte class',
-        tr: 'Numune hazırlama kimyası hedef madde grubuna göre değişiyor'
+        en: 'Positive and negative controls, calibration levels and internal standards surround the unknown sample with evidence',
+        tr: 'Pozitif-negatif kontroller, kalibrasyon seviyeleri ve internal standard bilinmeyen numuneyi kanıt sistemiyle çevreler'
       },
       paragraphs: {
         en: [
-          'The report follows multiple analytical groups rather than one universal preparation protocol. Depending on the target class, the workflow can involve enzymatic hydrolysis, liquid-phase extraction, solid-phase extraction or derivatization before instrumental analysis. Small-peptide analysis, for example, is paired with SPE before LC-MS/MS, while selected GC workflows use derivatization to improve chromatographic suitability.',
-          'Working across these preparations changed how I think about selectivity. Sample preparation is not a preliminary chore that happens before the “real” analysis; it is one of the mechanisms that determines what reaches the detector, what interferences are removed and how reproducible the final measurement can be.'
+          'The report uses a structured control language: PUC for positive urine control, NUC for negative urine control, calibration levels, quality-control samples, blank matrix and internal standards. Seeing these elements together made it clear that a reliable result is never interpreted from an unknown sample in isolation.',
+          'Internal standards and calibration help account for preparation losses and variation in instrumental response, while positive and negative controls show whether the analytical batch behaves as expected. For me, this transformed calibration from a purely mathematical exercise into a central part of method architecture and result credibility.'
         ],
         tr: [
-          'Raporda tek bir genel hazırlama reçetesi yerine farklı analit gruplarına göre ayrılan çok sayıda iş akışı bulunuyor. Hedef madde grubuna bağlı olarak enzimatik hidroliz, sıvı faz ekstraksiyonu, katı faz ekstraksiyonu veya türevlendirme gibi basamaklar cihaz analizinden önce devreye giriyor. Örneğin küçük peptitlerde LC-MS/MS öncesinde SPE kullanılırken, bazı GC tabanlı yöntemlerde bileşiği kromatografiye uygun hale getirmek için türevlendirme uygulanıyor.',
-          'Bu çeşitlilik, selectivity kavramına bakışımı değiştirdi. Numune hazırlama “asıl analizden önce yapılan” yardımcı bir işlem değil; dedektöre neyin ulaşacağını, hangi girişimlerin uzaklaştırılacağını ve sonucun ne kadar tekrarlanabilir olacağını belirleyen yöntem bileşenlerinden biri.'
+          'Raporda yapılandırılmış bir kontrol dili bulunuyor: pozitif idrar kontrolü için PUC, negatif idrar kontrolü için NUC, kalibrasyon seviyeleri, kalite kontrol örnekleri, blank matrix ve internal standardlar. Bu unsurları aynı sistem içinde görmek, güvenilir bir sonucun bilinmeyen numunenin sinyalinden tek başına yorumlanmadığını açık biçimde gösterdi.',
+          'Internal standard ve kalibrasyon, numune hazırlama kayıpları ile cihaz yanıtındaki değişkenliği kontrol etmeye yardımcı olurken pozitif ve negatif kontroller analitik batch’in beklendiği gibi çalışıp çalışmadığını gösteriyor. Böylece kalibrasyonu yalnızca matematiksel bir işlem değil, yöntemin mimarisinin ve sonuç güvenilirliğinin merkezi bir parçası olarak görmeye başladım.'
         ]
       },
-      art: 'sample'
+      art: 'calibration'
     },
     {
-      eyebrow: '06 · INSTRUMENTATION',
+      id: 'lc-msms',
+      short: { en: 'LC-MS/MS', tr: 'LC-MS/MS' },
+      eyebrow: '04 · TARGETED LC-MS/MS WORKFLOWS',
       title: {
-        en: 'Choosing LC, GC, high-resolution or isotope-ratio MS depends on the analytical question',
-        tr: 'LC, GC, yüksek çözünürlüklü veya izotop oranlı MS seçimi analitik soruya bağlı'
+        en: 'LC-MS/MS links liquid-phase separation to selective precursor-to-product ion monitoring',
+        tr: 'LC-MS/MS sıvı faz ayırmayı seçici precursor-product iyon takibiyle birleştirir'
       },
       paragraphs: {
         en: [
-          'The placement exposed me to LC-MS/MS, GC-MS/MS and LC-HRMS as complementary platforms rather than interchangeable instruments. LC-based workflows are particularly useful for compounds that are non-volatile, polar or better handled in liquid-phase separations; GC workflows become valuable for volatile species or compounds rendered GC-compatible through derivatization.',
-          'GC-C-IRMS added a different type of question. Instead of asking only whether an endogenous steroid is present, isotope-ratio analysis can help examine whether its carbon-isotope signature is consistent with an endogenous or synthetic source. Seeing these platforms side by side connected instrument choice to molecular properties and to the evidence required by the method.'
+          'LC-MS/MS was used in the report for several prohibited-substance groups, including workflows for narcotics, stimulants, beta blockers, diuretics, masking agents and selected hormone or metabolic modulators. Depending on the analytical group, preparation included pH adjustment, extraction, internal-standard addition, centrifugation, evaporation or reconstitution before vial preparation.',
+          'The instrumental logic was equally important: compounds are first separated chromatographically, ionized—commonly by ESI—and filtered by the first quadrupole according to precursor m/z. Collision-induced fragmentation then generates product ions that are measured by the second quadrupole. This precursor-to-fragment relationship provides both selectivity and quantitative information in a complex biological matrix.'
         ],
         tr: [
-          'Stajda LC-MS/MS, GC-MS/MS ve LC-HRMS cihazlarını birbirinin alternatifi olan sistemler gibi değil, farklı kimyasal sorulara cevap veren tamamlayıcı platformlar olarak gördüm. Uçucu olmayan, polar veya sıvı faz ayırmaya daha uygun bileşiklerde LC tabanlı yollar öne çıkarken; uçucu ya da türevlendirme sonrası GC’ye uygun hale getirilen bileşiklerde gaz kromatografisi temelli yöntemler önem kazanıyor.',
-          'GC-C-IRMS ise soruyu farklı bir düzleme taşıyordu. Burada yalnızca “endojen steroid var mı?” sorusu değil, karbon izotop imzasının endojen veya sentetik kökenle uyumlu olup olmadığı da değerlendirilebiliyor. Bu cihazları aynı staj içinde görmek, platform seçimini bileşiğin fizikokimyasal özellikleri ve ihtiyaç duyulan kanıt türüyle ilişkilendirmemi sağladı.'
+          'Raporda LC-MS/MS; narkotikler, stimulantlar, beta blockerlar, diüretikler, masking agent’lar ve bazı hormon veya metabolik modülatörleri içeren farklı yasaklı madde gruplarında kullanılıyordu. Analitik gruba bağlı olarak pH ayarlama, ekstraksiyon, internal-standard ekleme, santrifüjleme, evaporasyon veya yeniden çözme gibi hazırlık basamakları vial hazırlığından önce devreye giriyordu.',
+          'Cihazın çalışma mantığı da aynı derecede önemliydi: bileşikler önce kromatografik olarak ayrılıyor, genellikle ESI ile iyonlaştırılıyor ve ilk quadrupole’da precursor m/z değerine göre seçiliyordu. Collision-induced fragmentation sonrasında oluşan product ion’lar ikinci quadrupole’da ölçülüyordu. Bu precursor-fragment ilişkisi karmaşık biyolojik matrikste hem seçicilik hem de nicel bilgi sağlıyor.'
         ]
       },
       image: '/images/experience/doping/lc-ms.webp',
       caption: {
-        en: 'LC–MS platform photographed during my internship at the Doping Control Center.',
-        tr: 'Doping Kontrol Merkezi stajım sırasında fotoğrafladığım LC–MS platformu.'
+        en: 'LC-MS platform documented during my placement at the Turkish Doping Control Center.',
+        tr: 'Türkiye Doping Kontrol Merkezi stajım sırasında belgelediğim LC-MS platformu.'
       }
     },
     {
-      eyebrow: '07 · CALIBRATION / QUALITY SYSTEM',
+      id: 'gc-msms',
+      short: { en: 'GC-MS/MS', tr: 'GC-MS/MS' },
+      eyebrow: '05 · GC-MS/MS / DERIVATIZATION CHEMISTRY',
       title: {
-        en: 'Internal standards and controls surround the sample with evidence',
-        tr: 'Internal standard ve kontroller numuneyi çevreleyen bir kanıt sistemi kuruyor'
+        en: 'Hydrolysis, extraction and derivatization make selected doping analytes compatible with GC-MS/MS',
+        tr: 'Hidroliz, ekstraksiyon ve türevlendirme seçili doping analitlerini GC-MS/MS için uygun hale getirir'
       },
       paragraphs: {
         en: [
-          'The report uses a structured set of controls and calibration terminology, including negative and positive controls, calibration levels, quality-control samples and internal standards. Following these concepts in a real workflow made calibration feel less like a mathematical afterthought and more like part of the method architecture.',
-          'Internal-standard calibration is especially important in complex matrices because losses during preparation and variability in instrumental response can otherwise distort quantification. The internship helped me understand why trace-level conclusions are supported by the behavior of standards and controls around the unknown sample.'
+          'The GC-MS/MS workflows made the chemistry of sample preparation particularly visible. Analyses for stimulants, narcotics, beta blockers, low-level anabolic agents and endogenous steroids can involve enzymatic hydrolysis, organic extraction and derivatization before chromatographic separation.',
+          'MSTFA derivatization is especially instructive because polar functional groups such as hydroxyl, amino or carboxylic-acid groups can reduce volatility and compromise GC behavior. Silylation makes selected analytes less polar and more volatile, after which GC separation is followed by tandem-MS precursor selection, collision-induced fragmentation and product-ion detection. The workflow showed me directly how sample-preparation chemistry and instrument performance depend on one another.'
         ],
         tr: [
-          'Raporda negatif ve pozitif kontroller, farklı kalibrasyon seviyeleri, kalite kontrol numuneleri ve internal standardlar için yapılandırılmış bir terminoloji kullanılıyor. Bu kavramları gerçek bir iş akışında görmek, kalibrasyonu sonradan yapılan matematiksel bir işlem değil, yöntemin tasarımının parçası olarak anlamamı sağladı.',
-          'Özellikle kompleks matrislerde internal-standard kalibrasyonu; numune hazırlama sırasında oluşabilecek kayıplar ve cihaz yanıtındaki değişkenlik nedeniyle önem kazanıyor. Staj, iz düzey bir sonucun yalnızca bilinmeyen numunenin sinyaline değil, onun çevresindeki standard ve kontrollerin davranışına da dayandığını görmemi sağladı.'
+          'GC-MS/MS iş akışlarında numune hazırlama kimyası çok daha görünür hale geliyordu. Stimulant, narkotik ve beta blocker analizlerinin yanı sıra düşük düzey anabolik ajanlar ve endojen steroidlerin değerlendirilmesinde enzimatik hidroliz, organik ekstraksiyon ve türevlendirme basamakları kullanılabiliyordu.',
+          'MSTFA ile türevlendirme özellikle öğreticiydi; hidroksil, amino veya karboksilik asit gibi polar fonksiyonel gruplar uçuculuğu azaltarak GC davranışını bozabilir. Silylation seçili analitleri daha az polar ve daha uçucu hale getirir; ardından GC ayırması tandem-MS precursor seçimi, collision-induced fragmentation ve product-ion tespitiyle tamamlanır. Bu iş akışı numune hazırlama kimyası ile cihaz performansının birbirinden ayrı düşünülemeyeceğini doğrudan gösterdi.'
         ]
       },
-      art: 'qc'
+      art: 'triplequad'
     },
     {
-      eyebrow: '08 · WHAT I TOOK FROM THE PLACEMENT',
+      id: 'peptides-hrms',
+      short: { en: 'Peptides & HRMS', tr: 'Peptitler ve HRMS' },
+      eyebrow: '06 · SPE / SMALL PEPTIDES / HIGH-RESOLUTION MS',
       title: {
-        en: 'A complete analytical chain matters more than any single instrument',
-        tr: 'Tek bir cihazdan çok, bütün analitik zincirin güvenilirliği önemli'
+        en: 'SPE-based peptide preparation and LC-HRMS broaden the analytical window beyond routine targeted screening',
+        tr: 'SPE tabanlı peptit hazırlama ve LC-HRMS rutin hedefli taramanın ötesinde analitik pencereyi genişletir'
       },
       paragraphs: {
         en: [
-          'Across the 20-day placement I followed the larger sequence from reception and preparation through screening, instrument analysis, internal-standard calibration, confirmation and result reporting. The experience strengthened my ability to read a method as a connected system: matrix, preparation chemistry, separation, detector, calibration and quality controls all influence one another.',
-          'That mindset is the most transferable part of the internship. It is directly relevant to analytical R&D because a robust method depends not only on sensitivity, but also on traceability, selectivity, precision and the ability to explain why the result should be trusted.'
+          'Small-peptide analysis introduced a different preparation strategy. Solid Phase Extraction was used to condition, load, wash and elute the target fraction before evaporation, reconstitution and LC-MS/MS analysis. The workflow demonstrated how selective cleanup and preconcentration can be built into sample preparation before the instrument ever sees the sample.',
+          'LC-HRMS added another analytical dimension. High-resolution mass analysis can distinguish ions with very similar nominal m/z values by measuring exact mass with ppm-level accuracy. The report discusses TOF and Orbitrap principles and the value of high resolution for complex biological matrices, where accurate mass can reduce false positives and support broader screening or metabolite identification.'
         ],
         tr: [
-          'Yirmi günlük staj boyunca numune kabulü ve hazırlamadan taramaya, cihaz analizinden internal-standard kalibrasyonuna, doğrulama ve raporlamaya uzanan bütün diziyi takip ettim. Deneyim, yöntemi birbirine bağlı bir sistem olarak okumamı güçlendirdi: matris, hazırlama kimyası, ayırma, dedektör, kalibrasyon ve kalite kontrolleri birbirini doğrudan etkiliyor.',
-          'Bu stajdan taşıdığım en önemli yaklaşım da bu oldu. Analitik Ar-Ge açısından sağlam bir yöntem yalnızca yüksek sensitivity ile değil; izlenebilirlik, selectivity, precision ve sonucun neden güvenilir olduğunun açıklanabilmesiyle değer kazanıyor.'
+          'Küçük peptit analizi farklı bir hazırlama stratejisi gösterdi. Solid Phase Extraction ile kolon kondisyonlama, sample loading, yıkama ve elüsyon basamakları uygulanıyor; ardından evaporasyon, yeniden çözme ve LC-MS/MS analizi gerçekleştiriliyordu. Bu iş akışı seçici matriks temizleme ve zenginleştirmenin cihazdan önce numune hazırlama içine nasıl yerleştirilebildiğini gösterdi.',
+          'LC-HRMS ise analize başka bir boyut ekliyordu. Yüksek çözünürlüklü kütle analizi, nominal m/z değerleri birbirine çok yakın iyonları ppm düzeyindeki hassas kütle ölçümüyle ayırt edebilir. Raporda TOF ve Orbitrap prensipleri ile accurate mass bilgisinin karmaşık biyolojik matrikste yanlış pozitifleri azaltma, daha geniş tarama ve metabolit tanımlama açısından önemi ele alındı.'
         ]
       },
-      art: 'ms'
+      art: 'hrms'
+    },
+    {
+      id: 'hplc-irms-prep',
+      short: { en: 'HPLC → IRMS prep', tr: 'HPLC → IRMS hazırlık' },
+      eyebrow: '07 · MULTI-DAY PURIFICATION / GC-C-IRMS PREPARATION',
+      title: {
+        en: 'Isotope-ratio analysis depends on extensive cleanup before the final measurement',
+        tr: 'İzotop oranı analizi final ölçümden önce kapsamlı bir saflaştırmaya dayanır'
+      },
+      paragraphs: {
+        en: [
+          'One of the most extensive workflows in the report was the multi-day preparation preceding GC-C-IRMS. Urine samples undergo cleanup and extraction, enzymatic hydrolysis and evaporation before target steroid fractions are isolated and purified by HPLC. Fraction collection, drying, derivatization and—in selected fractions—an additional purification stage can extend the workflow across several days.',
+          'The purpose is analytical rather than procedural complexity for its own sake: isotope-ratio measurement requires a clean target fraction so that unrelated matrix components do not distort the carbon-isotope signal. This section was a strong reminder that the sophistication of a final detector does not remove the need for careful upstream chemistry.'
+        ],
+        tr: [
+          'Rapordaki en kapsamlı iş akışlarından biri GC-C-IRMS öncesindeki çok günlük hazırlık süreciydi. İdrar numuneleri temizleme ve ekstraksiyon, enzimatik hidroliz ve evaporasyon basamaklarından geçiyor; hedef steroid fraksiyonları daha sonra HPLC ile izole edilip saflaştırılıyordu. Fraction collection, kurutma, türevlendirme ve seçili fraksiyonlarda ek purification adımları süreci birkaç güne yayabiliyordu.',
+          'Bu uzun sürecin amacı yalnızca prosedürü karmaşıklaştırmak değildi; isotope-ratio measurement için hedef fraksiyonun mümkün olduğunca temiz olması gerekir, aksi halde matriks bileşenleri karbon izotop sinyalini etkileyebilir. Bu bölüm, final dedektör ne kadar gelişmiş olursa olsun yukarı akış kimyasının öneminin ortadan kalkmadığını açık biçimde gösterdi.'
+        ]
+      },
+      art: 'hplc'
+    },
+    {
+      id: 'isotope-ratio',
+      short: { en: 'GC-C-IRMS', tr: 'GC-C-IRMS' },
+      eyebrow: '08 · ISOTOPE-RATIO MASS SPECTROMETRY',
+      title: {
+        en: 'GC-C-IRMS asks not only whether a steroid is present, but whether its isotopic origin is consistent with endogenous production',
+        tr: 'GC-C-IRMS yalnızca steroidin varlığını değil, izotopik kökeninin endojen üretimle uyumunu da sorgular'
+      },
+      paragraphs: {
+        en: [
+          'After purification, compounds are separated by GC and passed through a combustion interface that converts the organic molecules into simple gases—especially CO₂ for carbon-isotope analysis. The isotope-ratio mass spectrometer then measures stable-isotope relationships such as ¹³C/¹²C with very high precision.',
+          'This is analytically different from conventional targeted MS. In anti-doping work, the isotopic signature can help assess whether a steroid that is naturally present in the body is consistent with endogenous production or with an exogenous synthetic source. Steroid-profile information such as testosterone, epitestosterone, androsterone, etiocholanolone and 5α/5β-diol can therefore be interpreted together with longitudinal and isotope-ratio evidence rather than as a simple present/absent result.'
+        ],
+        tr: [
+          'Saflaştırma sonrasında bileşikler GC ile ayrılıyor ve organik molekülleri basit gazlara—karbon izotop analizi için özellikle CO₂’ye—dönüştüren combustion interface üzerinden geçiriliyor. Isotope-ratio mass spectrometer daha sonra ¹³C/¹²C gibi kararlı izotop oranlarını çok yüksek hassasiyetle ölçüyor.',
+          'Bu yaklaşım klasik hedefli MS analizinden farklı bir analitik soru soruyor. Doping kontrolünde izotopik imza, vücutta doğal olarak bulunan bir steroidin endojen üretimle mi yoksa dışarıdan verilen sentetik bir kaynakla mı uyumlu olduğunu değerlendirmeye yardımcı olabilir. Testosterone, epitestosterone, androsterone, etiocholanolone ve 5α/5β-diol gibi steroid-profile bileşenleri bu nedenle longitudinal ve isotope-ratio kanıtıyla birlikte yorumlanabilir.'
+        ]
+      },
+      art: 'isotope'
+    },
+    {
+      id: 'epo-analysis',
+      short: { en: 'EPO analysis', tr: 'EPO analizi' },
+      eyebrow: '09 · ERYTHROPOIETIN / PROTEIN ANALYTICS',
+      title: {
+        en: 'EPO testing shifts from chromatographic mass spectrometry to electrophoresis, immunoblotting and chemiluminescence',
+        tr: 'EPO testi kromatografik kütle spektrometrisinden elektroforez, immunoblotting ve kemilüminesansa geçer'
+      },
+      paragraphs: {
+        en: [
+          'Erythropoietin analysis showed that an anti-doping laboratory cannot rely on one analytical platform for every target. The report describes immunopurification and selective preconcentration before SAR-PAGE, where erythropoiesis-stimulating agents are separated according to electrophoretic behavior.',
+          'After electrophoresis, proteins are transferred to a PVDF membrane by immunoblotting, recognized with an anti-human EPO antibody system and visualized through chemiluminescence. Images are then evaluated with the GAS-EPO software. For me, this was a useful contrast with MS workflows: the target molecule changes, so the analytical language changes from chromatography and m/z to protein separation, antibody recognition and band-pattern interpretation.'
+        ],
+        tr: [
+          'Eritropoietin analizi, doping kontrol laboratuvarının her hedef için tek bir analitik platforma dayanamayacağını gösterdi. Raporda SAR-PAGE öncesinde immunopurification ve seçici preconcentration uygulanıyor; ardından erythropoiesis-stimulating agent’lar elektroforetik davranışlarına göre ayrılıyor.',
+          'Elektroforez sonrasında proteinler immunoblotting ile PVDF membrane üzerine aktarılıyor, anti-human EPO antikor sistemiyle tanınıyor ve kemilüminesansla görünür hale getiriliyor. Görüntüler daha sonra GAS-EPO yazılımıyla değerlendiriliyor. Bu bölüm MS iş akışlarına güçlü bir karşılaştırma sundu: hedef molekül değiştiğinde analitik dil de chromatography ve m/z’den protein ayrımı, antikor tanıma ve band-pattern yorumuna geçiyor.'
+        ]
+      },
+      art: 'electrophoresis'
+    },
+    {
+      id: 'athlete-passport',
+      short: { en: 'Athlete passport', tr: 'Sporcu biyolojik pasaportu' },
+      eyebrow: '10 · ATHLETE BIOLOGICAL PASSPORT / TAKEAWAY',
+      title: {
+        en: 'Longitudinal hematology completes the picture: reliable anti-doping decisions are built from multiple controlled analytical perspectives',
+        tr: 'Longitudinal hematoloji resmi tamamlar: güvenilir doping kontrol kararları birden fazla kontrollü analitik perspektiften oluşur'
+      },
+      paragraphs: {
+        en: [
+          'The hematological module of the Athlete Biological Passport introduced a different type of monitoring. Blood samples are homogenized, analyzed with quality controls on the Sysmex XN-1000 and measured in duplicate so that agreement between repeated results can be checked. Rather than searching for one prohibited molecule, the longitudinal approach looks for biologically meaningful changes in an athlete’s hematological profile.',
+          'Taken together, the placement connected targeted LC-MS/MS and GC-MS/MS, high-resolution MS, isotope-ratio analysis, EPO protein testing and hematological monitoring within one anti-doping environment. The most transferable lesson for me was that trustworthy analytical chemistry comes from the complete chain—sample preparation, quality control, separation, detection, confirmation and interpretation—not from the reputation of any single instrument.'
+        ],
+        tr: [
+          'Athlete Biological Passport’ın hematolojik modülü farklı bir izleme yaklaşımı gösterdi. Kan numuneleri homojenize ediliyor, Sysmex XN-1000 üzerinde kalite kontrolleriyle birlikte analiz ediliyor ve tekrarlı ölçümlerin birbiriyle uyumu kontrol ediliyordu. Burada tek bir yasaklı molekül aramak yerine sporcunun hematolojik profilindeki biyolojik olarak anlamlı değişimler longitudinal biçimde değerlendiriliyor.',
+          'Stajın tamamı birlikte düşünüldüğünde hedefli LC-MS/MS ve GC-MS/MS, yüksek çözünürlüklü MS, izotop oranı analizi, EPO protein testleri ve hematolojik izleme aynı doping kontrol ortamında birleşti. Benim için en taşınabilir ders; güvenilir analitik kimyanın tek bir cihazın gücünden değil, numune hazırlama, kalite kontrol, ayırma, tespit, doğrulama ve yorumlamadan oluşan bütün zincirden doğduğuydu.'
+        ]
+      },
+      art: 'blood'
     }
   ]
 }

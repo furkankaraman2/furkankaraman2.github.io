@@ -54,6 +54,15 @@ describe('portfolio functionality', () => {
     expect(link).toHaveAttribute('href', '/research/spme-moi-ms')
   })
 
+  it('renders the ten-part anti-doping laboratory story and switches it to Turkish', () => {
+    render(<MemoryRouter initialEntries={['/experience/doping-control']}><App /></MemoryRouter>)
+    expect(screen.getByRole('heading', { name: /Anti-doping analysis is a controlled evidence chain/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /EPO analysis/i })).toHaveAttribute('href', '#story-epo-analysis')
+    fireEvent.click(screen.getByRole('button', { name: 'Türkçeye geç' }))
+    expect(screen.getByRole('heading', { name: /Doping kontrol analizi tek bir cihaz sonucundan değil/i })).toBeInTheDocument()
+    expect(screen.getAllByText(/Sporcu biyolojik pasaportu/i).length).toBeGreaterThan(0)
+  })
+
   it('renders the professional analytical/R&D CTA without a GitHub call-to-action', () => {
     render(<MemoryRouter initialEntries={['/']}><App /></MemoryRouter>)
     expect(screen.getAllByText(/My experience spans analytical chemistry, mass spectrometry/i).length).toBeGreaterThan(0)
