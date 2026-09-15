@@ -63,6 +63,15 @@ describe('portfolio functionality', () => {
     expect(screen.getAllByText(/Sporcu biyolojik pasaportu/i).length).toBeGreaterThan(0)
   })
 
+  it('renders the ten-part MTA geochemical story and switches it to Turkish', () => {
+    render(<MemoryRouter initialEntries={['/experience/mta']}><App /></MemoryRouter>)
+    expect(screen.getByRole('heading', { name: /Thirty working days connected geochemical analysis/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /C\/S, CHN & density/i })).toHaveAttribute('href', '#story-coal-characterization')
+    fireEvent.click(screen.getByRole('button', { name: 'Türkçeye geç' }))
+    expect(screen.getByRole('heading', { name: /Otuz iş günü jeokimyasal analiz/i })).toBeInTheDocument()
+    expect(screen.getAllByText(/Cu, Fe, W ve B/i).length).toBeGreaterThan(0)
+  })
+
   it('renders the professional analytical/R&D CTA without a GitHub call-to-action', () => {
     render(<MemoryRouter initialEntries={['/']}><App /></MemoryRouter>)
     expect(screen.getAllByText(/My experience spans analytical chemistry, mass spectrometry/i).length).toBeGreaterThan(0)
