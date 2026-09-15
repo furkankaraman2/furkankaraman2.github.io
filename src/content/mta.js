@@ -74,12 +74,7 @@ export const mtaExperience = {
           'Ateş zayiatı / loss-on-ignition çalışmaları bu kütle takibine ikinci bir katman ekliyordu. Hazırlanan numuneler yüksek sıcaklığa maruz bırakılıyor, kuru koşullarda yeniden soğutuluyor ve tekrar tartılıyordu. Bu süreç bana çok temel ama kritik bir gerçeği gösterdi: bir cihazın ürettiği veri ancak öncesindeki numune geçmişi, nem ve kütle değişimleri kontrol altındaysa anlamlıdır.'
         ]
       },
-      image: '/images/experience/mta/mta-report-atlas.webp',
-      imageCrop: 'sample',
-      caption: {
-        en: 'Coded geological samples documented during the sample-preparation stage at MTA.',
-        tr: 'MTA’daki numune hazırlama aşamasında belgelenen kodlanmış jeolojik numuneler.'
-      }
+      art: 'sample'
     },
     {
       id: 'xrf-preparation',
@@ -99,12 +94,8 @@ export const mtaExperience = {
           'Partikül boyutu veya matrix effect nedeniyle preslenmiş pellet sonuçları yeterince tutarlı olmadığında fusion başka bir hazırlama yolu sunuyordu. Flux destekli yüksek sıcaklık eritme ile daha düzgün ve homojen, cam benzeri bir analiz yüzeyi hazırlanıyordu. İki yaklaşımı aynı laboratuvar zincirinde görmek, “matrix effect” kavramını ders kitabındaki soyut bir terim olmaktan çıkarıp gerçek bir numune hazırlama problemine dönüştürdü.'
         ]
       },
-      image: '/images/experience/mta/mta-report-atlas.webp',
-      imageCrop: 'sample',
-      caption: {
-        en: 'Pressed-pellet preparation and fusion equipment documented during the XRF workflow.',
-        tr: 'XRF iş akışı sırasında belgelenen pellet presleme ve fusion ekipmanları.'
-      }
+      image: '/images/illustrations/mta-editorial.svg',
+      caption: { en: 'Resolution-independent editorial illustration of geological sample preparation, pellet/fusion and elemental analysis.', tr: 'Jeolojik numune hazırlama, pellet/fusion ve elementel analizi anlatan çözünürlükten bağımsız bilimsel illüstrasyon.' }
     },
     {
       id: 'xrf-analysis',
@@ -144,12 +135,7 @@ export const mtaExperience = {
           'Çözündürmeden sonra seyreltme, bekletme ve berrak sıvı fazın ayrılması cihaz öncesinde partikül kaynaklı sorunları azaltmaya yardımcı oluyordu. Bu bölümün en önemli dersi şuydu: ICP-MS’in yüksek sensitivity özelliği uzun bir hazırlama zincirinin sonundadır; eksik çözündürme, kontaminasyon veya kontrolsüz seyreltme en gelişmiş dedektörün sağladığı avantajı bile sınırlayabilir.'
         ]
       },
-      image: '/images/experience/mta/mta-report-atlas.webp',
-      imageCrop: 'digestion',
-      caption: {
-        en: 'Acid-digestion samples and dilution racks documented during ICP-oriented preparation work.',
-        tr: 'ICP odaklı hazırlama çalışmaları sırasında belgelenen asit çözündürme numuneleri ve seyreltme rack’leri.'
-      }
+      art: 'icp'
     },
     {
       id: 'icp-oes',
@@ -169,12 +155,7 @@ export const mtaExperience = {
           'Torch konumunun ve spektral incelemenin ölçüm güvenilirliğini nasıl etkilediğini de takip ettim. Çok elementli kalibrasyon eğrileri bilinen konsantrasyon seviyelerini emission intensity ile ilişkilendiriyor, wavelength/intensity grafiklerinde girişimler değerlendirilerek ölçülen sinyal konsantrasyona dönüştürülüyordu. Bu bölüm cihaz ayarı, optik spektroskopi ve nicel analizin aynı problemin parçaları olduğunu gösterdi.'
         ]
       },
-      image: '/images/experience/mta/mta-report-atlas.webp',
-      imageCrop: 'digestion',
-      caption: {
-        en: 'ICP-OES instrumentation documented during the multi-element calibration and torch-alignment rotation.',
-        tr: 'Çok elementli kalibrasyon ve torch-alignment rotasyonu sırasında belgelenen ICP-OES cihazı.'
-      }
+      art: 'plasma'
     },
     {
       id: 'wet-chemistry-foundation',
@@ -214,12 +195,7 @@ export const mtaExperience = {
           'Boron analizinde ise pH kontrolü, çöktürme, filtrasyon ve mannitol veya sorbitol varlığında titrasyondan oluşan farklı bir sıra vardı. Bu yöntem çeşitliliği stajın benim için en güçlü taraflarından biriydi; analitik kimyanın tek bir cihazla tanımlanmadığını, analitin kimyasının en uygun ölçüm stratejisini belirlediğini gösterdi.'
         ]
       },
-      image: '/images/experience/mta/mta-report-atlas.webp',
-      imageCrop: 'wet',
-      caption: {
-        en: 'Wet-chemistry work documented during precipitation, titration and separation-based analyses.',
-        tr: 'Çöktürme, titrasyon ve ayırmaya dayalı analizler sırasında belgelenen yaş kimya çalışmaları.'
-      }
+      art: 'titration'
     },
     {
       id: 'coal-thermal',
@@ -259,12 +235,7 @@ export const mtaExperience = {
           'Stajın tamamında iş akışı numune izlenebilirliği ve fiziksel hazırlamadan çözündürmeye, kalibrasyona, cihazlı ölçüme, klasik yaş kimyaya ve malzeme özelliği karakterizasyonuna kadar genişledi. Benim için en taşınabilir ders, güvenilir bir analitik sonucun tek bir cihazın isminden değil bütün zincirin kalitesinden doğduğuydu.'
         ]
       },
-      image: '/images/experience/mta/mta-report-atlas.webp',
-      imageCrop: 'coal',
-      caption: {
-        en: 'Selected coal-characterization systems documented during the final laboratory rotation: TGA, C/S analysis, CHN elemental analysis and density measurement.',
-        tr: 'Son laboratuvar rotasyonunda belgelenen seçili kömür karakterizasyon sistemleri: TGA, C/S analizi, CHN elementel analiz ve yoğunluk ölçümü.'
-      }
+      art: 'pycnometer'
     }
   ]
 }
