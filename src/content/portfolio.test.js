@@ -69,13 +69,24 @@ describe('portfolio content integrity', () => {
       'public/images/illustrations/doping-editorial.svg',
       'public/images/illustrations/mta-editorial.svg',
       'public/images/illustrations/patent-editorial.svg',
+      'public/images/illustrations/patent-science.svg',
+      'public/images/illustrations/patent-assessment.svg',
+      'public/images/illustrations/patent-spinout.svg',
+      'public/images/illustrations/patent-global-partnership.svg',
       'public/images/illustrations/spme-calibration-vector.svg',
       'public/images/illustrations/spme-phase-comparison-vector.svg',
       'public/images/illustrations/spme-desorption-vector.svg',
     ]) expect(existsSync(path)).toBe(true)
   })
 
-  it('expands patent research into a multi-part technology-transfer case study', () => {
-    expect(patentSections.length).toBeGreaterThanOrEqual(7)
+  it('expands patent research into a ten-part bilingual technology-transfer case study', () => {
+    expect(patentSections).toHaveLength(10)
+    expect(patentSections.map(x => x.id)).toEqual(expect.arrayContaining(['research-question','patent-framework','tto-ebiltem','dermalix-science','ip-protection','technology-assessment','commercialization-options','dermis-pharma','global-ip-partnership','market-impact']))
+    for (const item of patentSections) {
+      expect(item.title.en.length).toBeGreaterThan(25)
+      expect(item.title.tr.length).toBeGreaterThan(25)
+      expect(item.paragraphs.en).toHaveLength(2)
+      expect(item.paragraphs.tr).toHaveLength(2)
+    }
   })
 })

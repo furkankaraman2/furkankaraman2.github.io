@@ -72,6 +72,24 @@ describe('portfolio functionality', () => {
     expect(screen.getAllByText(/Cu, Fe, W ve B/i).length).toBeGreaterThan(0)
   })
 
+  it('renders the ten-part patent and technology-transfer story and switches it to Turkish', () => {
+    render(<MemoryRouter initialEntries={['/patent-research']}><App /></MemoryRouter>)
+    expect(screen.getByRole('heading', { name: /How does university research become a real healthcare product/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Global IP & pharma partner/i })).toHaveAttribute('href', '#story-global-ip-partnership')
+    fireEvent.click(screen.getByRole('button', { name: 'Türkçeye geç' }))
+    expect(screen.getByRole('heading', { name: /Üniversite araştırması gerçek bir sağlık ürününe nasıl dönüşür/i })).toBeInTheDocument()
+    expect(screen.getAllByText(/Bilimden pazara/i).length).toBeGreaterThan(0)
+  })
+
+  it('surfaces patent research from both Home and Experience without presenting it as a laboratory placement', () => {
+    const { unmount } = render(<MemoryRouter initialEntries={['/']}><App /></MemoryRouter>)
+    expect(screen.getByRole('link', { name: /Explore the ten-part technology-transfer case study/i })).toHaveAttribute('href', '/patent-research')
+    unmount()
+    render(<MemoryRouter initialEntries={['/experience']}><App /></MemoryRouter>)
+    expect(screen.getByText(/ACADEMIC RESEARCH · INNOVATION PERSPECTIVE/i)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Open ten-part technology-transfer study/i })).toHaveAttribute('href', '/patent-research')
+  })
+
   it('renders the professional analytical/R&D CTA without a GitHub call-to-action', () => {
     render(<MemoryRouter initialEntries={['/']}><App /></MemoryRouter>)
     expect(screen.getAllByText(/My experience spans analytical chemistry, mass spectrometry/i).length).toBeGreaterThan(0)
