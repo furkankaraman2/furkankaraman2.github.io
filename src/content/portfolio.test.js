@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { existsSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { copy, experiences, patentSections, phases, profile, researchMetrics, researchStory, researchWorkflow } from './portfolio'
 
 describe('portfolio content integrity', () => {
@@ -36,7 +36,17 @@ describe('portfolio content integrity', () => {
       expect(item.paragraphs.tr).toHaveLength(2)
     }
     expect(doping.methods).toEqual(expect.arrayContaining(['LC-MS/MS','GC-MS/MS','LC-HRMS','GC-C-IRMS','SAR-PAGE / Immunoblotting','Athlete Biological Passport']))
-    expect(experiences.find(x => x.slug === 'mta').sections.length).toBeGreaterThanOrEqual(7)
+
+    const mta = experiences.find(x => x.slug === 'mta')
+    expect(mta.sections).toHaveLength(10)
+    expect(mta.sections.map(x => x.id)).toEqual(expect.arrayContaining(['laboratory-scope','sample-traceability','xrf-preparation','xrf-analysis','digestion-icpms','icp-oes','wet-chemistry-foundation','wet-chemistry-diversity','coal-thermal','coal-characterization']))
+    for (const item of mta.sections) {
+      expect(item.title.en.length).toBeGreaterThan(25)
+      expect(item.title.tr.length).toBeGreaterThan(25)
+      expect(item.paragraphs.en).toHaveLength(2)
+      expect(item.paragraphs.tr).toHaveLength(2)
+    }
+    expect(mta.methods).toEqual(expect.arrayContaining(['XRF','ICP-OES','ICP-MS','TGA','CHN elemental analysis','Helium pycnometry']))
   })
 
   it('retains verified SPME figures and a ten-part bilingual research story', () => {
@@ -62,6 +72,10 @@ describe('portfolio content integrity', () => {
       'public/images/experience/mta/xrf.webp',
       'public/images/patent/dermalix.webp',
     ]) expect(existsSync(path)).toBe(true)
+    expect(existsSync('src/assets/mta-report-atlas.b64')).toBe(true)
+    const atlas = readFileSync('src/assets/mta-report-atlas.b64', 'utf8').trim()
+    expect(atlas.startsWith('UklG')).toBe(true)
+    expect(atlas.length).toBeGreaterThan(60000)
   })
 
   it('expands patent research into a multi-part technology-transfer case study', () => {

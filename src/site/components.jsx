@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom'
 import { ExternalLink, Mail, Phone } from 'lucide-react'
 import { copy, profile } from '../content/portfolio'
 import { t } from './utils'
+import { mtaAtlasDataUri } from './mtaAtlas'
 
 export function Eyebrow({ children }) { return <p className="eyebrow"><span/>{children}</p> }
 export function SectionHead({ eyebrow, title, body }) { return <div className="section-head" data-reveal>{eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}<h2>{title}</h2>{body && <p>{body}</p>}</div> }
 export function MethodTags({ items }) { return <div className="tags">{items.map(x => <span key={x}>{x}</span>)}</div> }
+export function MtaAtlasImage({ alt, className='' }) { return <img className={className} src={mtaAtlasDataUri} alt={alt}/> }
 
 export function LineArt({ variant = 'spme', label }) {
   const c = { fill:'none', stroke:'currentColor', strokeWidth:1.7, strokeLinecap:'round', strokeLinejoin:'round' }
@@ -37,6 +39,10 @@ export function LineArt({ variant = 'spme', label }) {
     coating:<><path {...c} d="M72 24v124M64 38h16M62 111h20M105 42h72v72h-72zM116 55h50M116 68h50M116 81h50M116 94h50M72 82h33"/><path {...c} d="M191 41v70M183 49h16M183 103h16M191 111v35M176 146h30"/></>,
     histidine:<><path {...c} d="M62 88l20-31h34l18 31-18 31H82zM116 57l22-17 24 12 4 28-21 17M166 80l26 14M192 94l18-10M192 94l17 11"/><text x="46" y="92" fill="currentColor" fontSize="14">NH₃⁺</text><text x="211" y="88" fill="currentColor" fontSize="14">COO⁻</text><text x="120" y="40" fill="currentColor" fontSize="13">imidazole</text></>,
     solvent:<><path {...c} d="M93 32c0 0-36 43-36 76a36 36 0 0 0 72 0c0-33-36-76-36-76zM150 50h71M150 78h51M150 106h63M150 134h44"/><path {...c} d="M78 111c10 10 22 10 32 0M148 92l-13 10M135 102l8 8M135 102l-9-2"/></>,
+    furnace:<><path {...c} d="M52 38h156v111H52zM66 55h128v72H66zM78 68h104M78 82h104M78 96h104M78 110h104"/><path {...c} d="M104 141h52M115 127v14M145 127v14M89 25h82M100 25v13M160 25v13"/></>,
+    titration:<><path {...c} d="M76 27h22v88H76zM70 27h34M87 115v20M69 135h36M86 62h13"/><path {...c} d="M153 40v68c0 18 13 29 31 29s31-11 31-29V40M145 40h78M164 71h40M174 96h20"/><path {...c} d="M95 76h54M142 70l8 6-8 6"/></>,
+    thermal:<><path {...c} d="M43 137h179M55 121l25-9 18-36 19 30 21-56 18 49 20-24 23 37"/><path {...c} d="M55 43h45M55 55h31M188 41c18 17 18 35 0 52-18-17-18-35 0-52zM188 93v27"/><circle {...c} cx="188" cy="129" r="8"/></>,
+    pycnometer:<><path {...c} d="M44 120h60V65H44zM52 75h44M120 48h68v83h-68zM130 60h48M154 131v17M138 148h32"/><circle {...c} cx="210" cy="91" r="24"/><path {...c} d="M210 67v48M186 91h48M104 91h16"/></>,
     industry:<><path {...c} d="M41 140V78l46 24V72l50 29V56h76v84zM158 79h16M183 79h16M158 100h16M183 100h16M158 121h16M183 121h16M72 62V37h20v36"/></>
   }
   return <div className={'line-art line-art-' + variant} aria-label={label || ''} role="img" data-parallax><svg viewBox="0 0 260 180" aria-hidden="true">{arts[variant] || arts.spme}</svg></div>
@@ -47,6 +53,7 @@ export function PageHero({ eyebrow, title, intro, art='spme' }) {
 }
 
 export function StoryMedia({ item, lang }) {
+  if (item.image && item.imageCrop) return <figure className="story-figure" data-parallax><div className={'image-frame story-crop crop-' + item.imageCrop}><div className="mta-report-atlas" style={{backgroundImage:`url(${mtaAtlasDataUri})`}} role="img" aria-label={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
   if (item.image) return <figure className="story-figure" data-parallax><div className="image-frame"><img src={item.image} alt={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
   return <LineArt variant={item.art || 'spme'} label={t(item.title,lang)}/>
 }
