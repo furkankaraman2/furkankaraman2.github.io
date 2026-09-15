@@ -7,6 +7,7 @@ import { t } from '../site/utils'
 export default function Home({ lang }) {
   const c=copy[lang]
   const doping=experiences.find(x=>x.slug==='doping-control')
+  const mta=experiences.find(x=>x.slug==='mta')
   return <>
     <section className="hero">
       <div className="hero-grid"/>
@@ -47,6 +48,11 @@ export default function Home({ lang }) {
     <section className="home-doping-feature section-pad">
       <div className="home-doping-copy" data-reveal><Eyebrow>{lang==='en'?'ANTI-DOPING LABORATORY EXPERIENCE':'DOPİNG KONTROL LABORATUVAR DENEYİMİ'}</Eyebrow><h2>{lang==='en'?'One placement, multiple analytical languages':'Tek bir staj, birden fazla analitik yaklaşım'}</h2><p>{t(doping.summary,lang)}</p><div className="doping-mini-flow">{[0,3,7,9].map(idx=><Link to={'/experience/doping-control#story-'+doping.sections[idx].id} key={doping.sections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(doping.sections[idx].short,lang)}</strong></Link>)}</div><Link className="button outline" to="/experience/doping-control">{lang==='en'?'Explore the ten-part case study':'10 bölümlü vaka çalışmasını incele'}<ArrowRight/></Link></div>
       <div className="home-doping-media" data-reveal data-parallax><img src="/images/experience/doping/lc-ms.webp" alt={lang==='en'?'LC-MS platform documented during the anti-doping placement':'Doping kontrol stajında belgelenen LC-MS platformu'}/><div className="doping-media-overlay"><LineArt variant="triplequad"/><span>LC-MS/MS · GC-MS/MS · LC-HRMS · GC-C-IRMS</span></div></div>
+    </section>
+
+    <section className="home-mta-feature section-pad">
+      <div className="home-mta-media" data-reveal data-parallax><img src="/images/experience/mta/icp-oes.webp" alt={lang==='en'?'ICP-OES instrumentation documented during the MTA placement':'MTA stajında belgelenen ICP-OES cihazı'}/><div className="mta-media-overlay"><LineArt variant="plasma"/><span>XRF · ICP-OES · ICP-MS · GRAVIMETRY · TGA</span></div></div>
+      <div className="home-mta-copy" data-reveal><Eyebrow>{lang==='en'?'GEOCHEMICAL & MATERIAL ANALYSIS':'JEOKİMYASAL & MALZEME ANALİZİ'}</Eyebrow><h2>{lang==='en'?'From coded geological samples to elemental and thermal characterization':'Kodlanmış jeolojik numuneden elementel ve termal karakterizasyona'}</h2><p>{t(mta.summary,lang)}</p><div className="mta-mini-flow">{[1,3,5,9].map(idx=><Link to={'/experience/mta#story-'+mta.sections[idx].id} key={mta.sections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(mta.sections[idx].short,lang)}</strong></Link>)}</div><Link className="button outline" to="/experience/mta">{lang==='en'?'Explore the ten-part MTA case study':'10 bölümlü MTA vaka çalışmasını incele'}<ArrowRight/></Link></div>
     </section>
 
     <section className="integrity section-pad" data-reveal><ShieldCheck/><div><Eyebrow>{c.labels.evidence}</Eyebrow><h2>{c.home.principlesTitle}</h2><p>{c.home.principlesBody}</p></div><div className="integrity-list"><span><Check/>{lang==='en'?'Report-grounded technical claims':'Rapor temelli teknik iddialar'}</span><span><Check/>{lang==='en'?'Original figures used selectively':'Orijinal görseller seçici kullanılır'}</span><span><Check/>{lang==='en'?'Raw reports remain unpublished':'Ham raporlar yayımlanmaz'}</span></div></section>
