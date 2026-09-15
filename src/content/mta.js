@@ -75,6 +75,7 @@ export const mtaExperience = {
         ]
       },
       image: '/images/experience/mta/mta-report-atlas.webp',
+      imageCrop: 'sample',
       caption: {
         en: 'Coded geological samples documented during the sample-preparation stage at MTA.',
         tr: 'MTA’daki numune hazırlama aşamasında belgelenen kodlanmış jeolojik numuneler.'
@@ -99,6 +100,7 @@ export const mtaExperience = {
         ]
       },
       image: '/images/experience/mta/mta-report-atlas.webp',
+      imageCrop: 'sample',
       caption: {
         en: 'Pressed-pellet preparation and fusion equipment documented during the XRF workflow.',
         tr: 'XRF iş akışı sırasında belgelenen pellet presleme ve fusion ekipmanları.'
@@ -147,6 +149,7 @@ export const mtaExperience = {
         ]
       },
       image: '/images/experience/mta/mta-report-atlas.webp',
+      imageCrop: 'digestion',
       caption: {
         en: 'Acid-digestion samples and dilution racks documented during ICP-oriented preparation work.',
         tr: 'ICP odaklı hazırlama çalışmaları sırasında belgelenen asit çözündürme numuneleri ve seyreltme rack’leri.'
@@ -171,6 +174,7 @@ export const mtaExperience = {
         ]
       },
       image: '/images/experience/mta/mta-report-atlas.webp',
+      imageCrop: 'digestion',
       caption: {
         en: 'ICP-OES instrumentation documented during the multi-element calibration and torch-alignment rotation.',
         tr: 'Çok elementli kalibrasyon ve torch-alignment rotasyonu sırasında belgelenen ICP-OES cihazı.'
@@ -215,6 +219,7 @@ export const mtaExperience = {
         ]
       },
       image: '/images/experience/mta/mta-report-atlas.webp',
+      imageCrop: 'wet',
       caption: {
         en: 'Wet-chemistry work documented during precipitation, titration and separation-based analyses.',
         tr: 'Çöktürme, titrasyon ve ayırmaya dayalı analizler sırasında belgelenen yaş kimya çalışmaları.'
@@ -259,6 +264,7 @@ export const mtaExperience = {
         ]
       },
       image: '/images/experience/mta/mta-report-atlas.webp',
+      imageCrop: 'coal',
       caption: {
         en: 'Selected coal-characterization systems documented during the final laboratory rotation: TGA, C/S analysis, CHN elemental analysis and density measurement.',
         tr: 'Son laboratuvar rotasyonunda belgelenen seçili kömür karakterizasyon sistemleri: TGA, C/S analizi, CHN elementel analiz ve yoğunluk ölçümü.'
