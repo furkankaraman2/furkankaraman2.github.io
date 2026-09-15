@@ -26,7 +26,16 @@ describe('portfolio content integrity', () => {
   })
 
   it('expands the major laboratory placements into long case studies', () => {
-    expect(experiences.find(x => x.slug === 'doping-control').sections.length).toBeGreaterThanOrEqual(6)
+    const doping = experiences.find(x => x.slug === 'doping-control')
+    expect(doping.sections).toHaveLength(10)
+    expect(doping.sections.map(x => x.id)).toEqual(expect.arrayContaining(['laboratory-chain','front-end-quality','controls-calibration','lc-msms','gc-msms','peptides-hrms','hplc-irms-prep','isotope-ratio','epo-analysis','athlete-passport']))
+    for (const item of doping.sections) {
+      expect(item.title.en.length).toBeGreaterThan(25)
+      expect(item.title.tr.length).toBeGreaterThan(25)
+      expect(item.paragraphs.en).toHaveLength(2)
+      expect(item.paragraphs.tr).toHaveLength(2)
+    }
+    expect(doping.methods).toEqual(expect.arrayContaining(['LC-MS/MS','GC-MS/MS','LC-HRMS','GC-C-IRMS','SAR-PAGE / Immunoblotting','Athlete Biological Passport']))
     expect(experiences.find(x => x.slug === 'mta').sections.length).toBeGreaterThanOrEqual(7)
   })
 
