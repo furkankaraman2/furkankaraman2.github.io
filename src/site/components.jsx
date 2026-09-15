@@ -51,6 +51,7 @@ export function PageHero({ eyebrow, title, intro, art='spme' }) {
 }
 
 export function StoryMedia({ item, lang }) {
+  if (item.image && item.imageCrop) return <figure className="story-figure" data-parallax><div className={'image-frame story-crop crop-' + item.imageCrop}><div className="mta-report-atlas" role="img" aria-label={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
   if (item.image) return <figure className="story-figure" data-parallax><div className="image-frame"><img src={item.image} alt={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
   return <LineArt variant={item.art || 'spme'} label={t(item.title,lang)}/>
 }
