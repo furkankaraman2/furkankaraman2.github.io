@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-labelledby="t d">
+<title id="t">Biomaterial research to wound-care concept</title><desc id="d">Original scientific editorial illustration showing a biomaterial matrix, microparticles, skin layers and a wound-care patch concept.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf5f3"/><stop offset="1" stop-color="#fbf7ec"/></linearGradient><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#50c6c8"/><stop offset="1" stop-color="#157f8c"/></linearGradient></defs>
+<rect width="1200" height="860" rx="38" fill="url(#bg)"/>
+<g opacity=".13" fill="none" stroke="#178a99"><circle cx="1050" cy="110" r="240"/><circle cx="1050" cy="110" r="165"/><circle cx="1050" cy="110" r="90"/></g>
+<g transform="translate(90 130)"><rect x="0" y="0" width="450" height="470" rx="28" fill="#fff" stroke="#cddcda" stroke-width="3"/>
+<path d="M38 120c74-28 130 36 210 0s131 25 165 2v210H38z" fill="#f1cbb6"/><path d="M38 190c74-25 130 31 210 0s131 22 165 0v142H38z" fill="#deb49a"/>
+<path d="M38 250c74-21 130 26 210 0s131 20 165 0v82H38z" fill="#c68f73"/>
+<rect x="90" y="64" width="260" height="58" rx="25" fill="url(#a)" opacity=".9"/><path d="M125 93h190" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+<g fill="#f1c46f" stroke="#8b6d2d" stroke-width="2"><circle cx="150" cy="150" r="16"/><circle cx="212" cy="169" r="12"/><circle cx="275" cy="149" r="14"/><circle cx="327" cy="184" r="10"/></g>
+<path d="M156 150c35 34 62 25 76 6M286 153c21 20 34 18 43 31" fill="none" stroke="#178a99" stroke-width="4" stroke-dasharray="7 9"/></g>
+<g transform="translate(650 180)"><path d="M0 100h120l45-65 50 130 55-92h120" fill="none" stroke="#163b49" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#fff" stroke="#178a99" stroke-width="4"><circle cx="44" cy="100" r="22"/><circle cx="167" cy="35" r="22"/><circle cx="215" cy="165" r="22"/><circle cx="270" cy="73" r="22"/></g>
+<rect x="20" y="250" width="360" height="190" rx="24" fill="#fff" stroke="#cddcda" stroke-width="3"/><path d="M56 300h285M56 338h230M56 376h264" stroke="#94a8ae" stroke-width="11" stroke-linecap="round"/>
+<path d="M90 470c85 57 174 59 275 2" fill="none" stroke="#178a99" stroke-width="5"/><circle cx="228" cy="476" r="14" fill="#50c6c8"/></g>
+</svg>
