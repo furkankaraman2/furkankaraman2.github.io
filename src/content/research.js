@@ -114,7 +114,11 @@ export const researchStory = [
         'Polyacrylonitrile (PAN) yalnızca yapıştırıcı olarak kullanılmadı. HLB, HLB-SAX veya PMAA parçacıklarını taşıyıcı yüzey üzerinde sabitledi, tekrarlanan ekstraksiyon–desorpsiyon döngülerinde mekanik kararlılığı artırdı ve boyut seçici bir bariyer görevi gördü. Büyük makromoleküllerin kaplamaya erişimi sınırlandırılırken L-histidin gibi küçük bir molekül PAN matrisi boyunca difüze olarak ekstraktif parçacıklara ulaşabilir.'
       ]
     },
-    art: 'coating'
+    image: '/images/research/spme/spme-dip-coating.webp',
+    caption: {
+      en: 'Project figure illustrating the controlled SPME dip-coating sequence: immersion in the extractive-phase/PAN slurry, smooth withdrawal, and heat treatment in a muffle furnace.',
+      tr: 'SPME fiber üretiminde kontrollü dip-coating sırasını gösteren proje görseli: ekstraktif faz/PAN süspansiyonuna daldırma, düzgün biçimde geri çekme ve kül fırınında ısıl işlem.'
+    }
   },
   {
     id: 'histidine-chemistry',
@@ -134,7 +138,11 @@ export const researchStory = [
         'HLB, hidrojen bağları ve aromatik etkileşimler gibi iyonik olmayan karma mekanizmalarla histidini tutabilir. HLB-SAX üzerindeki pozitif kuaterner amonyum bölgeleri ile histidinin deprotonlanmış karboksilat grubu arasında güçlü elektrostatik çekim oluşur. PMAA ise negatif karboksilat gruplarıyla protonlanmış amino fonksiyonuna etkileşim fırsatı sunar. Bu kimyasal çerçeve, faz karşılaştırmasını yalnızca deneysel bir taramadan çıkarıp mekanizma temelli bir seçime dönüştürdü.'
       ]
     },
-    art: 'histidine'
+    image: '/images/research/spme/histidine-pka.webp',
+    caption: {
+      en: 'L-histidine structure with the reported pKa values (carboxyl 1.82, imidazole 6.00, α-amino 9.17), providing the charge-state context for extraction at pH 7.4.',
+      tr: 'L-histidinin raporlanan pKa değerlerini gösteren yapı (karboksil 1,82; imidazol 6,00; α-amino 9,17); pH 7,4’teki yük durumunun ekstraksiyon kimyasına etkisini açıklamak için kullanıldı.'
+    }
   },
   {
     id: 'calibration',
@@ -154,10 +162,10 @@ export const researchStory = [
         'Raporda regresyon denklemi y = 1505,6x − 36145 ve R² = 0,987 olarak verildi. Bu sonuç sonraki SPME deneyleri için nicel bir referans oluşturdu ve ekstraksiyon ya da desorpsiyon koşullarındaki değişikliklerin kararlı bir MOI-MS yanıtı üzerinden değerlendirilebildiğini gösterdi.'
       ]
     },
-    image: '/images/illustrations/spme-calibration-vector.svg',
+    image: '/images/research/spme/histidine-calibration.webp',
     caption: {
-      en: 'Six-point L-histidine external calibration reported for the MOI-MS platform (R² = 0.987).',
-      tr: 'MOI-MS platformu için raporlanan altı noktalı L-histidin dış kalibrasyonu (R² = 0,987).'
+      en: 'Experimental L-histidine calibration curve used in the project (y = 1505.6x − 36145; R² = 0.987).',
+      tr: 'Projede kullanılan deneysel L-histidin kalibrasyon eğrisi (y = 1505,6x − 36145; R² = 0,987).'
     }
   },
   {
@@ -178,10 +186,10 @@ export const researchStory = [
         'HLB-SAX ise 6,10 ng elüe edilen miktar, 0,16 recovery ve %13 ile en düşük değişkenliği sağladı. Bu nedenle çalışmada tek başına en yüksek recovery yerine hassasiyet ve tekrarlanabilirlik önceliklendirildi. Numuneleri tutarlı biçimde karşılaştırmayı hedefleyen bir yöntem için bu denge HLB-SAX’ı sonraki optimizasyonların en güçlü adayı haline getirdi.'
       ]
     },
-    image: '/images/illustrations/spme-phase-comparison-vector.svg',
+    image: '/images/research/spme/extractive-phase-comparison.webp',
     caption: {
-      en: 'Report comparison of HLB, PMAA and HLB-SAX by %RSD, eluted amount and recovery.',
-      tr: 'HLB, PMAA ve HLB-SAX fazlarının %RSD, elüe edilen miktar ve recovery açısından rapor karşılaştırması.'
+      en: 'Experimental comparison of HLB, PMAA and SAX/HLB-SAX extractive phases. HLB gave the largest mean eluted amount, while HLB-SAX was selected after reproducibility was considered together with response.',
+      tr: 'HLB, PMAA ve SAX/HLB-SAX ekstraktif fazlarının deneysel karşılaştırması. HLB en yüksek ortalama elüe edilen miktarı verirken, yanıtla birlikte tekrarlanabilirlik değerlendirildiğinde HLB-SAX seçildi.'
     }
   },
   {
@@ -202,8 +210,22 @@ export const researchStory = [
         'Asidik ortam karboksilat fonksiyonunun protonlanmasını artırarak iyonik çekimi zayıflatır. Daha sonra 1, 5, 10, 20 ve 30 dakikalık desorpsiyon süreleri karşılaştırıldı; en yüksek yanıt 1 dakikada elde edildi. İkinci desorpsiyonun birçok durumda daha yüksek sinyal vermesi ise raporda gecikmiş analit salımı ve PBS kaynaklı tuzların kısmen uzaklaşmasıyla azalan iyon baskılanması üzerinden tartışıldı.'
       ]
     },
-    image: '/images/illustrations/spme-desorption-vector.svg',
-    caption: { en: 'Vector summary of the report’s desorption-time screening; 1 minute produced the highest response.', tr: 'Rapordaki desorpsiyon süresi taramasının vektörel özeti; en yüksek yanıt 1 dakikada elde edildi.' }
+    images: [
+      {
+        src: '/images/research/spme/desorption-solvent-screening.webp',
+        caption: {
+          en: 'Experimental desorption-solvent screening comparing first and second desorption. ACN/MeOH/H₂O (40:40:20) produced the strongest release among the tested solvent systems.',
+          tr: 'Birinci ve ikinci desorpsiyonu karşılaştıran deneysel çözücü taraması. Test edilen sistemler arasında ACN/MeOH/H₂O (40:40:20) en güçlü analit salımını sağladı.'
+        }
+      },
+      {
+        src: '/images/research/spme/desorption-time-optimization.webp',
+        caption: {
+          en: 'Experimental desorption-time optimization at 1, 5, 10, 20 and 30 minutes, showing the highest response at 1 minute and the first/second desorption behavior.',
+          tr: '1, 5, 10, 20 ve 30 dakikada yapılan deneysel desorpsiyon süresi optimizasyonu; en yüksek yanıt 1 dakikada görülürken birinci/ikinci desorpsiyon davranışı birlikte gösteriliyor.'
+        }
+      }
+    ]
   },
   {
     id: 'final-workflow',
