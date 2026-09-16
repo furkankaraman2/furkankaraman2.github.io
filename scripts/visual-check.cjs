@@ -14,11 +14,21 @@ async function run() {
     page.on('pageerror', e => errors.push(e.message))
     for (const route of routes) {
       const response = await page.goto(`http://127.0.0.1:5173${route}`, { waitUntil: 'networkidle' })
-      const height = await page.evaluate(() => document.documentElement.scrollHeight)
-      for (let y = 0; y <= height; y += Math.max(420, Math.floor(device.height * 0.7))) {
-        await page.evaluate(scrollY => window.scrollTo(0, scrollY), y)
+      const step = Math.max(420, Math.floor(device.height * 0.7))
+      let y = 0
+      let previousHeight = 0
+      // Re-read scrollHeight while moving: lazy-loaded figures can increase page
+      // height after the initial render, especially on narrow mobile layouts.
+      while (true) {
+        const height = await page.evaluate(() => document.documentElement.scrollHeight)
+        if (y > height && height <= previousHeight) break
+        previousHeight = height
+        await page.evaluate(scrollY => window.scrollTo(0, scrollY), Math.min(y, height))
         await page.waitForTimeout(70)
+        y += step
       }
+      await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight))
+      await page.waitForTimeout(120)
       await page.evaluate(() => window.scrollTo(0, 0))
       await page.waitForTimeout(100)
       const state = await page.evaluate(() => ({
