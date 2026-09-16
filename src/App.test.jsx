@@ -50,17 +50,22 @@ describe('portfolio functionality', () => {
 
   it('renders the expanded SPME context and workflow figures with bilingual scientific captions', () => {
     render(<MemoryRouter initialEntries={['/research/spme-moi-ms']}><App /></MemoryRouter>)
-    expect(screen.getByAltText(/Malignant Hyperthermia overview used to introduce the clinical context/i)).toHaveAttribute('src', '/images/research/spme/malignant-hyperthermia-overview.webp')
-    expect(screen.getByAltText(/Calcium-homeostasis schematic highlighting RYR\/SERCA/i)).toHaveAttribute('src', '/images/research/spme/calcium-homeostasis-context.webp')
-    expect(screen.getByAltText(/Microfluidic open-port \/ bio-SPME interface schematic/i)).toHaveAttribute('src', '/images/research/spme/moi-ms-open-port-interface.webp')
-    expect(screen.getByAltText(/SPME method workflow: pre-conditioning/i)).toHaveAttribute('src', '/images/research/spme/spme-method-workflow.webp')
-    expect(screen.getByAltText(/SPME fiber geometry shown for the project/i)).toHaveAttribute('src', '/images/research/spme/spme-fiber-geometry.webp')
-    expect(screen.getByAltText(/Summary table for the HLB, PMAA and SAX\/HLB-SAX comparison/i)).toHaveAttribute('src', '/images/research/spme/extractive-phase-results-table.webp')
-    expect(screen.getByAltText(/Time-dependent first\/second desorption response at 1, 5, 10, 20 and 30 minutes/i)).toHaveAttribute('src', '/images/research/spme/desorption-time-optimization.webp')
+    const assertFigure = (pattern, src) => {
+      const matches = screen.getAllByAltText(pattern)
+      expect(matches.length).toBeGreaterThan(0)
+      expect(matches[0]).toHaveAttribute('src', src)
+    }
+    assertFigure(/Malignant Hyperthermia overview used to introduce the clinical context/i, '/images/research/spme/malignant-hyperthermia-overview.webp')
+    assertFigure(/Calcium-homeostasis schematic highlighting RYR\/SERCA/i, '/images/research/spme/calcium-homeostasis-context.webp')
+    assertFigure(/Microfluidic open-port \/ bio-SPME interface schematic/i, '/images/research/spme/moi-ms-open-port-interface.webp')
+    assertFigure(/SPME method workflow: pre-conditioning/i, '/images/research/spme/spme-method-workflow.webp')
+    assertFigure(/SPME fiber geometry shown for the project/i, '/images/research/spme/spme-fiber-geometry.webp')
+    assertFigure(/Summary table for the HLB, PMAA and SAX\/HLB-SAX comparison/i, '/images/research/spme/extractive-phase-results-table.webp')
+    assertFigure(/Time-dependent first\/second desorption response at 1, 5, 10, 20 and 30 minutes/i, '/images/research/spme/desorption-time-optimization.webp')
     fireEvent.click(screen.getByRole('button', { name: 'Türkçeye geç' }))
-    expect(screen.getByAltText(/Akut kriz sırasında görülebilen hızlı vücut sıcaklığı artışını/i)).toBeInTheDocument()
-    expect(screen.getByAltText(/Akış izolasyonu, kısa fiber desorpsiyonu/i)).toBeInTheDocument()
-    expect(screen.getByAltText(/Seçilen 1 dakikalık desorpsiyon koşulu/i)).toBeInTheDocument()
+    expect(screen.getAllByAltText(/Akut kriz sırasında görülebilen hızlı vücut sıcaklığı artışını/i).length).toBeGreaterThan(0)
+    expect(screen.getAllByAltText(/Akış izolasyonu, kısa fiber desorpsiyonu/i).length).toBeGreaterThan(0)
+    expect(screen.getAllByAltText(/Seçilen 1 dakikalık desorpsiyon koşulu/i).length).toBeGreaterThan(0)
   })
 
   it('shows SPME as a real Experience entry that routes to the central research case study', () => {
