@@ -65,11 +65,20 @@ describe('portfolio content integrity', () => {
     expect(researchStory.find(x => x.id === 'histidine-chemistry').image).toBe('/images/research/spme/histidine-pka.webp')
     expect(researchStory.find(x => x.id === 'calibration').image).toBe('/images/research/spme/histidine-calibration.webp')
     expect(researchStory.find(x => x.id === 'phase-selection').image).toBe('/images/research/spme/extractive-phase-comparison.webp')
-    expect(researchStory.find(x => x.id === 'desorption').images).toHaveLength(2)
-    expect(researchStory.find(x => x.id === 'desorption').images.map(x => x.src)).toEqual(expect.arrayContaining([
-      '/images/research/spme/desorption-solvent-screening.webp',
-      '/images/research/spme/desorption-time-optimization.webp',
-    ]))
+    const context = researchStory.find(x => x.id === 'clinical-context')
+    expect(context.images.map(x => x.src)).toEqual([
+      '/images/research/spme/malignant-hyperthermia-overview.webp',
+      '/images/research/spme/calcium-homeostasis-context.webp',
+    ])
+    expect(researchStory.find(x => x.id === 'spme-moi-concept').image).toBe('/images/research/spme/moi-ms-open-port-interface.webp')
+    expect(researchStory.find(x => x.id === 'spme-principle').images.map(x => x.src)).toEqual([
+      '/images/research/spme/spme-method-workflow.webp',
+      '/images/research/spme/spme-fiber-geometry.webp',
+    ])
+    expect(researchStory.find(x => x.id === 'extractive-phases').image).toBe('/images/research/spme/extractive-phase-results-table.webp')
+    expect(researchStory.find(x => x.id === 'desorption').images).toHaveLength(1)
+    expect(researchStory.find(x => x.id === 'desorption').images[0].src).toBe('/images/research/spme/desorption-solvent-screening.webp')
+    expect(researchStory.find(x => x.id === 'final-workflow').image).toBe('/images/research/spme/desorption-time-optimization.webp')
   })
 
   it('uses scalable premium scientific visuals that are actually present in public assets', () => {
@@ -85,6 +94,12 @@ describe('portfolio content integrity', () => {
       'public/images/illustrations/spme-calibration-vector.svg',
       'public/images/illustrations/spme-phase-comparison-vector.svg',
       'public/images/illustrations/spme-desorption-vector.svg',
+      'public/images/research/spme/malignant-hyperthermia-overview.webp',
+      'public/images/research/spme/calcium-homeostasis-context.webp',
+      'public/images/research/spme/spme-method-workflow.webp',
+      'public/images/research/spme/moi-ms-open-port-interface.webp',
+      'public/images/research/spme/spme-fiber-geometry.webp',
+      'public/images/research/spme/extractive-phase-results-table.webp',
       'public/images/research/spme/spme-dip-coating.webp',
       'public/images/research/spme/histidine-pka.webp',
       'public/images/research/spme/histidine-calibration.webp',
