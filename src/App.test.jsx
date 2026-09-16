@@ -48,14 +48,19 @@ describe('portfolio functionality', () => {
     expect(localStorage.getItem('portfolio-language')).toBe('tr')
   })
 
-  it('renders the experimental SPME figures with bilingual scientific captions', () => {
+  it('renders the expanded SPME context and workflow figures with bilingual scientific captions', () => {
     render(<MemoryRouter initialEntries={['/research/spme-moi-ms']}><App /></MemoryRouter>)
-    expect(screen.getByAltText(/Project figure illustrating the controlled SPME dip-coating sequence/i)).toHaveAttribute('src', '/images/research/spme/spme-dip-coating.webp')
-    expect(screen.getByAltText(/Experimental L-histidine calibration curve used in the project/i)).toHaveAttribute('src', '/images/research/spme/histidine-calibration.webp')
-    expect(screen.getByAltText(/Experimental desorption-time optimization at 1, 5, 10, 20 and 30 minutes/i)).toHaveAttribute('src', '/images/research/spme/desorption-time-optimization.webp')
+    expect(screen.getByAltText(/Malignant Hyperthermia overview used to introduce the clinical context/i)).toHaveAttribute('src', '/images/research/spme/malignant-hyperthermia-overview.webp')
+    expect(screen.getByAltText(/Calcium-homeostasis schematic highlighting RYR\/SERCA/i)).toHaveAttribute('src', '/images/research/spme/calcium-homeostasis-context.webp')
+    expect(screen.getByAltText(/Microfluidic open-port \/ bio-SPME interface schematic/i)).toHaveAttribute('src', '/images/research/spme/moi-ms-open-port-interface.webp')
+    expect(screen.getByAltText(/SPME method workflow: pre-conditioning/i)).toHaveAttribute('src', '/images/research/spme/spme-method-workflow.webp')
+    expect(screen.getByAltText(/SPME fiber geometry shown for the project/i)).toHaveAttribute('src', '/images/research/spme/spme-fiber-geometry.webp')
+    expect(screen.getByAltText(/Summary table for the HLB, PMAA and SAX\/HLB-SAX comparison/i)).toHaveAttribute('src', '/images/research/spme/extractive-phase-results-table.webp')
+    expect(screen.getByAltText(/Time-dependent first\/second desorption response at 1, 5, 10, 20 and 30 minutes/i)).toHaveAttribute('src', '/images/research/spme/desorption-time-optimization.webp')
     fireEvent.click(screen.getByRole('button', { name: 'Türkçeye geç' }))
-    expect(screen.getByAltText(/SPME fiber üretiminde kontrollü dip-coating sırasını gösteren proje görseli/i)).toBeInTheDocument()
-    expect(screen.getByAltText(/1, 5, 10, 20 ve 30 dakikada yapılan deneysel desorpsiyon süresi optimizasyonu/i)).toBeInTheDocument()
+    expect(screen.getByAltText(/Akut kriz sırasında görülebilen hızlı vücut sıcaklığı artışını/i)).toBeInTheDocument()
+    expect(screen.getByAltText(/Akış izolasyonu, kısa fiber desorpsiyonu/i)).toBeInTheDocument()
+    expect(screen.getByAltText(/Seçilen 1 dakikalık desorpsiyon koşulu/i)).toBeInTheDocument()
   })
 
   it('shows SPME as a real Experience entry that routes to the central research case study', () => {
