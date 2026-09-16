@@ -30,7 +30,22 @@ export const researchStory = [
         'Güncel In-Vitro Contracture Test (IVCT) güvenilir olmakla birlikte operasyonel açıdan zordur: cerrahi kas biyopsisi gerektirir, iyileşme haftalar sürebilir, taze dokunun yaklaşık altı saatlik dar bir canlılık penceresinde test edilmesi gerekir, uzman merkez sayısı sınırlıdır ve tanı süreci uzayabilir. Bu sınırlamalar, tüm klinik tanı sürecini yeniden üretmekten ziyade daha küçük ve daha hızlı bir analitik örnekleme yaklaşımını araştırma fikrini doğurdu.'
       ]
     },
-    art: 'mh'
+    images: [
+      {
+        src: '/images/research/spme/malignant-hyperthermia-overview.webp',
+        caption: {
+          en: 'Malignant Hyperthermia overview used to introduce the clinical context and the rapid rise in body temperature associated with an acute crisis.',
+          tr: 'Akut kriz sırasında görülebilen hızlı vücut sıcaklığı artışını ve klinik bağlamı tanıtmak için kullanılan Malign Hipertermi genel görseli.'
+        }
+      },
+      {
+        src: '/images/research/spme/calcium-homeostasis-context.webp',
+        caption: {
+          en: 'Calcium-homeostasis schematic highlighting RYR/SERCA-mediated Ca²⁺ handling across the sarcoplasmic reticulum and ER, providing mechanistic context for dysregulated calcium release in MH.',
+          tr: 'Sarkoplazmik retikulum ve ER boyunca RYR/SERCA aracılı Ca²⁺ düzenlenmesini gösteren şema; Malign Hipertermi’deki kontrolsüz kalsiyum salınımının mekanistik bağlamını destekler.'
+        }
+      }
+    ]
   },
   {
     id: 'spme-moi-concept',
@@ -50,7 +65,11 @@ export const researchStory = [
         'MOI-MS ölçümünde kromatografik bir ayırma basamağı bulunmadığı için örnekleme ve desorpsiyonun kalitesi daha da kritik hale geliyor. Bu nedenle proje; ekstraksiyon kimyasını, kaplama tasarımını, çözücü bileşimini ve tekrarlanabilirliği birbirinden bağımsız deneyler olarak değil, tek bir analitik sistemin bağlantılı parçaları olarak ele aldı.'
       ]
     },
-    art: 'workflow'
+    image: '/images/research/spme/moi-ms-open-port-interface.webp',
+    caption: {
+      en: 'Microfluidic open-port / bio-SPME interface schematic showing flow isolation, brief fiber desorption and ESI aspiration toward the MS detector.',
+      tr: 'Akış izolasyonu, kısa fiber desorpsiyonu ve MS dedektörüne ESI aspirasyonunu gösteren microfluidic open-port / bio-SPME arayüz şeması.'
+    }
   },
   {
     id: 'spme-principle',
@@ -70,11 +89,22 @@ export const researchStory = [
         'Bu projede küçük fiber geometrisi özellikle avantajlıydı; çünkü örnekleme, matriks temizleme ve zenginleştirme işlevleri tek bir küçük elemanda birleşebiliyor. Ayrıca karmaşık biyolojik ortamlarda analitik sisteme taşınan matriks miktarını azaltma potansiyeli sunuyor.'
       ]
     },
-    image: '/images/illustrations/spme-editorial.svg',
-    caption: {
-      en: 'Resolution-independent editorial illustration of the SPME extraction–desorption–MOI-MS concept.',
-      tr: 'SPME ekstraksiyon–desorpsiyon–MOI-MS yaklaşımını anlatan çözünürlükten bağımsız bilimsel illüstrasyon.'
-    }
+    images: [
+      {
+        src: '/images/research/spme/spme-method-workflow.webp',
+        caption: {
+          en: 'SPME method workflow: pre-conditioning, immersion extraction from the sample matrix, and desorption into a solvent before analysis.',
+          tr: 'SPME yöntem akışı: ön koşullandırma, numune matriksinden daldırmalı ekstraksiyon ve analiz öncesi çözücüye desorpsiyon.'
+        }
+      },
+      {
+        src: '/images/research/spme/spme-fiber-geometry.webp',
+        caption: {
+          en: 'SPME fiber geometry shown for the project: 200 µm nitinol support, extractive-phase coating and an illustrated coating thickness of approximately 240 µm.',
+          tr: 'Projede gösterilen SPME fiber geometrisi: 200 µm nitinol taşıyıcı, ekstraktif faz kaplaması ve yaklaşık 240 µm olarak gösterilen kaplama kalınlığı.'
+        }
+      }
+    ]
   },
   {
     id: 'extractive-phases',
@@ -94,7 +124,11 @@ export const researchStory = [
         'Karşılaştırmanın amacı yalnızca en büyük sinyali veren kaplamayı bulmak değildi. Polarite, iyonik karakter ve fonksiyonel grup kimyasının L-histidin alımını nasıl etkilediğini anlamak ve sinyal ile tekrarlanabilirlik arasında en uygun dengeyi sağlayan fazı seçmekti.'
       ]
     },
-    art: 'selectivity'
+    image: '/images/research/spme/extractive-phase-results-table.webp',
+    caption: {
+      en: 'Summary table for the HLB, PMAA and SAX/HLB-SAX comparison, including %RSD, eluted amount and recovery values used to evaluate phase performance.',
+      tr: 'HLB, PMAA ve SAX/HLB-SAX karşılaştırmasının %RSD, elüe edilen miktar ve recovery değerlerini özetleyen performans tablosu.'
+    }
   },
   {
     id: 'fiber-fabrication',
@@ -217,13 +251,6 @@ export const researchStory = [
           en: 'Experimental desorption-solvent screening comparing first and second desorption. ACN/MeOH/H₂O (40:40:20) produced the strongest release among the tested solvent systems.',
           tr: 'Birinci ve ikinci desorpsiyonu karşılaştıran deneysel çözücü taraması. Test edilen sistemler arasında ACN/MeOH/H₂O (40:40:20) en güçlü analit salımını sağladı.'
         }
-      },
-      {
-        src: '/images/research/spme/desorption-time-optimization.webp',
-        caption: {
-          en: 'Experimental desorption-time optimization at 1, 5, 10, 20 and 30 minutes, showing the highest response at 1 minute and the first/second desorption behavior.',
-          tr: '1, 5, 10, 20 ve 30 dakikada yapılan deneysel desorpsiyon süresi optimizasyonu; en yüksek yanıt 1 dakikada görülürken birinci/ikinci desorpsiyon davranışı birlikte gösteriliyor.'
-        }
       }
     ]
   },
@@ -245,7 +272,11 @@ export const researchStory = [
         'Bu proje klinik olarak doğrulanmış bir tanı testi değil; yöntem geliştirme ve fizibilite araştırması olarak değerlendirilmelidir. Çalışmanın asıl değeri; kaplama kimyası, boyut seçici PAN mimarisi, iyonik etkileşimler, çözücü bileşimi, süre, kalibrasyon ve tekrarlanabilirliğin hızlı bir doğrudan-MS iş akışında nasıl bir araya getirilebildiğini göstermesidir.'
       ]
     },
-    art: 'ms'
+    image: '/images/research/spme/desorption-time-optimization.webp',
+    caption: {
+      en: 'Time-dependent first/second desorption response at 1, 5, 10, 20 and 30 minutes. The graph is retained here as part of the final feasibility sequence because the selected 1-minute desorption condition feeds directly into the compact workflow.',
+      tr: '1, 5, 10, 20 ve 30 dakikada birinci/ikinci desorpsiyon yanıtı. Seçilen 1 dakikalık desorpsiyon koşulu doğrudan kompakt final iş akışını beslediği için grafik bu fizibilite bölümünde sunuluyor.'
+    }
   },
 ]
 
