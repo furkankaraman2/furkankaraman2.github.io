@@ -51,7 +51,8 @@ export function PageHero({ eyebrow, title, intro, art='spme' }) {
 }
 
 export function StoryMedia({ item, lang }) {
-  if (item.image) return <figure className="story-figure" data-parallax><div className={'image-frame ' + (item.image.includes('/illustrations/') ? 'vector-frame' : '')}><img loading="lazy" decoding="async" src={item.image} alt={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
+  if (item.images?.length) return <div className="story-media-gallery" data-parallax>{item.images.map((media,i)=><figure className="story-figure" key={media.src}><div className="image-frame report-frame"><img loading="lazy" decoding="async" src={media.src} alt={t(media.caption,lang) || t(item.title,lang)}/></div>{media.caption && <figcaption><span>FIG. {i+1}</span>{t(media.caption,lang)}</figcaption>}</figure>)}</div>
+  if (item.image) return <figure className="story-figure" data-parallax><div className={'image-frame ' + (item.image.includes('/illustrations/') ? 'vector-frame' : 'report-frame')}><img loading="lazy" decoding="async" src={item.image} alt={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
   return <LineArt variant={item.art || 'spme'} label={t(item.title,lang)}/>
 }
 

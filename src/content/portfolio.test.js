@@ -61,6 +61,15 @@ describe('portfolio content integrity', () => {
       expect(item.text.en.length).toBeGreaterThanOrEqual(2)
       expect(item.text.tr.length).toBeGreaterThanOrEqual(2)
     }
+    expect(researchStory.find(x => x.id === 'fiber-fabrication').image).toBe('/images/research/spme/spme-dip-coating.webp')
+    expect(researchStory.find(x => x.id === 'histidine-chemistry').image).toBe('/images/research/spme/histidine-pka.webp')
+    expect(researchStory.find(x => x.id === 'calibration').image).toBe('/images/research/spme/histidine-calibration.webp')
+    expect(researchStory.find(x => x.id === 'phase-selection').image).toBe('/images/research/spme/extractive-phase-comparison.webp')
+    expect(researchStory.find(x => x.id === 'desorption').images).toHaveLength(2)
+    expect(researchStory.find(x => x.id === 'desorption').images.map(x => x.src)).toEqual(expect.arrayContaining([
+      '/images/research/spme/desorption-solvent-screening.webp',
+      '/images/research/spme/desorption-time-optimization.webp',
+    ]))
   })
 
   it('uses scalable premium scientific visuals that are actually present in public assets', () => {
@@ -76,6 +85,12 @@ describe('portfolio content integrity', () => {
       'public/images/illustrations/spme-calibration-vector.svg',
       'public/images/illustrations/spme-phase-comparison-vector.svg',
       'public/images/illustrations/spme-desorption-vector.svg',
+      'public/images/research/spme/spme-dip-coating.webp',
+      'public/images/research/spme/histidine-pka.webp',
+      'public/images/research/spme/histidine-calibration.webp',
+      'public/images/research/spme/extractive-phase-comparison.webp',
+      'public/images/research/spme/desorption-solvent-screening.webp',
+      'public/images/research/spme/desorption-time-optimization.webp',
     ]) expect(existsSync(path)).toBe(true)
   })
 

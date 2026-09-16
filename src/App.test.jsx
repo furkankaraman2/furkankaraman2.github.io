@@ -48,6 +48,16 @@ describe('portfolio functionality', () => {
     expect(localStorage.getItem('portfolio-language')).toBe('tr')
   })
 
+  it('renders the experimental SPME figures with bilingual scientific captions', () => {
+    render(<MemoryRouter initialEntries={['/research/spme-moi-ms']}><App /></MemoryRouter>)
+    expect(screen.getByAltText(/Project figure illustrating the controlled SPME dip-coating sequence/i)).toHaveAttribute('src', '/images/research/spme/spme-dip-coating.webp')
+    expect(screen.getByAltText(/Experimental L-histidine calibration curve used in the project/i)).toHaveAttribute('src', '/images/research/spme/histidine-calibration.webp')
+    expect(screen.getByAltText(/Experimental desorption-time optimization at 1, 5, 10, 20 and 30 minutes/i)).toHaveAttribute('src', '/images/research/spme/desorption-time-optimization.webp')
+    fireEvent.click(screen.getByRole('button', { name: 'Türkçeye geç' }))
+    expect(screen.getByAltText(/SPME fiber üretiminde kontrollü dip-coating sırasını gösteren proje görseli/i)).toBeInTheDocument()
+    expect(screen.getByAltText(/1, 5, 10, 20 ve 30 dakikada yapılan deneysel desorpsiyon süresi optimizasyonu/i)).toBeInTheDocument()
+  })
+
   it('shows SPME as a real Experience entry that routes to the central research case study', () => {
     render(<MemoryRouter initialEntries={['/experience']}><App /></MemoryRouter>)
     const link = screen.getByRole('link', { name: /Student Researcher – SPME–MOI–MS Method Development/i })
