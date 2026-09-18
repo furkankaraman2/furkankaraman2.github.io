@@ -1,3 +1,5 @@
+import { realPhotos } from './imageCredits'
+
 export const dopingExperience = {
   slug: 'doping-control',
   order: 2,
@@ -113,11 +115,6 @@ export const dopingExperience = {
           'Cihazın çalışma mantığı da aynı derecede önemliydi: bileşikler önce kromatografik olarak ayrılıyor, genellikle ESI ile iyonlaştırılıyor ve ilk quadrupole’da precursor m/z değerine göre seçiliyordu. Collision-induced fragmentation sonrasında oluşan product ion’lar ikinci quadrupole’da ölçülüyordu. Bu precursor-fragment ilişkisi karmaşık biyolojik matrikste hem seçicilik hem de nicel bilgi sağlıyor.'
         ]
       },
-      image: '/images/illustrations/doping-editorial.svg',
-      caption: {
-        en: 'Editorial illustration of the anti-doping analytical chain, including tandem MS, high-resolution MS and longitudinal monitoring.',
-        tr: 'Tandem MS, yüksek çözünürlüklü MS ve longitudinal izlemeyi kapsayan doping kontrol analitik zincirinin bilimsel illüstrasyonu.'
-      }
     },
     {
       id: 'gc-msms',
@@ -241,3 +238,51 @@ export const dopingExperience = {
     }
   ]
 }
+
+
+const dopingPhotoMap = {
+  'laboratory-chain': [realPhotos.labScientist, {
+    en: 'Representative analytical-laboratory photograph used to illustrate the controlled sample-to-result environment described in this section; it is not a photograph of my placement laboratory.',
+    tr: 'Bu bölümde anlatılan kontrollü numuneden-sonuca laboratuvar ortamını görselleştiren temsilî analitik laboratuvar fotoğrafıdır; staj yaptığım laboratuvarın fotoğrafı değildir.'
+  }],
+  'front-end-quality': [realPhotos.labScientist, {
+    en: 'Representative laboratory photograph illustrating disciplined bench work and front-end quality control; not a photograph of the Turkish Doping Control Center.',
+    tr: 'Disiplinli tezgâh çalışması ve ön kalite kontrolü görselleştiren temsilî laboratuvar fotoğrafıdır; Türkiye Doping Kontrol Merkezi’nin fotoğrafı değildir.'
+  }],
+  'controls-calibration': [realPhotos.lcms, {
+    en: 'Representative LC–MS laboratory instrumentation used to support the discussion of controls, calibration and internal-standard based analytical batches; not the instrument from my placement.',
+    tr: 'Kontrol, kalibrasyon ve internal-standard temelli analitik batch anlatımını destekleyen temsilî LC–MS laboratuvar cihazıdır; stajımdaki cihazın fotoğrafı değildir.'
+  }],
+  'lc-msms': [realPhotos.lcms, {
+    en: 'Representative liquid-chromatography–mass-spectrometry instrumentation used to illustrate the LC–MS/MS workflow discussed here. The photograph is illustrative and is not presented as the exact instrument used during my placement.',
+    tr: 'Burada anlatılan LC–MS/MS iş akışını görselleştirmek için kullanılan temsilî sıvı kromatografisi–kütle spektrometrisi cihazıdır. Fotoğraf, stajımda kullanılan birebir cihaz olarak sunulmamaktadır.'
+  }],
+  'gc-msms': [realPhotos.gcms, {
+    en: 'Representative GC–MS laboratory instrumentation. The source photograph documents a GC–MS system, so it is used only to illustrate the GC–MS analytical environment rather than to claim a specific tandem-MS model.',
+    tr: 'Temsilî GC–MS laboratuvar cihazı. Kaynak fotoğraf bir GC–MS sistemi gösterdiği için belirli bir tandem-MS modeli olduğu iddia edilmeden GC–MS analitik ortamını görselleştirmek amacıyla kullanılmıştır.'
+  }],
+  'peptides-hrms': [realPhotos.qtof, {
+    en: 'Representative LC–qTOF high-resolution mass-spectrometry system used to illustrate accurate-mass / HRMS analysis; not the instrument from my placement.',
+    tr: 'Accurate-mass / HRMS analizini görselleştiren temsilî LC–qTOF yüksek çözünürlüklü kütle spektrometrisi sistemi; stajımdaki cihazın fotoğrafı değildir.'
+  }],
+  'hplc-irms-prep': [realPhotos.lcms, {
+    en: 'Representative liquid-chromatography / mass-spectrometry laboratory instrumentation used as visual context for the multi-stage chromatographic preparation described here; not a photograph of the placement laboratory.',
+    tr: 'Burada anlatılan çok aşamalı kromatografik hazırlığa görsel bağlam sağlayan temsilî sıvı kromatografisi / kütle spektrometrisi laboratuvar cihazı; staj laboratuvarının fotoğrafı değildir.'
+  }],
+  'isotope-ratio': [realPhotos.irms, {
+    en: 'Representative isotope-ratio mass spectrometer used to illustrate the isotope-ratio measurement stage; not the specific instrument used during my placement.',
+    tr: 'İzotop oranı ölçüm aşamasını görselleştiren temsilî isotope-ratio mass spectrometer; stajımda kullanılan spesifik cihazın fotoğrafı değildir.'
+  }],
+  'epo-analysis': [realPhotos.electrophoresis, {
+    en: 'Representative electrophoresis equipment used to illustrate electrophoretic separation in the EPO-analysis discussion; not a photograph of the placement laboratory.',
+    tr: 'EPO analizi anlatımındaki elektroforetik ayırmayı görselleştiren temsilî elektroforez ekipmanı; staj laboratuvarının fotoğrafı değildir.'
+  }],
+  'athlete-passport': [realPhotos.labScientist, {
+    en: 'Representative laboratory photograph used to provide real-world analytical context for longitudinal monitoring; it does not depict an Athlete Biological Passport procedure or my placement laboratory.',
+    tr: 'Longitudinal izlem anlatımına gerçek laboratuvar bağlamı sağlayan temsilî fotoğraf; Athlete Biological Passport prosedürünü veya staj laboratuvarımı göstermemektedir.'
+  }],
+}
+dopingExperience.sections.forEach(section => {
+  const media = dopingPhotoMap[section.id]
+  if (media) Object.assign(section, { image: media[0], caption: media[1], art: undefined, images: undefined })
+})

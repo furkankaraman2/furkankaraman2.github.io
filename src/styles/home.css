@@ -68,3 +68,10 @@
 .patent-media-overlay{position:absolute;z-index:3;left:22px;right:22px;bottom:18px;display:grid;grid-template-columns:112px 1fr;gap:18px;align-items:end;color:#fff}.patent-media-overlay .line-art{color:#6bd0d5;min-height:105px}.patent-media-overlay .line-art:before{width:105px;height:105px}.patent-media-overlay span{font:700 9px/1.6 var(--display);letter-spacing:.13em;color:#d9edef;padding-bottom:12px}
 .home-patent-copy .button.outline{border-color:#527079}.home-patent-copy .button.outline:hover{background:#0d2a36;border-color:#0d2a36}
 .home-patent-media.premium-illustration>img{filter:none;object-position:center;image-rendering:auto}
+
+
+/* Real-photo feature panels replace the former AI/editorial illustration treatment. */
+.home-doping-media.real-photo-feature>img,.home-mta-media.real-photo-feature>img,.home-patent-media.real-photo-feature>img{filter:none!important;object-fit:cover;object-position:center;transform:scale(1.01)!important}
+.home-doping-media.real-photo-feature .photo-credit,.home-mta-media.real-photo-feature .photo-credit,.home-patent-media.real-photo-feature .photo-credit{position:absolute;z-index:4;right:14px;bottom:10px;max-width:58%;padding:5px 7px;background:rgba(7,26,43,.76);color:#dcecef}
+.home-doping-media.real-photo-feature:after,.home-mta-media.real-photo-feature:after,.home-patent-media.real-photo-feature:after{background:linear-gradient(180deg,transparent 58%,rgba(7,26,43,.58))}
+

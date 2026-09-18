@@ -1,3 +1,5 @@
+import { realPhotos } from './imageCredits'
+
 export const patentSections = [
   {
     id: 'research-question',
@@ -17,11 +19,6 @@ export const patentSections = [
         'Bu geçişin merkezinde Teknoloji Transfer Ofisleri (TTO) yer alıyor. Dermis Pharma / Dermalix vakası çalışmaya somut bir zaman çizgisi kazandırıyor ve akademik bilim, fikri mülkiyet, girişimcilik, yatırım ve yerleşik bir ilaç şirketinin tek bir ticarileştirme yolunun parçaları hâline nasıl gelebileceğini gösteriyor.'
       ]
     },
-    image: '/images/illustrations/patent-editorial.svg',
-    caption: {
-      en: 'Original editorial illustration of the research-to-commercialization pathway studied in the term paper.',
-      tr: 'Dönem çalışmasında incelenen araştırmadan ticarileşmeye geçiş yolunun özgün editoryal illüstrasyonu.'
-    }
   },
   {
     id: 'patent-framework',
@@ -81,11 +78,6 @@ export const patentSections = [
         'Dermalix çalışmada, doku iyileştikçe zamanla parçalanabilen veya çözünebilen bir yara bakım yaması olarak anlatılıyor. Bu aşama benim dönem çalışmam açısından kritik; çünkü bilimsel yenilik, hasta ihtiyacı ve pazar gereksinimi ilk kez aynı noktada birleşmeye başlıyor.'
       ]
     },
-    image: '/images/illustrations/patent-science.svg',
-    caption: {
-      en: 'Representative scientific illustration of biomaterial research evolving toward a wound-care product concept.',
-      tr: 'Biyomalzeme araştırmasının yara bakım ürünü fikrine dönüşmesini anlatan temsilî bilimsel illüstrasyon.'
-    }
   },
   {
     id: 'ip-protection',
@@ -125,11 +117,6 @@ export const patentSections = [
         'EBİLTEM bu değerlendirmeyi yapılandırmak için vaka çalışmasında Avrupa Patent Ofisi ile ilişkilendirilen IPscore aracından yararlanıyor. Bu bölüm benim için özellikle öğreticiydi; çünkü inovasyonu yalnızca “bilimsel olarak ilginç” olmaktan çıkarıp karşılaştırılabilen, puanlanabilen ve önceliklendirilebilen bir teknoloji portföyü kararına dönüştürüyor.'
       ]
     },
-    image: '/images/illustrations/patent-assessment.svg',
-    caption: {
-      en: 'Representative decision matrix for technical, market and strategic-financial technology assessment.',
-      tr: 'Teknik, pazar ve stratejik-finansal teknoloji değerlendirmesini anlatan temsilî karar matrisi.'
-    }
   },
   {
     id: 'commercialization-options',
@@ -169,11 +156,6 @@ export const patentSections = [
         'Çalışmada üniversite ile spin-off arasında equity odaklı bir ilişki de anlatılıyor; patentli teknoloji yeni şirket yapısına aktarılırken EBİLTEM araştırmacıların girişimcilik gelişimini desteklemeye devam ediyor. Böylece vaka, Türkiye’de üniversite–startup iş birliğinin erken örneklerinden biri hâline geliyor.'
       ]
     },
-    image: '/images/illustrations/patent-spinout.svg',
-    caption: {
-      en: 'Representative illustration of the transition from university research to a funded spin-off company.',
-      tr: 'Üniversite araştırmasından fonlanan bir spin-off şirkete geçişi anlatan temsilî illüstrasyon.'
-    }
   },
   {
     id: 'global-ip-partnership',
@@ -193,11 +175,6 @@ export const patentSections = [
         'Venture capital desteği geliştirme, klinik çalışmalar ve patent korumasının ilerlemesine yardımcı oluyor; ancak tam ölçekli üretim, regülasyon genişlemesi ve uluslararası satış için daha güçlü altyapıya sahip bir sektör ortağı gerekiyor. Çalışmada Abdi İbrahim, üretim kapasitesi, düzenleyici bilgi ve pazar erişimiyle akademik ekip ve startup’ın yetkinliklerini tamamlayan stratejik ilaç şirketi olarak öne çıkıyor.'
       ]
     },
-    image: '/images/illustrations/patent-global-partnership.svg',
-    caption: {
-      en: 'Representative illustration of global IP prioritization, investment and pharmaceutical partnership.',
-      tr: 'Global IP önceliklendirmesi, yatırım ve ilaç sektörü ortaklığını anlatan temsilî illüstrasyon.'
-    }
   },
   {
     id: 'market-impact',
@@ -220,3 +197,51 @@ export const patentSections = [
     art: 'industry'
   }
 ]
+
+
+const patentPhotoMap = {
+  'research-question': [realPhotos.labNotebook, {
+    en: 'Representative research notebook used to ground the research-to-commercialization discussion in real scientific documentation; not a document from the case-study team.',
+    tr: 'Araştırmadan ticarileşmeye geçiş anlatımını gerçek bilimsel dokümantasyonla ilişkilendiren temsilî araştırma defteri; vaka ekibine ait bir belge değildir.'
+  }],
+  'patent-framework': [realPhotos.patentApplication, {
+    en: 'Historical U.S. patent-application document used as representative visual context for patent filing and protection; unrelated to the Dermalix patent.',
+    tr: 'Patent başvurusu ve koruma sürecine temsilî görsel bağlam sağlayan tarihî ABD patent başvurusu belgesi; Dermalix patentiyle ilişkili değildir.'
+  }],
+  'tto-ebiltem': [realPhotos.labNotebook, {
+    en: 'Representative scientific documentation used to illustrate the handoff from research evidence to structured technology-transfer assessment; not an EBİLTEM document.',
+    tr: 'Araştırma kanıtından yapılandırılmış teknoloji transferi değerlendirmesine geçişi görselleştiren temsilî bilimsel dokümantasyon; EBİLTEM belgesi değildir.'
+  }],
+  'dermalix-science': [realPhotos.labScientist, {
+    en: 'Representative academic laboratory photograph used to illustrate the scientific-research stage of the commercialization pathway; it does not depict the Dermalix research team.',
+    tr: 'Ticarileştirme yolundaki bilimsel araştırma aşamasını görselleştiren temsilî akademik laboratuvar fotoğrafı; Dermalix araştırma ekibini göstermemektedir.'
+  }],
+  'ip-protection': [realPhotos.patentApplication, {
+    en: 'Representative patent-application document used to illustrate formal IP protection; it is not the patent application from the case study.',
+    tr: 'Resmî fikri mülkiyet korumasını görselleştiren temsilî patent başvurusu belgesi; vaka çalışmasındaki patent başvurusu değildir.'
+  }],
+  'technology-assessment': [realPhotos.labNotebook, {
+    en: 'Representative research documentation used to illustrate evidence-based technical and commercial assessment; not an IPscore or EBİLTEM worksheet.',
+    tr: 'Kanıta dayalı teknik ve ticari değerlendirmeyi görselleştiren temsilî araştırma dokümantasyonu; IPscore veya EBİLTEM çalışma formu değildir.'
+  }],
+  'commercialization-options': [realPhotos.labScientist, {
+    en: 'Representative university research environment used to illustrate the academic origin of commercialization options; it does not depict the case-study researchers.',
+    tr: 'Ticarileştirme seçeneklerinin akademik kökenini görselleştiren temsilî üniversite araştırma ortamı; vaka araştırmacılarını göstermemektedir.'
+  }],
+  'dermis-pharma': [realPhotos.labNotebook, {
+    en: 'Representative research notebook used to illustrate the transition from documented R&D to an entrepreneurial development pathway; not a Dermis Pharma document.',
+    tr: 'Belgelenmiş Ar-Ge’den girişimci geliştirme yoluna geçişi görselleştiren temsilî araştırma defteri; Dermis Pharma belgesi değildir.'
+  }],
+  'global-ip-partnership': [realPhotos.patentApplication, {
+    en: 'Representative patent documentation used to illustrate the global-IP stage of the case study; it is not a filing from the Dermalix portfolio.',
+    tr: 'Vaka çalışmasının global IP aşamasını görselleştiren temsilî patent dokümantasyonu; Dermalix portföyündeki bir başvuru değildir.'
+  }],
+  'market-impact': [realPhotos.labScientist, {
+    en: 'Representative research-laboratory photograph used to close the science-to-impact narrative; it does not depict the companies or researchers discussed in the term paper.',
+    tr: 'Bilimden etkiye uzanan anlatımı tamamlayan temsilî araştırma laboratuvarı fotoğrafı; dönem çalışmasında geçen şirketleri veya araştırmacıları göstermemektedir.'
+  }],
+}
+patentSections.forEach(section => {
+  const media = patentPhotoMap[section.id]
+  if (media) Object.assign(section, { image: media[0], caption: media[1], art: undefined, images: undefined })
+})

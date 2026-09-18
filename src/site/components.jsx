@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ExternalLink, Mail, Phone } from 'lucide-react'
 import { copy, profile } from '../content/portfolio'
+import { imageCredits } from '../content/imageCredits'
 import { t } from './utils'
 
 export function Eyebrow({ children }) { return <p className="eyebrow"><span/>{children}</p> }
@@ -46,13 +47,19 @@ export function LineArt({ variant = 'spme', label }) {
   return <div className={'line-art line-art-' + variant} aria-label={label || ''} role="img" data-parallax><svg viewBox="0 0 260 180" aria-hidden="true">{arts[variant] || arts.spme}</svg></div>
 }
 
-export function PageHero({ eyebrow, title, intro, art='spme' }) {
-  return <section className="page-hero"><div data-reveal><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{intro}</p></div><LineArt variant={art}/></section>
+export function PageHero({ eyebrow, title, intro, art='spme', image, imageAlt }) {
+  return <section className={'page-hero ' + (image ? 'page-hero-photo' : '')}><div data-reveal><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{intro}</p></div>{image ? <figure className="page-hero-photo-frame"><img loading="eager" decoding="async" src={image} alt={imageAlt || title}/><PhotoCredit src={image}/></figure> : <LineArt variant={art}/>}</section>
+}
+
+export function PhotoCredit({ src }) {
+  const credit = imageCredits[src]
+  if (!credit) return null
+  return <small className="photo-credit">Photo: <a href={credit.sourceUrl} target="_blank" rel="noreferrer">{credit.author}</a>{credit.institution ? ` · ${credit.institution}` : ''} · <a href={credit.licenseUrl} target="_blank" rel="noreferrer">{credit.license}</a></small>
 }
 
 export function StoryMedia({ item, lang }) {
-  if (item.images?.length) return <div className="story-media-gallery" data-parallax>{item.images.map((media,i)=><figure className="story-figure" key={media.src}><div className="image-frame report-frame"><img loading="lazy" decoding="async" src={media.src} alt={t(media.caption,lang) || t(item.title,lang)}/></div>{media.caption && <figcaption><span>FIG. {i+1}</span>{t(media.caption,lang)}</figcaption>}</figure>)}</div>
-  if (item.image) return <figure className="story-figure" data-parallax><div className={'image-frame ' + (item.image.includes('/illustrations/') ? 'vector-frame' : 'report-frame')}><img loading="lazy" decoding="async" src={item.image} alt={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}</figcaption>}</figure>
+  if (item.images?.length) return <div className="story-media-gallery" data-parallax>{item.images.map((media,i)=><figure className="story-figure" key={media.src}><div className="image-frame report-frame"><img loading="lazy" decoding="async" src={media.src} alt={t(media.caption,lang) || t(item.title,lang)}/></div>{media.caption && <figcaption><span>FIG. {i+1}</span>{t(media.caption,lang)}<PhotoCredit src={media.src}/></figcaption>}</figure>)}</div>
+  if (item.image) return <figure className="story-figure" data-parallax><div className={'image-frame ' + (item.image.includes('/illustrations/') ? 'vector-frame' : 'report-frame')}><img loading="lazy" decoding="async" src={item.image} alt={t(item.caption,lang) || t(item.title,lang)}/></div>{item.caption && <figcaption><span>FIG.</span>{t(item.caption,lang)}<PhotoCredit src={item.image}/></figcaption>}</figure>
   return <LineArt variant={item.art || 'spme'} label={t(item.title,lang)}/>
 }
 
