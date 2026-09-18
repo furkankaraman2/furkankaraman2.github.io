@@ -1,8 +1,8 @@
 export const realPhotos = {
-  labScientist: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Scientists_are_working_in_the_lab.1.jpg/1024px-Scientists_are_working_in_the_lab.1.jpg',
+  labScientist: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Scientists_are_working_in_the_lab.1.jpg',
   lcms: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Liquid_chromatograph_with_mass_spectrometer%2C_in_CAFIA_laboratory%2C_Czech_Republic.png/1280px-Liquid_chromatograph_with_mass_spectrometer%2C_in_CAFIA_laboratory%2C_Czech_Republic.png',
   gcms: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/GCMS_Instrument.jpg/1280px-GCMS_Instrument.jpg',
-  qtof: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Liquid_chromatograph_with_a_mass_spectrometer_operating_on_the_principle_of_flight_time_in_combination_with_a_quadrupole_analyzer_%28qTOF%29_in_CAFIA_laboratory%2C_Czech_Republic.jpg/1135px-Liquid_chromatograph_with_a_mass_spectrometer_operating_on_the_principle_of_flight_time_in_combination_with_a_quadrupole_analyzer_%28qTOF%29_in_CAFIA_laboratory%2C_Czech_Republic.jpg',
+  qtof: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Liquid_chromatograph_with_a_mass_spectrometer_operating_on_the_principle_of_flight_time_in_combination_with_a_quadrupole_analyzer_%28qTOF%29_in_CAFIA_laboratory%2C_Czech_Republic.jpg',
   irms: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Isotope_Ratio_Mass_Spectrometer_%2808010617%29_%2845919100874%29.jpg',
   electrophoresis: 'https://upload.wikimedia.org/wikipedia/commons/0/07/Electrophoresis_equipment.jpg',
   icpmsPrep: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Scientist_prepares_samples_for_the_Inductively_Couples_Plasma_Mass_Spectroscopy_%28ICP-MS%29_analysis.jpg/1280px-Scientist_prepares_samples_for_the_Inductively_Couples_Plasma_Mass_Spectroscopy_%28ICP-MS%29_analysis.jpg',
