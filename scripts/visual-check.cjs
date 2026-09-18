@@ -13,7 +13,7 @@ async function run() {
     page.on('console', m => { if (m.type() === 'error') errors.push(m.text()) })
     page.on('pageerror', e => errors.push(e.message))
     for (const route of routes) {
-      const response = await page.goto(`http://127.0.0.1:5173${route}`, { waitUntil: 'networkidle' })
+      const response = await page.goto(`http://127.0.0.1:5173${route}`, { waitUntil: 'domcontentloaded' })
       const step = Math.max(420, Math.floor(device.height * 0.7))
       let y = 0
       let previousHeight = 0
@@ -31,6 +31,9 @@ async function run() {
       await page.waitForTimeout(120)
       await page.evaluate(() => window.scrollTo(0, 0))
       await page.waitForTimeout(100)
+      // External, openly licensed scientific photography may finish after the app itself.
+      // Wait for image requests without making the whole route depend on global network-idle.
+      await page.waitForFunction(() => [...document.images].every(i => i.complete), { timeout: 20000 }).catch(() => {})
       const state = await page.evaluate(() => ({
         width: document.documentElement.scrollWidth,
         viewport: document.documentElement.clientWidth,
@@ -44,7 +47,7 @@ async function run() {
       results.push({ device: device.name, route, status: response?.status(), ...state, errors: [...errors] })
       errors.length = 0
     }
-    await page.goto('http://127.0.0.1:5173/', { waitUntil: 'networkidle' })
+    await page.goto('http://127.0.0.1:5173/', { waitUntil: 'domcontentloaded' })
     if (device.name === 'mobile') await page.getByRole('button', { name: 'Toggle menu' }).click()
     await page.getByRole('button', { name: 'Türkçeye geç' }).click()
     results.push({ device: device.name, translation: await page.locator('h1').innerText(), storedLanguage: await page.evaluate(() => localStorage.getItem('portfolio-language')) })
