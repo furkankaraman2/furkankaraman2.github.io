@@ -1,6 +1,7 @@
 import { ShieldCheck } from 'lucide-react'
 import { copy, patentSections } from '../content/portfolio'
-import { ContactStrip, Eyebrow, LineArt, PageHero, SectionHead, StorySection } from '../site/components'
+import { realPhotos } from '../content/imageCredits'
+import { ContactStrip, Eyebrow, LineArt, PageHero, PhotoCredit, SectionHead, StorySection } from '../site/components'
 import { t } from '../site/utils'
 
 export default function PatentResearch({lang}) {
@@ -9,7 +10,7 @@ export default function PatentResearch({lang}) {
     <PageHero eyebrow={c.patents.eyebrow} title={c.patents.title} intro={c.patents.intro} art="patent"/>
     <section className="patent-map section-pad" data-reveal>
       <div><Eyebrow>{lang==='en'?'THE QUESTION':'ARAŞTIRMA SORUSU'}</Eyebrow><h2>{lang==='en'?'What has to happen between a laboratory result and a real healthcare product?':'Laboratuvar sonucu ile gerçek bir sağlık ürünü arasında nelerin gerçekleşmesi gerekir?'}</h2><p>{lang==='en'?'My term paper treats commercialization as a connected system: patent strategy, technology assessment, financing, entrepreneurship and industry partnership have to mature together. The Dermis Pharma / Dermalix case became a practical way to trace those decisions across time.':'Dönem çalışmam ticarileşmeyi bağlantılı bir sistem olarak ele alıyor: patent stratejisi, teknoloji değerlendirmesi, finansman, girişimcilik ve sektör ortaklığı birlikte olgunlaşmalı. Dermis Pharma / Dermalix vakası bu kararları zaman içinde izlemek için somut bir örnek sağladı.'}</p></div>
-      <div className="patent-map-art"><img loading="eager" decoding="async" width="1200" height="860" src="/images/illustrations/patent-editorial.svg" alt={lang==='en'?'Editorial illustration of research moving through IP protection, technology transfer and commercialization':'Araştırmanın fikri mülkiyet koruması, teknoloji transferi ve ticarileştirme üzerinden ilerleyişini anlatan illüstrasyon'}/></div>
+      <div className="patent-map-art real-photo-feature"><img loading="eager" decoding="async" width="1200" height="860" src={realPhotos.labNotebook} alt={lang==='en'?'Representative real research notebook and scientific documentation':'Temsilî gerçek araştırma defteri ve bilimsel dokümantasyon'}/><PhotoCredit src={realPhotos.labNotebook}/></div>
     </section>
 
     <section className="narrative-title patent-narrative-title section-pad">
