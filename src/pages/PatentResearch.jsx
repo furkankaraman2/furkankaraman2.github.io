@@ -7,7 +7,7 @@ import { t } from '../site/utils'
 export default function PatentResearch({lang}) {
   const c=copy[lang]
   return <>
-    <PageHero eyebrow={c.patents.eyebrow} title={c.patents.title} intro={c.patents.intro} art="patent"/>
+    <PageHero eyebrow={c.patents.eyebrow} title={c.patents.title} intro={c.patents.intro} art="patent" image={realPhotos.labNotebook} imageAlt={lang==='en'?'Representative real research notebook and scientific documentation':'Temsilî gerçek araştırma defteri ve bilimsel dokümantasyon'}/>
     <section className="patent-map section-pad" data-reveal>
       <div><Eyebrow>{lang==='en'?'THE QUESTION':'ARAŞTIRMA SORUSU'}</Eyebrow><h2>{lang==='en'?'What has to happen between a laboratory result and a real healthcare product?':'Laboratuvar sonucu ile gerçek bir sağlık ürünü arasında nelerin gerçekleşmesi gerekir?'}</h2><p>{lang==='en'?'My term paper treats commercialization as a connected system: patent strategy, technology assessment, financing, entrepreneurship and industry partnership have to mature together. The Dermis Pharma / Dermalix case became a practical way to trace those decisions across time.':'Dönem çalışmam ticarileşmeyi bağlantılı bir sistem olarak ele alıyor: patent stratejisi, teknoloji değerlendirmesi, finansman, girişimcilik ve sektör ortaklığı birlikte olgunlaşmalı. Dermis Pharma / Dermalix vakası bu kararları zaman içinde izlemek için somut bir örnek sağladı.'}</p></div>
       <div className="patent-map-art real-photo-feature"><img loading="eager" decoding="async" width="1200" height="860" src={realPhotos.labNotebook} alt={lang==='en'?'Representative real research notebook and scientific documentation':'Temsilî gerçek araştırma defteri ve bilimsel dokümantasyon'}/><PhotoCredit src={realPhotos.labNotebook}/></div>
