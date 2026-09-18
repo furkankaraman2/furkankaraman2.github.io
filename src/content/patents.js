@@ -1,3 +1,5 @@
+import { realPhotos } from './imageCredits'
+
 export const patentSections = [
   {
     id: 'research-question',
@@ -220,3 +222,51 @@ export const patentSections = [
     art: 'industry'
   }
 ]
+
+
+const patentPhotoMap = {
+  'research-question': [realPhotos.labNotebook, {
+    en: 'Representative research notebook used to ground the research-to-commercialization discussion in real scientific documentation; not a document from the case-study team.',
+    tr: 'Araştırmadan ticarileşmeye geçiş anlatımını gerçek bilimsel dokümantasyonla ilişkilendiren temsilî araştırma defteri; vaka ekibine ait bir belge değildir.'
+  }],
+  'patent-framework': [realPhotos.patentApplication, {
+    en: 'Historical U.S. patent-application document used as representative visual context for patent filing and protection; unrelated to the Dermalix patent.',
+    tr: 'Patent başvurusu ve koruma sürecine temsilî görsel bağlam sağlayan tarihî ABD patent başvurusu belgesi; Dermalix patentiyle ilişkili değildir.'
+  }],
+  'tto-ebiltem': [realPhotos.labNotebook, {
+    en: 'Representative scientific documentation used to illustrate the handoff from research evidence to structured technology-transfer assessment; not an EBİLTEM document.',
+    tr: 'Araştırma kanıtından yapılandırılmış teknoloji transferi değerlendirmesine geçişi görselleştiren temsilî bilimsel dokümantasyon; EBİLTEM belgesi değildir.'
+  }],
+  'dermalix-science': [realPhotos.labScientist, {
+    en: 'Representative academic laboratory photograph used to illustrate the scientific-research stage of the commercialization pathway; it does not depict the Dermalix research team.',
+    tr: 'Ticarileştirme yolundaki bilimsel araştırma aşamasını görselleştiren temsilî akademik laboratuvar fotoğrafı; Dermalix araştırma ekibini göstermemektedir.'
+  }],
+  'ip-protection': [realPhotos.patentApplication, {
+    en: 'Representative patent-application document used to illustrate formal IP protection; it is not the patent application from the case study.',
+    tr: 'Resmî fikri mülkiyet korumasını görselleştiren temsilî patent başvurusu belgesi; vaka çalışmasındaki patent başvurusu değildir.'
+  }],
+  'technology-assessment': [realPhotos.labNotebook, {
+    en: 'Representative research documentation used to illustrate evidence-based technical and commercial assessment; not an IPscore or EBİLTEM worksheet.',
+    tr: 'Kanıta dayalı teknik ve ticari değerlendirmeyi görselleştiren temsilî araştırma dokümantasyonu; IPscore veya EBİLTEM çalışma formu değildir.'
+  }],
+  'commercialization-options': [realPhotos.labScientist, {
+    en: 'Representative university research environment used to illustrate the academic origin of commercialization options; it does not depict the case-study researchers.',
+    tr: 'Ticarileştirme seçeneklerinin akademik kökenini görselleştiren temsilî üniversite araştırma ortamı; vaka araştırmacılarını göstermemektedir.'
+  }],
+  'dermis-pharma': [realPhotos.labNotebook, {
+    en: 'Representative research notebook used to illustrate the transition from documented R&D to an entrepreneurial development pathway; not a Dermis Pharma document.',
+    tr: 'Belgelenmiş Ar-Ge’den girişimci geliştirme yoluna geçişi görselleştiren temsilî araştırma defteri; Dermis Pharma belgesi değildir.'
+  }],
+  'global-ip-partnership': [realPhotos.patentApplication, {
+    en: 'Representative patent documentation used to illustrate the global-IP stage of the case study; it is not a filing from the Dermalix portfolio.',
+    tr: 'Vaka çalışmasının global IP aşamasını görselleştiren temsilî patent dokümantasyonu; Dermalix portföyündeki bir başvuru değildir.'
+  }],
+  'market-impact': [realPhotos.labScientist, {
+    en: 'Representative research-laboratory photograph used to close the science-to-impact narrative; it does not depict the companies or researchers discussed in the term paper.',
+    tr: 'Bilimden etkiye uzanan anlatımı tamamlayan temsilî araştırma laboratuvarı fotoğrafı; dönem çalışmasında geçen şirketleri veya araştırmacıları göstermemektedir.'
+  }],
+}
+patentSections.forEach(section => {
+  const media = patentPhotoMap[section.id]
+  if (media) Object.assign(section, { image: media[0], caption: media[1], art: undefined, images: undefined })
+})
