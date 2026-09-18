@@ -47,8 +47,8 @@ export function LineArt({ variant = 'spme', label }) {
   return <div className={'line-art line-art-' + variant} aria-label={label || ''} role="img" data-parallax><svg viewBox="0 0 260 180" aria-hidden="true">{arts[variant] || arts.spme}</svg></div>
 }
 
-export function PageHero({ eyebrow, title, intro, art='spme' }) {
-  return <section className="page-hero"><div data-reveal><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{intro}</p></div><LineArt variant={art}/></section>
+export function PageHero({ eyebrow, title, intro, art='spme', image, imageAlt }) {
+  return <section className={'page-hero ' + (image ? 'page-hero-photo' : '')}><div data-reveal><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{intro}</p></div>{image ? <figure className="page-hero-photo-frame"><img loading="eager" decoding="async" src={image} alt={imageAlt || title}/><PhotoCredit src={image}/></figure> : <LineArt variant={art}/>}</section>
 }
 
 export function PhotoCredit({ src }) {
