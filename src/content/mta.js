@@ -96,8 +96,6 @@ export const mtaExperience = {
           'Partikül boyutu veya matrix effect nedeniyle preslenmiş pellet sonuçları yeterince tutarlı olmadığında fusion başka bir hazırlama yolu sunuyordu. Flux destekli yüksek sıcaklık eritme ile daha düzgün ve homojen, cam benzeri bir analiz yüzeyi hazırlanıyordu. İki yaklaşımı aynı laboratuvar zincirinde görmek, “matrix effect” kavramını ders kitabındaki soyut bir terim olmaktan çıkarıp gerçek bir numune hazırlama problemine dönüştürdü.'
         ]
       },
-      image: '/images/illustrations/mta-editorial.svg',
-      caption: { en: 'Resolution-independent editorial illustration of geological sample preparation, pellet/fusion and elemental analysis.', tr: 'Jeolojik numune hazırlama, pellet/fusion ve elementel analizi anlatan çözünürlükten bağımsız bilimsel illüstrasyon.' }
     },
     {
       id: 'xrf-analysis',
