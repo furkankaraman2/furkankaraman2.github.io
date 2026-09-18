@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { existsSync, readdirSync } from 'node:fs'
 import { copy, experiences, patentSections, phases, profile, researchMetrics, researchStory, researchWorkflow } from './portfolio'
+import { imageCredits, realPhotos } from './imageCredits'
 
 describe('portfolio content integrity', () => {
   it('provides natural bilingual core copy and no Reports navigation', () => {
@@ -18,6 +19,25 @@ describe('portfolio content integrity', () => {
     expect(profile.github).toBeUndefined()
     expect(profile.email).toBe('chemist.furkan2@gmail.com')
     expect(readdirSync('public/documents')).toEqual(['Furkan_Karaman_CV.pdf'])
+  })
+
+  it('uses licensed real photography for Doping, MTA and Patent while leaving SPME media untouched', () => {
+    const doping = experiences.find(x => x.slug === 'doping-control')
+    const mta = experiences.find(x => x.slug === 'mta')
+    for (const item of [...doping.sections, ...mta.sections, ...patentSections]) {
+      expect(item.image).toMatch(/^https:\/\/upload\.wikimedia\.org\//)
+      expect(item.image).not.toContain('/images/illustrations/')
+      expect(item.caption.en).toMatch(/Representative|representative/)
+      expect(imageCredits[item.image]).toBeTruthy()
+    }
+    expect(doping.sections.find(x => x.id === 'lc-msms').image).toBe(realPhotos.lcms)
+    expect(doping.sections.find(x => x.id === 'gc-msms').image).toBe(realPhotos.gcms)
+    expect(doping.sections.find(x => x.id === 'peptides-hrms').image).toBe(realPhotos.qtof)
+    expect(doping.sections.find(x => x.id === 'isotope-ratio').image).toBe(realPhotos.irms)
+    expect(mta.sections.find(x => x.id === 'xrf-analysis').image).toBe(realPhotos.xrf)
+    expect(mta.sections.find(x => x.id === 'icp-oes').image).toBe(realPhotos.icpOes)
+    expect(mta.sections.find(x => x.id === 'coal-thermal').image).toBe(realPhotos.tga)
+    expect(researchStory.find(x => x.id === 'spme-moi-concept').image).toBe('/images/research/spme/moi-ms-open-port-interface.webp')
   })
 
   it('uses one central SPME experience entry that routes to the research case study', () => {
