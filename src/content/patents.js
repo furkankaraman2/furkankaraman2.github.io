@@ -19,11 +19,6 @@ export const patentSections = [
         'Bu geçişin merkezinde Teknoloji Transfer Ofisleri (TTO) yer alıyor. Dermis Pharma / Dermalix vakası çalışmaya somut bir zaman çizgisi kazandırıyor ve akademik bilim, fikri mülkiyet, girişimcilik, yatırım ve yerleşik bir ilaç şirketinin tek bir ticarileştirme yolunun parçaları hâline nasıl gelebileceğini gösteriyor.'
       ]
     },
-    image: '/images/illustrations/patent-editorial.svg',
-    caption: {
-      en: 'Original editorial illustration of the research-to-commercialization pathway studied in the term paper.',
-      tr: 'Dönem çalışmasında incelenen araştırmadan ticarileşmeye geçiş yolunun özgün editoryal illüstrasyonu.'
-    }
   },
   {
     id: 'patent-framework',
@@ -83,11 +78,6 @@ export const patentSections = [
         'Dermalix çalışmada, doku iyileştikçe zamanla parçalanabilen veya çözünebilen bir yara bakım yaması olarak anlatılıyor. Bu aşama benim dönem çalışmam açısından kritik; çünkü bilimsel yenilik, hasta ihtiyacı ve pazar gereksinimi ilk kez aynı noktada birleşmeye başlıyor.'
       ]
     },
-    image: '/images/illustrations/patent-science.svg',
-    caption: {
-      en: 'Representative scientific illustration of biomaterial research evolving toward a wound-care product concept.',
-      tr: 'Biyomalzeme araştırmasının yara bakım ürünü fikrine dönüşmesini anlatan temsilî bilimsel illüstrasyon.'
-    }
   },
   {
     id: 'ip-protection',
@@ -127,11 +117,6 @@ export const patentSections = [
         'EBİLTEM bu değerlendirmeyi yapılandırmak için vaka çalışmasında Avrupa Patent Ofisi ile ilişkilendirilen IPscore aracından yararlanıyor. Bu bölüm benim için özellikle öğreticiydi; çünkü inovasyonu yalnızca “bilimsel olarak ilginç” olmaktan çıkarıp karşılaştırılabilen, puanlanabilen ve önceliklendirilebilen bir teknoloji portföyü kararına dönüştürüyor.'
       ]
     },
-    image: '/images/illustrations/patent-assessment.svg',
-    caption: {
-      en: 'Representative decision matrix for technical, market and strategic-financial technology assessment.',
-      tr: 'Teknik, pazar ve stratejik-finansal teknoloji değerlendirmesini anlatan temsilî karar matrisi.'
-    }
   },
   {
     id: 'commercialization-options',
@@ -171,11 +156,6 @@ export const patentSections = [
         'Çalışmada üniversite ile spin-off arasında equity odaklı bir ilişki de anlatılıyor; patentli teknoloji yeni şirket yapısına aktarılırken EBİLTEM araştırmacıların girişimcilik gelişimini desteklemeye devam ediyor. Böylece vaka, Türkiye’de üniversite–startup iş birliğinin erken örneklerinden biri hâline geliyor.'
       ]
     },
-    image: '/images/illustrations/patent-spinout.svg',
-    caption: {
-      en: 'Representative illustration of the transition from university research to a funded spin-off company.',
-      tr: 'Üniversite araştırmasından fonlanan bir spin-off şirkete geçişi anlatan temsilî illüstrasyon.'
-    }
   },
   {
     id: 'global-ip-partnership',
@@ -195,11 +175,6 @@ export const patentSections = [
         'Venture capital desteği geliştirme, klinik çalışmalar ve patent korumasının ilerlemesine yardımcı oluyor; ancak tam ölçekli üretim, regülasyon genişlemesi ve uluslararası satış için daha güçlü altyapıya sahip bir sektör ortağı gerekiyor. Çalışmada Abdi İbrahim, üretim kapasitesi, düzenleyici bilgi ve pazar erişimiyle akademik ekip ve startup’ın yetkinliklerini tamamlayan stratejik ilaç şirketi olarak öne çıkıyor.'
       ]
     },
-    image: '/images/illustrations/patent-global-partnership.svg',
-    caption: {
-      en: 'Representative illustration of global IP prioritization, investment and pharmaceutical partnership.',
-      tr: 'Global IP önceliklendirmesi, yatırım ve ilaç sektörü ortaklığını anlatan temsilî illüstrasyon.'
-    }
   },
   {
     id: 'market-impact',
