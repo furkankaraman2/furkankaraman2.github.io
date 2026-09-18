@@ -78,6 +78,7 @@ describe('portfolio functionality', () => {
     expect(screen.queryByText(/SPME · 10 BÖLÜMLÜ HİKÂYE/i)).not.toBeInTheDocument()
     expect(screen.queryByText(/Araştırma sayfası CV tekrarı değil, bilimsel bir hikâye olarak kurgulandı/i)).not.toBeInTheDocument()
     unmount()
+    localStorage.setItem('portfolio-language', 'en')
 
     render(<MemoryRouter initialEntries={['/research/spme-moi-ms']}><App /></MemoryRouter>)
     expect(screen.getByRole('heading', { level: 1, name: /SPME–MOI–MS method development for L-histidine/i })).toBeInTheDocument()
