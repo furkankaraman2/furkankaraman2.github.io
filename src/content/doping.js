@@ -115,11 +115,6 @@ export const dopingExperience = {
           'Cihazın çalışma mantığı da aynı derecede önemliydi: bileşikler önce kromatografik olarak ayrılıyor, genellikle ESI ile iyonlaştırılıyor ve ilk quadrupole’da precursor m/z değerine göre seçiliyordu. Collision-induced fragmentation sonrasında oluşan product ion’lar ikinci quadrupole’da ölçülüyordu. Bu precursor-fragment ilişkisi karmaşık biyolojik matrikste hem seçicilik hem de nicel bilgi sağlıyor.'
         ]
       },
-      image: '/images/illustrations/doping-editorial.svg',
-      caption: {
-        en: 'Editorial illustration of the anti-doping analytical chain, including tandem MS, high-resolution MS and longitudinal monitoring.',
-        tr: 'Tandem MS, yüksek çözünürlüklü MS ve longitudinal izlemeyi kapsayan doping kontrol analitik zincirinin bilimsel illüstrasyonu.'
-      }
     },
     {
       id: 'gc-msms',
