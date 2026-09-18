@@ -68,6 +68,22 @@ describe('portfolio functionality', () => {
     expect(screen.getAllByAltText(/Seçilen 1 dakikalık desorpsiyon koşulu/i).length).toBeGreaterThan(0)
   })
 
+  it('keeps the homepage compact while preserving the full SPME case study', () => {
+    const { unmount } = render(<MemoryRouter initialEntries={['/']}><App /></MemoryRouter>)
+    expect(screen.queryByText(/FEATURED RESEARCH/i)).not.toBeInTheDocument()
+    expect(screen.queryByText(/A method-development project built around selective sampling and direct mass spectrometry/i)).not.toBeInTheDocument()
+    expect(screen.queryByText(/SPME · TEN-PART STORY/i)).not.toBeInTheDocument()
+    expect(screen.queryByText(/The research page is structured as a scientific narrative, not a CV repeat/i)).not.toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: 'Türkçeye geç' }))
+    expect(screen.queryByText(/SPME · 10 BÖLÜMLÜ HİKÂYE/i)).not.toBeInTheDocument()
+    expect(screen.queryByText(/Araştırma sayfası CV tekrarı değil, bilimsel bir hikâye olarak kurgulandı/i)).not.toBeInTheDocument()
+    unmount()
+
+    render(<MemoryRouter initialEntries={['/research/spme-moi-ms']}><App /></MemoryRouter>)
+    expect(screen.getByRole('heading', { level: 1, name: /SPME–MOI–MS method development for L-histidine/i })).toBeInTheDocument()
+    expect(screen.getByRole('tab', { name: /Desorption/i })).toBeInTheDocument()
+  })
+
   it('shows SPME as a real Experience entry that routes to the central research case study', () => {
     render(<MemoryRouter initialEntries={['/experience']}><App /></MemoryRouter>)
     const link = screen.getByRole('link', { name: /Student Researcher – SPME–MOI–MS Method Development/i })
