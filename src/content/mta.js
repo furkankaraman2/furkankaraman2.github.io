@@ -238,7 +238,7 @@ export const mtaExperience = {
   ]
 }
 
-const mtaPhoto = (number) => `/media/mta/mta-${String(number).padStart(2, '0')}${number === 1 ? '.jpg' : '.webp'}`
+const mtaPhoto = (number) => `/media/mta/mta-${String(number).padStart(2, '0')}${number === 1 ? '.jpg' : '.webp'}?v=20260919-2`
 const originalMtaCaption = {
   en: 'Original photograph from my MTA internship, 2024.',
   tr: 'MTA stajımdan orijinal fotoğraf, 2024.'
