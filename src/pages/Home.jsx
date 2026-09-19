@@ -32,7 +32,7 @@ export default function Home({ lang }) {
     </section>
 
     <section className="home-mta-feature section-pad">
-      <div className="home-mta-media real-photo-feature" data-reveal data-parallax><img loading="lazy" decoding="async" width="1200" height="860" src={realPhotos.icpmsPrep} alt={lang==='en'?'Representative real laboratory sample preparation for ICP-MS analysis':'ICP-MS analizi için temsilî gerçek laboratuvar numune hazırlama'}/><div className="mta-media-overlay"><span>XRF · ICP-OES · ICP-MS · GRAVIMETRY · TGA</span></div><PhotoCredit src={realPhotos.icpmsPrep}/></div>
+      <div className="home-mta-media real-photo-feature" data-reveal data-parallax><img loading="lazy" decoding="async" width="1200" height="860" src={mta.heroImage} alt={lang==='en'?'Original photograph from my MTA internship':'MTA stajımdan orijinal fotoğraf'}/><div className="mta-media-overlay"><span>XRF · ICP-OES · ICP-MS · GRAVIMETRY · TGA</span></div></div>
       <div className="home-mta-copy" data-reveal><Eyebrow>{lang==='en'?'GEOCHEMICAL & MATERIAL ANALYSIS':'JEOKİMYASAL & MALZEME ANALİZİ'}</Eyebrow><h2>{lang==='en'?'From coded geological samples to elemental and thermal characterization':'Kodlanmış jeolojik numuneden elementel ve termal karakterizasyona'}</h2><p>{t(mta.summary,lang)}</p><div className="mta-mini-flow">{[1,3,5,9].map(idx=><Link to={'/experience/mta#story-'+mta.sections[idx].id} key={mta.sections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(mta.sections[idx].short,lang)}</strong></Link>)}</div><Link className="button outline" to="/experience/mta">{lang==='en'?'Explore the ten-part MTA case study':'10 bölümlü MTA vaka çalışmasını incele'}<ArrowRight/></Link></div>
     </section>
 
