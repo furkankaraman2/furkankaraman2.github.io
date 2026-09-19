@@ -26,3 +26,5 @@ npm run build
 ```
 
 Pushes to `main` deploy automatically to GitHub Pages through GitHub Actions.
+
+<!-- deployment refresh: 2026-09-19T18:50+03:00 -->
