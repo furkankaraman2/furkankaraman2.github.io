@@ -1,5 +1,3 @@
-import { realPhotos } from './imageCredits'
-
 export const mtaExperience = {
   slug: 'mta',
   order: 3,
@@ -13,8 +11,8 @@ export const mtaExperience = {
     tr: 'Jeokimyasal numune hazırlama, XRF, ICP-MS öncesi çözündürme, ICP-OES kalibrasyonu, klasik yaş kimya ve kömür/malzeme karakterizasyonunu kapsayan 30 iş günlük laboratuvar rotasyonu.'
   },
   role: {
-    en: 'I participated in sample coding and preparation, drying and mass-control steps, pellet/fusion preparation, acid-digestion workflows, reference-solution and calibration work, and classical gravimetric/titrimetric analyses. The final rotation covered coal preparation, calorimetry, TGA, carbon/sulfur, CHN elemental analysis and helium-pycnometry density work. XRD and MLA were observation visits rather than hands-on instrument operation.',
-    tr: 'Numune kodlama ve hazırlama, kurutma ve kütle kontrolü, pellet/fusion hazırlama, asit çözündürme iş akışları, referans çözelti ve kalibrasyon çalışmaları ile klasik gravimetrik/titrimetrik analizlere katıldım. Son rotasyonda kömür numune hazırlama, kalorimetri, TGA, karbon/kükürt, CHN elementel analiz ve helyum piknometresiyle yoğunluk çalışmalarını takip ettim. XRD ve MLA ise uygulamalı cihaz kullanımı değil, gözlem ziyaretleriydi.'
+    en: 'I participated in sample coding and preparation, drying and mass-control steps, pellet/fusion preparation, acid-digestion workflows, reference-solution and calibration work, and classical gravimetric/titrimetric analyses. The final rotation covered coal preparation, calorimetry, TGA, carbon/sulfur, CHN elemental analysis and helium-pycnometry density work.',
+    tr: 'Numune kodlama ve hazırlama, kurutma ve kütle kontrolü, pellet/fusion hazırlama, asit çözündürme iş akışları, referans çözelti ve kalibrasyon çalışmaları ile klasik gravimetrik/titrimetrik analizlere katıldım. Son rotasyonda kömür numune hazırlama, kalorimetri, TGA, karbon/kükürt, CHN elementel analiz ve helyum piknometresiyle yoğunluk çalışmalarını takip ettim.'
   },
   workflow: [
     { en: 'Coding & traceability', tr: 'Kodlama / izlenebilirlik' },
@@ -207,11 +205,11 @@ export const mtaExperience = {
       },
       paragraphs: {
         en: [
-          'Coal samples were crushed, sieved and ground to controlled particle sizes before analysis. I also visited the mineralogy/petrography area to learn about XRD and MLA; these were observation visits rather than hands-on instrument operation. The main coal-laboratory work then moved into bomb calorimetry and thermogravimetric analysis.',
+          'Coal samples were crushed, sieved and ground to controlled particle sizes before analysis. The coal-laboratory work then moved into bomb calorimetry and thermogravimetric analysis.',
           'Bomb calorimetry linked controlled combustion to calorific value, while TGA separated the material response into moisture, volatile matter and ash stages under controlled temperature and gas conditions. This widened the analytical question from “what elements are present?” to “how does the material respond when heated or burned?”'
         ],
         tr: [
-          'Kömür numuneleri analiz öncesinde kontrollü partikül boyutlarına ulaşmak için kırılıyor, eleniyor ve öğütülüyordu. Mineralogy/petrography bölümünde XRD ve MLA hakkında bilgi edinmek için gözlem ziyareti de yaptım; bunlar uygulamalı cihaz kullanımı değil gözlem niteliğindeydi. Kömür laboratuvarındaki ana çalışma daha sonra bomb calorimetry ve thermogravimetric analysis yönüne geçti.',
+          'Kömür numuneleri analiz öncesinde kontrollü partikül boyutlarına ulaşmak için kırılıyor, eleniyor ve öğütülüyordu. Kömür laboratuvarındaki çalışma daha sonra bomb calorimetry ve thermogravimetric analysis yönüne geçti.',
           'Bomb kalorimetrisi kontrollü yanmayı calorific value ile ilişkilendirirken, TGA numunenin davranışını kontrollü sıcaklık ve gaz koşullarında moisture, volatile matter ve ash aşamalarına ayırıyordu. Böylece analitik soru “numunede hangi elementler var?” düzeyinden “malzeme ısıtıldığında veya yakıldığında nasıl davranıyor?” sorusuna genişledi.'
         ]
       },
@@ -240,50 +238,33 @@ export const mtaExperience = {
   ]
 }
 
-
-const mtaPhotoMap = {
-  'laboratory-scope': [realPhotos.icpmsPrep, {
-    en: 'Representative ICP-MS sample-preparation laboratory photograph used to illustrate geochemical analytical work; it is not a photograph of MTA.',
-    tr: 'Jeokimyasal analitik çalışmayı görselleştiren temsilî ICP-MS numune hazırlama laboratuvar fotoğrafıdır; MTA’nın fotoğrafı değildir.'
-  }],
-  'sample-traceability': [realPhotos.icpmsPrep, {
-    en: 'Representative laboratory sample-preparation photograph used to illustrate traceable handling before instrumental analysis; not a photograph from my MTA placement.',
-    tr: 'Cihazlı analiz öncesindeki izlenebilir numune yönetimini görselleştiren temsilî laboratuvar numune hazırlama fotoğrafıdır; MTA stajımdan bir fotoğraf değildir.'
-  }],
-  'xrf-preparation': [realPhotos.xrf, {
-    en: 'Representative XRF instrument photograph used alongside the pellet/fusion preparation discussion; not the specific instrument used during my placement.',
-    tr: 'Pellet/fusion hazırlığı anlatımını destekleyen temsilî XRF cihaz fotoğrafı; stajımda kullanılan spesifik cihazın fotoğrafı değildir.'
-  }],
-  'xrf-analysis': [realPhotos.xrf, {
-    en: 'Representative X-ray fluorescence instrument used to illustrate the XRF analytical stage; not the specific MTA instrument.',
-    tr: 'XRF analitik aşamasını görselleştiren temsilî X-ışını floresans cihazı; MTA’daki spesifik cihaz değildir.'
-  }],
-  'digestion-icpms': [realPhotos.icpmsPrep, {
-    en: 'Representative scientist preparing samples for ICP-MS analysis, used to illustrate the preparation chain before trace-element measurement; not a photograph of MTA.',
-    tr: 'İz element ölçümü öncesindeki hazırlama zincirini görselleştiren, ICP-MS analizi için numune hazırlayan araştırmacının temsilî fotoğrafı; MTA’nın fotoğrafı değildir.'
-  }],
-  'icp-oes': [realPhotos.icpOes, {
-    en: 'Representative ICP-OES spectrometer used to illustrate optical-emission analysis; not the specific instrument used during my placement.',
-    tr: 'Optik emisyon analizini görselleştiren temsilî ICP-OES spektrometresi; stajımda kullanılan spesifik cihaz değildir.'
-  }],
-  'wet-chemistry-foundation': [realPhotos.icpmsPrep, {
-    en: 'Representative analytical laboratory photograph used as real-world context for solution preparation and classical analytical chemistry; not a photograph of MTA.',
-    tr: 'Çözelti hazırlama ve klasik analitik kimya için gerçek laboratuvar bağlamı sağlayan temsilî fotoğraf; MTA’nın fotoğrafı değildir.'
-  }],
-  'wet-chemistry-diversity': [realPhotos.labScientist, {
-    en: 'Representative laboratory bench photograph used to illustrate hands-on analytical chemistry; it does not depict the exact procedures or laboratory used during my placement.',
-    tr: 'Uygulamalı analitik kimyayı görselleştiren temsilî laboratuvar tezgâhı fotoğrafı; stajımdaki birebir prosedürleri veya laboratuvarı göstermemektedir.'
-  }],
-  'coal-thermal': [realPhotos.tga, {
-    en: 'Representative thermogravimetric analyser used to illustrate thermal characterization; not the specific instrument used during my MTA placement.',
-    tr: 'Termal karakterizasyonu görselleştiren temsilî termogravimetrik analiz cihazı; MTA stajımda kullanılan spesifik cihaz değildir.'
-  }],
-  'coal-characterization': [realPhotos.coal, {
-    en: 'Representative coal sample used to provide material context for the coal-characterization rotation; not a sample from my placement.',
-    tr: 'Kömür karakterizasyonu rotasyonuna malzeme bağlamı sağlayan temsilî kömür numunesi; stajımdaki numune değildir.'
-  }],
+const mtaPhoto = (number) => `/media/mta/mta-${String(number).padStart(2, '0')}${number === 1 ? '.jpg' : '.webp'}`
+const originalMtaCaption = {
+  en: 'Original photograph from my MTA internship, 2024.',
+  tr: 'MTA stajımdan orijinal fotoğraf, 2024.'
 }
+
+mtaExperience.heroImage = mtaPhoto(1)
+mtaExperience.roleImages = [2, 3].map(number => ({ src: mtaPhoto(number), caption: originalMtaCaption }))
+
+const mtaOriginalPhotoMap = {
+  'laboratory-scope': [4, 5, 6],
+  'sample-traceability': [7],
+  'xrf-preparation': [8],
+  'xrf-analysis': [9, 10],
+  'digestion-icpms': [11],
+  'icp-oes': [4],
+  'wet-chemistry-foundation': [10],
+  'wet-chemistry-diversity': [12, 13],
+}
+
 mtaExperience.sections.forEach(section => {
-  const media = mtaPhotoMap[section.id]
-  if (media) Object.assign(section, { image: media[0], caption: media[1], art: undefined, images: undefined })
+  const imageNumbers = mtaOriginalPhotoMap[section.id]
+  if (!imageNumbers) return
+  Object.assign(section, {
+    images: imageNumbers.map(number => ({ src: mtaPhoto(number), caption: originalMtaCaption })),
+    image: undefined,
+    caption: undefined,
+    art: undefined,
+  })
 })
