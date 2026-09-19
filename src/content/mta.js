@@ -244,8 +244,30 @@ const originalMtaCaption = {
   tr: 'MTA stajımdan orijinal fotoğraf, 2024.'
 }
 
+const mtaPhotoLayout = {
+  1: 'wide',
+  2: 'portrait',
+  3: 'portrait',
+  4: 'portrait',
+  5: 'landscape',
+  6: 'wide',
+  7: 'landscape',
+  8: 'portrait',
+  9: 'portrait',
+  10: 'portrait',
+  11: 'landscape',
+  12: 'landscape',
+  13: 'landscape',
+}
+const mtaMedia = (number) => ({
+  src: mtaPhoto(number),
+  caption: originalMtaCaption,
+  layout: mtaPhotoLayout[number],
+})
+
 mtaExperience.heroImage = mtaPhoto(1)
-mtaExperience.roleImages = [2, 3].map(number => ({ src: mtaPhoto(number), caption: originalMtaCaption }))
+mtaExperience.heroLayout = mtaPhotoLayout[1]
+mtaExperience.roleImages = [2, 3].map(mtaMedia)
 
 const mtaOriginalPhotoMap = {
   'laboratory-scope': [4, 5, 6],
@@ -262,7 +284,7 @@ mtaExperience.sections.forEach(section => {
   const imageNumbers = mtaOriginalPhotoMap[section.id]
   if (!imageNumbers) return
   Object.assign(section, {
-    images: imageNumbers.map(number => ({ src: mtaPhoto(number), caption: originalMtaCaption })),
+    images: imageNumbers.map(mtaMedia),
     image: undefined,
     caption: undefined,
     art: undefined,
