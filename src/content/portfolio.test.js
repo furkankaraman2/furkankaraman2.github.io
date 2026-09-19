@@ -21,22 +21,42 @@ describe('portfolio content integrity', () => {
     expect(readdirSync('public/documents')).toEqual(['Furkan_Karaman_CV.pdf'])
   })
 
-  it('uses licensed real photography for Doping, MTA and Patent while leaving SPME media untouched', () => {
+  it('uses licensed real photography for Doping and Patent, original MTA internship photos, and leaves SPME media untouched', () => {
     const doping = experiences.find(x => x.slug === 'doping-control')
     const mta = experiences.find(x => x.slug === 'mta')
-    for (const item of [...doping.sections, ...mta.sections, ...patentSections]) {
+
+    for (const item of [...doping.sections, ...patentSections]) {
       expect(item.image).toMatch(/^https:\/\/upload\.wikimedia\.org\//)
       expect(item.image).not.toContain('/images/illustrations/')
       expect(item.caption.en).toMatch(/Representative|representative/)
       expect(imageCredits[item.image]).toBeTruthy()
     }
+
     expect(doping.sections.find(x => x.id === 'lc-msms').image).toBe(realPhotos.lcms)
     expect(doping.sections.find(x => x.id === 'gc-msms').image).toBe(realPhotos.gcms)
     expect(doping.sections.find(x => x.id === 'peptides-hrms').image).toBe(realPhotos.qtof)
     expect(doping.sections.find(x => x.id === 'isotope-ratio').image).toBe(realPhotos.irms)
-    expect(mta.sections.find(x => x.id === 'xrf-analysis').image).toBe(realPhotos.xrf)
-    expect(mta.sections.find(x => x.id === 'icp-oes').image).toBe(realPhotos.icpOes)
-    expect(mta.sections.find(x => x.id === 'coal-thermal').image).toBe(realPhotos.tga)
+
+    expect(mta.heroImage).toBe('/media/mta/mta-01.jpg')
+    expect(mta.roleImages.map(x => x.src)).toEqual(['/media/mta/mta-02.webp', '/media/mta/mta-03.webp'])
+    const mtaImages = Object.fromEntries(mta.sections.map(item => [item.id, item.images?.map(x => x.src)]))
+    expect(mtaImages).toMatchObject({
+      'laboratory-scope': ['/media/mta/mta-04.webp', '/media/mta/mta-05.webp', '/media/mta/mta-06.webp'],
+      'sample-traceability': ['/media/mta/mta-07.webp'],
+      'xrf-preparation': ['/media/mta/mta-08.webp'],
+      'xrf-analysis': ['/media/mta/mta-09.webp', '/media/mta/mta-10.webp'],
+      'digestion-icpms': ['/media/mta/mta-11.webp'],
+      'icp-oes': ['/media/mta/mta-04.webp'],
+      'wet-chemistry-foundation': ['/media/mta/mta-10.webp'],
+      'wet-chemistry-diversity': ['/media/mta/mta-12.webp', '/media/mta/mta-13.webp'],
+    })
+    expect(mta.sections.find(x => x.id === 'coal-thermal')).toMatchObject({ art: 'thermal' })
+    expect(mta.sections.find(x => x.id === 'coal-characterization')).toMatchObject({ art: 'pycnometer' })
+    expect(JSON.stringify(mta)).not.toMatch(/XRD|MLA/)
+    for (const file of ['mta-01.jpg', ...Array.from({ length: 12 }, (_, i) => `mta-${String(i + 2).padStart(2, '0')}.webp`)]) {
+      expect(existsSync(`public/media/mta/${file}`)).toBe(true)
+    }
+
     expect(researchStory.find(x => x.id === 'spme-moi-concept').image).toBe('/images/research/spme/moi-ms-open-port-interface.webp')
   })
 
