@@ -37,18 +37,18 @@ describe('portfolio content integrity', () => {
     expect(doping.sections.find(x => x.id === 'peptides-hrms').image).toBe(realPhotos.qtof)
     expect(doping.sections.find(x => x.id === 'isotope-ratio').image).toBe(realPhotos.irms)
 
-    expect(mta.heroImage).toBe('/media/mta/mta-01.jpg?v=20260919-2')
-    expect(mta.roleImages.map(x => x.src)).toEqual(['/media/mta/mta-02.webp?v=20260919-2', '/media/mta/mta-03.webp?v=20260919-2'])
+    expect(mta.heroImage).toBe('/media/mta/mta-01.jpg?v=20260919-3')
+    expect(mta.roleImages.map(x => x.src)).toEqual(['/media/mta/mta-02.webp?v=20260919-3', '/media/mta/mta-03.webp?v=20260919-3'])
     const mtaImages = Object.fromEntries(mta.sections.map(item => [item.id, item.images?.map(x => x.src)]))
     expect(mtaImages).toMatchObject({
-      'laboratory-scope': ['/media/mta/mta-04.webp?v=20260919-2', '/media/mta/mta-05.webp?v=20260919-2', '/media/mta/mta-06.webp?v=20260919-2'],
-      'sample-traceability': ['/media/mta/mta-07.webp?v=20260919-2'],
-      'xrf-preparation': ['/media/mta/mta-08.webp?v=20260919-2'],
-      'xrf-analysis': ['/media/mta/mta-09.webp?v=20260919-2', '/media/mta/mta-10.webp?v=20260919-2'],
-      'digestion-icpms': ['/media/mta/mta-11.webp?v=20260919-2'],
-      'icp-oes': ['/media/mta/mta-04.webp?v=20260919-2'],
-      'wet-chemistry-foundation': ['/media/mta/mta-10.webp?v=20260919-2'],
-      'wet-chemistry-diversity': ['/media/mta/mta-12.webp?v=20260919-2', '/media/mta/mta-13.webp?v=20260919-2'],
+      'laboratory-scope': ['/media/mta/mta-04.webp?v=20260919-3', '/media/mta/mta-05.webp?v=20260919-3', '/media/mta/mta-06.webp?v=20260919-3'],
+      'sample-traceability': ['/media/mta/mta-07.webp?v=20260919-3'],
+      'xrf-preparation': ['/media/mta/mta-08.webp?v=20260919-3'],
+      'xrf-analysis': ['/media/mta/mta-09.webp?v=20260919-3', '/media/mta/mta-10.webp?v=20260919-3'],
+      'digestion-icpms': ['/media/mta/mta-11.webp?v=20260919-3'],
+      'icp-oes': ['/media/mta/mta-04.webp?v=20260919-3'],
+      'wet-chemistry-foundation': ['/media/mta/mta-10.webp?v=20260919-3'],
+      'wet-chemistry-diversity': ['/media/mta/mta-12.webp?v=20260919-3', '/media/mta/mta-13.webp?v=20260919-3'],
     })
     expect(mta.sections.find(x => x.id === 'coal-thermal')).toMatchObject({ art: 'thermal' })
     expect(mta.sections.find(x => x.id === 'coal-characterization')).toMatchObject({ art: 'pycnometer' })
