@@ -1,5 +1,3 @@
-import { realPhotos } from './imageCredits'
-
 export const patentSections = [
   {
     id: 'research-question',
@@ -199,49 +197,45 @@ export const patentSections = [
 ]
 
 
+const patentSourceMedia = {
+  logo: '/media/patent/dermis-pharma-logo.png?v=20260920-1',
+  team: '/media/patent/dermis-pharma-team.png?v=20260920-1',
+  product: '/media/patent/dermalix-product.png?v=20260920-1',
+}
+
+const patentSourceCaptions = {
+  logo: {
+    en: 'Dermis Pharma logo reproduced from the image embedded in my university–pharma industry collaboration term paper.',
+    tr: 'Üniversite–ilaç sanayii iş birliği dönem çalışmama eklenmiş görselden alınan Dermis Pharma logosu.'
+  },
+  team: {
+    en: 'Dermis Pharma / commercialization-team photograph reproduced from the image embedded in my term paper case study.',
+    tr: 'Dönem çalışmamın vaka analizine eklenmiş görselden alınan Dermis Pharma / ticarileştirme ekibi fotoğrafı.'
+  },
+  product: {
+    en: 'Dermalix wound-dressing product image reproduced from the image embedded in my term paper case study.',
+    tr: 'Dönem çalışmamın vaka analizine eklenmiş görselden alınan Dermalix yara örtüsü ürün görseli.'
+  },
+}
+
 const patentPhotoMap = {
-  'research-question': [realPhotos.labNotebook, {
-    en: 'Representative research notebook used to ground the research-to-commercialization discussion in real scientific documentation; not a document from the case-study team.',
-    tr: 'Araştırmadan ticarileşmeye geçiş anlatımını gerçek bilimsel dokümantasyonla ilişkilendiren temsilî araştırma defteri; vaka ekibine ait bir belge değildir.'
-  }],
-  'patent-framework': [realPhotos.patentApplication, {
-    en: 'Historical U.S. patent-application document used as representative visual context for patent filing and protection; unrelated to the Dermalix patent.',
-    tr: 'Patent başvurusu ve koruma sürecine temsilî görsel bağlam sağlayan tarihî ABD patent başvurusu belgesi; Dermalix patentiyle ilişkili değildir.'
-  }],
-  'tto-ebiltem': [realPhotos.labNotebook, {
-    en: 'Representative scientific documentation used to illustrate the handoff from research evidence to structured technology-transfer assessment; not an EBİLTEM document.',
-    tr: 'Araştırma kanıtından yapılandırılmış teknoloji transferi değerlendirmesine geçişi görselleştiren temsilî bilimsel dokümantasyon; EBİLTEM belgesi değildir.'
-  }],
-  'dermalix-science': [realPhotos.labScientist, {
-    en: 'Representative academic laboratory photograph used to illustrate the scientific-research stage of the commercialization pathway; it does not depict the Dermalix research team.',
-    tr: 'Ticarileştirme yolundaki bilimsel araştırma aşamasını görselleştiren temsilî akademik laboratuvar fotoğrafı; Dermalix araştırma ekibini göstermemektedir.'
-  }],
-  'ip-protection': [realPhotos.patentApplication, {
-    en: 'Representative patent-application document used to illustrate formal IP protection; it is not the patent application from the case study.',
-    tr: 'Resmî fikri mülkiyet korumasını görselleştiren temsilî patent başvurusu belgesi; vaka çalışmasındaki patent başvurusu değildir.'
-  }],
-  'technology-assessment': [realPhotos.labNotebook, {
-    en: 'Representative research documentation used to illustrate evidence-based technical and commercial assessment; not an IPscore or EBİLTEM worksheet.',
-    tr: 'Kanıta dayalı teknik ve ticari değerlendirmeyi görselleştiren temsilî araştırma dokümantasyonu; IPscore veya EBİLTEM çalışma formu değildir.'
-  }],
-  'commercialization-options': [realPhotos.labScientist, {
-    en: 'Representative university research environment used to illustrate the academic origin of commercialization options; it does not depict the case-study researchers.',
-    tr: 'Ticarileştirme seçeneklerinin akademik kökenini görselleştiren temsilî üniversite araştırma ortamı; vaka araştırmacılarını göstermemektedir.'
-  }],
-  'dermis-pharma': [realPhotos.labNotebook, {
-    en: 'Representative research notebook used to illustrate the transition from documented R&D to an entrepreneurial development pathway; not a Dermis Pharma document.',
-    tr: 'Belgelenmiş Ar-Ge’den girişimci geliştirme yoluna geçişi görselleştiren temsilî araştırma defteri; Dermis Pharma belgesi değildir.'
-  }],
-  'global-ip-partnership': [realPhotos.patentApplication, {
-    en: 'Representative patent documentation used to illustrate the global-IP stage of the case study; it is not a filing from the Dermalix portfolio.',
-    tr: 'Vaka çalışmasının global IP aşamasını görselleştiren temsilî patent dokümantasyonu; Dermalix portföyündeki bir başvuru değildir.'
-  }],
-  'market-impact': [realPhotos.labScientist, {
-    en: 'Representative research-laboratory photograph used to close the science-to-impact narrative; it does not depict the companies or researchers discussed in the term paper.',
-    tr: 'Bilimden etkiye uzanan anlatımı tamamlayan temsilî araştırma laboratuvarı fotoğrafı; dönem çalışmasında geçen şirketleri veya araştırmacıları göstermemektedir.'
-  }],
+  'research-question': ['team'],
+  'patent-framework': ['product'],
+  'tto-ebiltem': ['team'],
+  'dermalix-science': ['product'],
+  'ip-protection': ['product'],
+  'technology-assessment': ['team'],
+  'commercialization-options': ['team'],
+  'dermis-pharma': ['logo'],
+  'global-ip-partnership': ['product'],
+  'market-impact': ['product'],
 }
 patentSections.forEach(section => {
-  const media = patentPhotoMap[section.id]
-  if (media) Object.assign(section, { image: media[0], caption: media[1], art: undefined, images: undefined })
+  const [key] = patentPhotoMap[section.id] || []
+  if (key) Object.assign(section, {
+    image: patentSourceMedia[key],
+    caption: patentSourceCaptions[key],
+    art: undefined,
+    images: undefined,
+  })
 })

@@ -576,3 +576,66 @@ html[data-scroll-direction="up"] .patent-stack .science-story.is-visible>.line-a
   background:linear-gradient(180deg,transparent 74%,rgba(33,30,23,.38));
   pointer-events:none;
 }
+
+
+/* Patent report media from the uploaded term paper: preserve source quality and proportions. */
+.page-hero-photo-frame img[src*="/media/patent/"]{
+  width:100%;
+  height:auto;
+  max-height:330px;
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
+  padding:6px;
+  transform:none!important;
+  filter:none!important;
+  image-rendering:auto;
+}
+.patent-map-art.real-photo-feature{
+  display:grid;
+  place-items:center;
+}
+.patent-map-art.real-photo-feature img[src*="/media/patent/"]{
+  display:block;
+  width:min(100%,595px);
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  object-position:center;
+  margin:auto;
+  padding:7px;
+  background:#fff;
+  border-radius:4px;
+  box-shadow:0 22px 48px rgba(7,26,43,.10);
+  transform:none!important;
+  filter:none!important;
+  image-rendering:auto;
+}
+.patent-stack .story-figure .report-frame{
+  padding:7px;
+  background:#fff;
+  place-items:center;
+  min-height:0;
+}
+.patent-stack .story-figure .report-frame img[src*="/media/patent/"]{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  object-position:center;
+  transform:none!important;
+  filter:none!important;
+  image-rendering:auto;
+  background:#fff;
+}
+.patent-stack .story-figure .report-frame img[src*="dermis-pharma-team"]{
+  max-width:595px;
+}
+.patent-stack .story-figure .report-frame img[src*="dermalix-product"]{
+  max-width:587px;
+}
+.patent-stack .story-figure .report-frame img[src*="dermis-pharma-logo"]{
+  width:auto;
+  max-width:min(100%,281px);
+}

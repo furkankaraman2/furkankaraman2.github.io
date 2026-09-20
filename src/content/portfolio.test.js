@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { existsSync, readdirSync } from 'node:fs'
 import { copy, experiences, patentSections, phases, profile, researchMetrics, researchStory, researchWorkflow } from './portfolio'
-import { imageCredits, realPhotos } from './imageCredits'
 
 describe('portfolio content integrity', () => {
   it('provides natural bilingual core copy and no Reports navigation', () => {
@@ -25,11 +24,17 @@ describe('portfolio content integrity', () => {
     const doping = experiences.find(x => x.slug === 'doping-control')
     const mta = experiences.find(x => x.slug === 'mta')
 
-    for (const item of patentSections) {
-      expect(item.image).toMatch(/^https:\/\/upload\.wikimedia\.org\//)
-      expect(item.image).not.toContain('/images/illustrations/')
-      expect(item.caption.en).toMatch(/Representative|representative/)
-      expect(imageCredits[item.image]).toBeTruthy()
+    const patentImages = patentSections.map(item => item.image)
+    expect(patentImages).toHaveLength(10)
+    for (const src of patentImages) expect(src).toMatch(/^\/media\/patent\//)
+    expect(JSON.stringify(patentSections)).not.toMatch(/upload\.wikimedia\.org/)
+    expect(new Set(patentImages)).toEqual(new Set([
+      '/media/patent/dermis-pharma-logo.png?v=20260920-1',
+      '/media/patent/dermis-pharma-team.png?v=20260920-1',
+      '/media/patent/dermalix-product.png?v=20260920-1',
+    ]))
+    for (const file of ['dermis-pharma-logo.png','dermis-pharma-team.png','dermalix-product.png']) {
+      expect(existsSync(`public/media/patent/${file}`)).toBe(true)
     }
 
     expect(doping.heroImage).toBe('/media/doping/doping-01.webp?v=20260920-2')
