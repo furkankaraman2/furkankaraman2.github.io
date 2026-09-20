@@ -197,3 +197,17 @@
     padding:16px;
   }
 }
+
+
+/* SPME supplied-image responsive layout. */
+@media(max-width:950px){
+  .spme-home-media{min-height:0;padding:30px 24px 54px}
+}
+@media(max-width:650px){
+  .spme-home-collage{grid-template-columns:1fr;gap:14px}
+  .spme-home-structure{width:min(100%,220px);justify-self:center}
+  .spme-home-formulation{width:100%}
+  .experience-research-panel{gap:14px}
+  .experience-research-figure{padding:6px}
+  .page-hero-photo-frame img[src*="spme-hlb-structure"]{max-width:186px;max-height:378px}
+}
