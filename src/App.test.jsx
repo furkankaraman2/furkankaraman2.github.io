@@ -68,15 +68,16 @@ describe('portfolio functionality', () => {
     expect(screen.getAllByAltText(/Seçilen 1 dakikalık desorpsiyon koşulu/i).length).toBeGreaterThan(0)
   })
 
-  it('keeps the homepage compact while preserving the full SPME case study', () => {
+  it('shows a compact flagship SPME preview on Home while preserving the full case study on Research', () => {
     const { unmount } = render(<MemoryRouter initialEntries={['/']}><App /></MemoryRouter>)
-    expect(screen.queryByText(/FEATURED RESEARCH/i)).not.toBeInTheDocument()
-    expect(screen.queryByText(/A method-development project built around selective sampling and direct mass spectrometry/i)).not.toBeInTheDocument()
+    expect(screen.getByText(/A method-development project built around selective sampling and direct mass spectrometry/i)).toBeInTheDocument()
+    expect(screen.getByAltText('HLB extractive-phase structure')).toHaveAttribute('src', '/media/spme/spme-hlb-structure.png?v=20260920-1')
+    expect(screen.getByAltText('HLB extractive-phase formulation table')).toHaveAttribute('src', '/media/spme/spme-hlb-formulation-table.png?v=20260920-1')
     expect(screen.queryByText(/SPME · TEN-PART STORY/i)).not.toBeInTheDocument()
     expect(screen.queryByText(/The research page is structured as a scientific narrative, not a CV repeat/i)).not.toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: 'Türkçeye geç' }))
+    expect(screen.getByText(/L-histidin tayini için SPME–MOI–MS yöntem geliştirme/i)).toBeInTheDocument()
     expect(screen.queryByText(/SPME · 10 BÖLÜMLÜ HİKÂYE/i)).not.toBeInTheDocument()
-    expect(screen.queryByText(/Araştırma sayfası CV tekrarı değil, bilimsel bir hikâye olarak kurgulandı/i)).not.toBeInTheDocument()
     unmount()
     localStorage.setItem('portfolio-language', 'en')
 
