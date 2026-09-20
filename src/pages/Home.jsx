@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Atom, Beaker, BookOpen, Check, Microscope, ShieldCheck } from 'lucide-react'
-import { copy, experiences, patentSections, profile } from '../content/portfolio'
-import { realPhotos } from '../content/imageCredits'
-import { ContactStrip, Eyebrow, LineArt, PhotoCredit, SectionHead } from '../site/components'
+import { copy, experiences, patentSections, profile, researchFeatureMedia, researchMetrics } from '../content/portfolio'
+import { ContactStrip, Eyebrow, LineArt, SectionHead } from '../site/components'
 import { t } from '../site/utils'
 
 export default function Home({ lang }) {
   const c=copy[lang]
   const doping=experiences.find(x=>x.slug==='doping-control')
   const mta=experiences.find(x=>x.slug==='mta')
+  const dopingHomeImage=doping.sections.find(x=>x.id==='lc-msms')?.images?.[0]?.src || doping.heroImage
+  const patentHomeImage=patentSections.find(x=>x.id==='market-impact')?.image
   return <>
     <section className="hero">
       <div className="hero-grid"/>
@@ -21,6 +22,26 @@ export default function Home({ lang }) {
       <div className="scroll-cue"><span/>{lang==='en'?'SCROLL TO EXPLORE':'KEŞFETMEK İÇİN KAYDIR'}</div>
     </section>
 
+    <section className="home-research section-pad">
+      <SectionHead eyebrow={c.research.eyebrow} title={c.research.title} body={c.home.researchBody}/>
+      <div className="research-feature" data-reveal>
+        <div className="feature-media spme-home-media" data-parallax>
+          <div className="spme-home-collage">
+            <figure className="spme-home-structure"><img loading="eager" decoding="async" src={researchFeatureMedia.hlbStructure} alt={lang==='en'?'HLB extractive-phase structure':'HLB ekstraktif faz yapısı'}/></figure>
+            <figure className="spme-home-formulation"><img loading="eager" decoding="async" src={researchFeatureMedia.hlbFormulation} alt={lang==='en'?'HLB extractive-phase formulation table':'HLB ekstraktif faz formülasyon tablosu'}/></figure>
+          </div>
+          <span>HLB · PAN COATING · SPME · MOI–MS</span>
+        </div>
+        <div className="feature-content">
+          <span className="number">{lang==='en'?'FLAGSHIP RESEARCH':'ANA ARAŞTIRMA'}</span>
+          <h3>{c.home.researchTitle}</h3>
+          <p>{c.research.subtitle}</p>
+          <div className="metric-strip">{researchMetrics.map(m=><div key={m.value}><strong>{m.value}</strong><span>{t(m.label,lang)}</span></div>)}</div>
+          <Link className="text-link" to="/research/spme-moi-ms">{lang==='en'?'Open the full research case study':'Araştırmanın tamamını aç'}<ArrowRight/></Link>
+        </div>
+      </div>
+    </section>
+
     <section className="experience-teaser section-pad">
       <SectionHead eyebrow={c.labels.selected} title={c.home.expTitle} body={c.home.expBody}/>
       <div className="experience-grid">{experiences.filter(e=>e.visible).sort((a,b)=>a.order-b.order).map((e,i)=><Link data-reveal className={'experience-card ' + e.type} to={e.route || '/experience/' + e.slug} key={e.slug}><span className="card-num">0{i+1}</span><div className="icon-ring">{e.type==='research'?<Atom/>:e.type==='biological'?<Microscope/>:e.type==='geochemical'?<Beaker/>:<BookOpen/>}</div><small>{t(e.date,lang)}</small><h3>{t(e.title,lang)}</h3><h4>{t(e.institution,lang)}</h4><p>{t(e.summary,lang)}</p><span className="card-arrow"><ArrowRight/></span></Link>)}</div>
@@ -28,7 +49,7 @@ export default function Home({ lang }) {
 
     <section className="home-doping-feature section-pad">
       <div className="home-doping-copy" data-reveal><Eyebrow>{lang==='en'?'ANTI-DOPING LABORATORY EXPERIENCE':'DOPİNG KONTROL LABORATUVAR DENEYİMİ'}</Eyebrow><h2>{lang==='en'?'One placement, multiple analytical languages':'Tek bir staj, birden fazla analitik yaklaşım'}</h2><p>{t(doping.summary,lang)}</p><div className="doping-mini-flow">{[0,3,7,9].map(idx=><Link to={'/experience/doping-control#story-'+doping.sections[idx].id} key={doping.sections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(doping.sections[idx].short,lang)}</strong></Link>)}</div><Link className="button outline" to="/experience/doping-control">{lang==='en'?'Explore the ten-part case study':'10 bölümlü vaka çalışmasını incele'}<ArrowRight/></Link></div>
-      <div className="home-doping-media real-photo-feature" data-reveal data-parallax><img loading="lazy" decoding="async" width="1200" height="860" src={realPhotos.lcms} alt={lang==='en'?'Representative real LC–MS laboratory instrumentation':'Temsilî gerçek LC–MS laboratuvar cihazı'}/><div className="doping-media-overlay"><span>LC-MS/MS · GC-MS/MS · LC-HRMS · GC-C-IRMS</span></div><PhotoCredit src={realPhotos.lcms}/></div>
+      <div className="home-doping-media real-photo-feature" data-reveal data-parallax><img loading="lazy" decoding="async" src={dopingHomeImage} alt={lang==='en'?'Original LC–MS/MS photograph from my Turkish Doping Control Center internship':'Türkiye Doping Kontrol Merkezi stajımdan orijinal LC–MS/MS fotoğrafı'}/><div className="doping-media-overlay"><span>LC-MS/MS · GC-MS/MS · LC-HRMS · GC-C-IRMS</span></div></div>
     </section>
 
     <section className="home-mta-feature section-pad">
@@ -38,7 +59,7 @@ export default function Home({ lang }) {
 
     <section className="home-patent-feature section-pad">
       <div className="home-patent-copy" data-reveal><Eyebrow>{lang==='en'?'PATENT & TECHNOLOGY-TRANSFER RESEARCH':'PATENT & TEKNOLOJİ TRANSFERİ ARAŞTIRMASI'}</Eyebrow><h2>{lang==='en'?'A scientific result is only the beginning of the commercialization story':'Bilimsel sonuç, ticarileştirme hikâyesinin yalnızca başlangıcı'}</h2><p>{lang==='en'?'My elective-course term paper examines how academic research can move through intellectual-property protection, TTO evaluation, entrepreneurship, financing and pharmaceutical partnership. The Dermis Pharma / Dermalix case provides the practical thread for that journey.':'Seçmeli ders dönem çalışmam, akademik araştırmanın fikri mülkiyet koruması, TTO değerlendirmesi, girişimcilik, finansman ve ilaç sektörü ortaklığı üzerinden nasıl ilerleyebileceğini inceliyor. Dermis Pharma / Dermalix vakası bu yolculuğun somut omurgasını oluşturuyor.'}</p><div className="patent-mini-flow">{[0,2,6,9].map(idx=><Link to={'/patent-research#story-'+patentSections[idx].id} key={patentSections[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(patentSections[idx].short,lang)}</strong></Link>)}</div><Link className="button outline" to="/patent-research">{lang==='en'?'Explore the ten-part technology-transfer case study':'10 bölümlü teknoloji transferi çalışmasını incele'}<ArrowRight/></Link></div>
-      <div className="home-patent-media real-photo-feature" data-reveal data-parallax><img loading="lazy" decoding="async" width="1200" height="860" src={realPhotos.labNotebook} alt={lang==='en'?'Representative real research notebook and scientific documentation':'Temsilî gerçek araştırma defteri ve bilimsel dokümantasyon'}/><div className="patent-media-overlay"><span>IP · TTO · SPIN-OFF · FUNDING · PHARMA PARTNERSHIP</span></div><PhotoCredit src={realPhotos.labNotebook}/></div>
+      <div className="home-patent-media real-photo-feature" data-reveal data-parallax><img loading="lazy" decoding="async" src={patentHomeImage} alt={lang==='en'?'Dermalix product image from my technology-transfer term paper':'Teknoloji transferi dönem çalışmamdaki Dermalix ürün görseli'}/><div className="patent-media-overlay"><span>IP · TTO · SPIN-OFF · FUNDING · PHARMA PARTNERSHIP</span></div></div>
     </section>
 
     <section className="integrity section-pad" data-reveal><ShieldCheck/><div><Eyebrow>{c.labels.evidence}</Eyebrow><h2>{c.home.principlesTitle}</h2><p>{c.home.principlesBody}</p></div><div className="integrity-list"><span><Check/>{lang==='en'?'Report-grounded technical claims':'Rapor temelli teknik iddialar'}</span><span><Check/>{lang==='en'?'Original figures used selectively':'Orijinal görseller seçici kullanılır'}</span><span><Check/>{lang==='en'?'Raw reports remain unpublished':'Ham raporlar yayımlanmaz'}</span></div></section>
