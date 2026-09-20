@@ -677,3 +677,45 @@ html[data-scroll-direction="up"] .patent-stack .science-story.is-visible>.line-a
   filter:none!important;
   image-rendering:auto;
 }
+
+
+/* Experience index hero: supplied original lab photographs, source-ratio collage. */
+.experience-index-hero{
+  grid-template-columns:minmax(0,1.15fr) minmax(430px,.85fr);
+  gap:clamp(34px,5vw,72px);
+}
+.experience-hero-collage{
+  position:relative;
+  z-index:2;
+  min-height:360px;
+  display:grid;
+  place-items:center;
+  align-self:center;
+}
+.experience-hero-collage figure{
+  margin:0;
+  background:#f8fbfb;
+  padding:7px;
+  box-shadow:0 24px 58px rgba(0,0,0,.28);
+  border:1px solid rgba(255,255,255,.18);
+}
+.experience-hero-collage img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  transform:none!important;
+  filter:none!important;
+  image-rendering:auto;
+}
+.experience-hero-wide{
+  width:min(100%,478px);
+  justify-self:start;
+}
+.experience-hero-detail{
+  position:absolute;
+  right:0;
+  bottom:5px;
+  width:min(38%,230px);
+}
