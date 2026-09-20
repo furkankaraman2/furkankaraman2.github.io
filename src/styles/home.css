@@ -75,3 +75,57 @@
 .home-doping-media.real-photo-feature .photo-credit,.home-mta-media.real-photo-feature .photo-credit,.home-patent-media.real-photo-feature .photo-credit{position:absolute;z-index:4;right:14px;bottom:10px;max-width:58%;padding:5px 7px;background:rgba(7,26,43,.76);color:#dcecef}
 .home-doping-media.real-photo-feature:after,.home-mta-media.real-photo-feature:after,.home-patent-media.real-photo-feature:after{background:linear-gradient(180deg,transparent 58%,rgba(7,26,43,.58))}
 
+
+
+/* Home flagship SPME collage using the user-supplied HLB figures. */
+.spme-home-media{
+  min-height:520px;
+  display:grid;
+  place-items:center;
+  padding:38px 30px 58px;
+  background:#0d2635;
+}
+.spme-home-collage{
+  width:100%;
+  display:grid;
+  grid-template-columns:minmax(150px,.34fr) minmax(0,1fr);
+  gap:18px;
+  align-items:center;
+}
+.spme-home-collage figure{
+  margin:0;
+  min-width:0;
+  background:#fff;
+  padding:10px;
+  border-radius:3px;
+  display:grid;
+  place-items:center;
+  box-shadow:0 18px 42px rgba(0,0,0,.18);
+}
+.spme-home-collage img{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:0;
+  max-height:none;
+  object-fit:contain;
+  object-position:center;
+  filter:none!important;
+  transform:none!important;
+  image-rendering:auto;
+}
+.spme-home-structure img{width:min(100%,186px)}
+.spme-home-formulation img{width:min(100%,715px)}
+.spme-home-media:after{
+  background:linear-gradient(to top,rgba(7,26,43,.72),transparent 34%);
+  pointer-events:none;
+}
+.home-doping-media.real-photo-feature>img[src*="/media/doping/"],
+.home-patent-media.real-photo-feature>img[src*="/media/patent/"]{
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
+  transform:none!important;
+  filter:none!important;
+  image-rendering:auto;
+}
