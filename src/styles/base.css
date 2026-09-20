@@ -31,3 +31,29 @@ a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;max-w
 @keyframes scrollPulse{50%{width:55px;background:var(--cyan)}}
 
 .section-pad{padding:clamp(68px,8vw,118px) clamp(24px,8vw,122px)}.section-head{max-width:850px;margin-bottom:48px}.section-head h2,.two-col h2,.contact-strip h2,.education h2,.beyond h2,.skills-band h2,.integrity-note h2{font:600 clamp(29px,3.6vw,50px)/1.15 var(--display);letter-spacing:-.035em;margin:0}.section-head>p{font-size:15px;line-height:1.75;color:var(--muted);max-width:760px}
+
+
+/* Accessibility skip link: hidden visually unless keyboard-focused. */
+.skip-link{
+  position:fixed;
+  left:16px;
+  top:10px;
+  z-index:9999;
+  padding:9px 12px;
+  border-radius:6px;
+  background:#fff;
+  color:var(--navy);
+  font:600 12px var(--sans);
+  box-shadow:0 8px 24px rgba(7,26,43,.18);
+  transform:translateY(-180%);
+  opacity:0;
+  pointer-events:none;
+  transition:transform .18s ease,opacity .18s ease;
+}
+.skip-link:focus,.skip-link:focus-visible{
+  transform:translateY(0);
+  opacity:1;
+  pointer-events:auto;
+  outline:2px solid var(--cyan);
+  outline-offset:2px;
+}
