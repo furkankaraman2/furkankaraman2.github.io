@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { existsSync, readdirSync } from 'node:fs'
-import { copy, experiences, patentSections, phases, profile, researchMetrics, researchStory, researchWorkflow } from './portfolio'
+import { copy, experiences, interests, patentSections, phases, profile, researchFeatureMedia, researchMetrics, researchStory, researchWorkflow } from './portfolio'
 
 describe('portfolio content integrity', () => {
   it('provides natural bilingual core copy and no Reports navigation', () => {
@@ -79,6 +79,21 @@ describe('portfolio content integrity', () => {
     }
 
     expect(researchStory.find(x => x.id === 'spme-moi-concept').image).toBe('/images/research/spme/moi-ms-open-port-interface.webp')
+  })
+
+  it('uses the supplied HLB visuals for flagship SPME presentation and the updated Beyond the lab interests', () => {
+    expect(researchFeatureMedia).toEqual({
+      hlbStructure: '/media/spme/spme-hlb-structure.png?v=20260920-1',
+      hlbFormulation: '/media/spme/spme-hlb-formulation-table.png?v=20260920-1',
+    })
+    expect(existsSync('public/media/spme/spme-hlb-structure.png')).toBe(true)
+    expect(existsSync('public/media/spme/spme-hlb-formulation-table.png')).toBe(true)
+    expect(interests.map(x => x.tr)).toEqual([
+      'Haftada yaklaşık 30 bin adım yürüyüş yapar',
+      'Karakalem ve akrilik boya ile resim yapmayı sever',
+      'Aerobik spor yapmayı sever',
+      'Elektrik konularını çalışmak ister',
+    ])
   })
 
   it('uses one central SPME experience entry that routes to the research case study', () => {
