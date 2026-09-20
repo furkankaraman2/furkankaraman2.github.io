@@ -114,3 +114,65 @@
     object-fit:contain;
   }
 }
+
+
+/* Doping Control collage: tablet/mobile layout. */
+@media(max-width:900px){
+  #story-peptides-hrms .story-media-gallery,
+  #story-hplc-irms-prep .story-media-gallery,
+  #story-isotope-ratio .story-media-gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  #story-epo-analysis .story-media-gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  #story-epo-analysis .story-media-gallery .story-figure:nth-child(1),
+  #story-epo-analysis .story-media-gallery .story-figure:nth-child(2){
+    grid-column:auto;
+  }
+  #story-epo-analysis .story-media-gallery .story-figure:nth-child(3){
+    grid-column:1/-1;
+  }
+}
+@media(max-width:650px){
+  .doping-story .story-media-gallery,
+  #story-peptides-hrms .story-media-gallery,
+  #story-hplc-irms-prep .story-media-gallery,
+  #story-isotope-ratio .story-media-gallery,
+  #story-epo-analysis .story-media-gallery{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .doping-story .story-media-gallery .story-figure,
+  #story-epo-analysis .story-media-gallery .story-figure:nth-child(1),
+  #story-epo-analysis .story-media-gallery .story-figure:nth-child(2),
+  #story-epo-analysis .story-media-gallery .story-figure:nth-child(3){
+    grid-column:1;
+    width:100%;
+    justify-self:center;
+  }
+  #story-peptides-hrms .story-media-gallery .report-frame,
+  #story-hplc-irms-prep .story-media-gallery .report-frame,
+  #story-isotope-ratio .story-media-gallery .report-frame,
+  #story-epo-analysis .story-media-gallery .story-figure:nth-child(-n+2) .report-frame,
+  #story-epo-analysis .story-media-gallery .story-figure:nth-child(3) .report-frame{
+    height:auto;
+    min-height:0;
+  }
+  .doping-story .story-media-gallery .report-frame img,
+  #story-peptides-hrms .story-media-gallery .report-frame img,
+  #story-hplc-irms-prep .story-media-gallery .report-frame img,
+  #story-isotope-ratio .story-media-gallery .report-frame img,
+  #story-epo-analysis .story-media-gallery .report-frame img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+  #story-athlete-passport .story-media-gallery .story-figure:only-child{
+    width:min(100%,480px);
+  }
+  .page-hero-photo-frame img[src*="/media/doping/"]{
+    height:auto;
+    max-height:none;
+  }
+}

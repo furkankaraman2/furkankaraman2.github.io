@@ -21,21 +21,35 @@ describe('portfolio content integrity', () => {
     expect(readdirSync('public/documents')).toEqual(['Furkan_Karaman_CV.pdf'])
   })
 
-  it('uses licensed real photography for Doping and Patent, original MTA internship photos, and leaves SPME media untouched', () => {
+  it('uses supplied Doping and MTA internship media, licensed Patent photography, and leaves SPME media untouched', () => {
     const doping = experiences.find(x => x.slug === 'doping-control')
     const mta = experiences.find(x => x.slug === 'mta')
 
-    for (const item of [...doping.sections, ...patentSections]) {
+    for (const item of patentSections) {
       expect(item.image).toMatch(/^https:\/\/upload\.wikimedia\.org\//)
       expect(item.image).not.toContain('/images/illustrations/')
       expect(item.caption.en).toMatch(/Representative|representative/)
       expect(imageCredits[item.image]).toBeTruthy()
     }
 
-    expect(doping.sections.find(x => x.id === 'lc-msms').image).toBe(realPhotos.lcms)
-    expect(doping.sections.find(x => x.id === 'gc-msms').image).toBe(realPhotos.gcms)
-    expect(doping.sections.find(x => x.id === 'peptides-hrms').image).toBe(realPhotos.qtof)
-    expect(doping.sections.find(x => x.id === 'isotope-ratio').image).toBe(realPhotos.irms)
+    expect(doping.heroImage).toBe('/media/doping/doping-01.webp?v=20260920-1')
+    const dopingImages = Object.fromEntries(doping.sections.map(item => [item.id, item.images?.map(x => x.src)]))
+    expect(dopingImages).toMatchObject({
+      'front-end-quality': ['/media/doping/doping-02.webp?v=20260920-1'],
+      'controls-calibration': ['/media/doping/doping-03.webp?v=20260920-1'],
+      'lc-msms': ['/media/doping/doping-04.webp?v=20260920-1'],
+      'gc-msms': ['/media/doping/doping-05.webp?v=20260920-1'],
+      'peptides-hrms': ['/media/doping/doping-06.webp?v=20260920-1', '/media/doping/doping-07.webp?v=20260920-1'],
+      'hplc-irms-prep': ['/media/doping/doping-08.webp?v=20260920-1', '/media/doping/doping-09.webp?v=20260920-1'],
+      'isotope-ratio': ['/media/doping/doping-10.webp?v=20260920-1', '/media/doping/doping-11.webp?v=20260920-1'],
+      'epo-analysis': ['/media/doping/doping-12.webp?v=20260920-1', '/media/doping/doping-13.webp?v=20260920-1', '/media/doping/doping-14.webp?v=20260920-1'],
+      'athlete-passport': ['/media/doping/doping-15.webp?v=20260920-1'],
+    })
+    expect(doping.sections.find(x => x.id === 'laboratory-chain')).toMatchObject({ art: 'doping' })
+    expect(JSON.stringify(doping)).not.toMatch(/upload\.wikimedia\.org/)
+    for (const file of Array.from({ length: 15 }, (_, i) => `doping-${String(i + 1).padStart(2, '0')}.webp`)) {
+      expect(existsSync(`public/media/doping/${file}`)).toBe(true)
+    }
 
     expect(mta.heroImage).toBe('/media/mta/mta-01.jpg?v=20260920-1')
     expect(mta.roleImages.map(x => x.src)).toEqual(['/media/mta/mta-02.webp?v=20260920-1', '/media/mta/mta-03.webp?v=20260920-1'])

@@ -393,3 +393,127 @@ html[data-scroll-direction="up"] .patent-stack .science-story.is-visible>.line-a
   min-height:22px;
   line-height:1.35;
 }
+
+
+/* Doping Control original internship media and collage system. */
+.doping-story .story-media-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  width:100%;
+  align-items:start;
+}
+.doping-story .story-media-gallery .story-figure{
+  min-width:0;
+  width:100%;
+  justify-self:stretch;
+}
+.doping-story .story-media-gallery .story-figure:only-child{
+  grid-column:1/-1;
+  width:min(100%,800px);
+  justify-self:center;
+}
+.doping-story .story-media-gallery .report-frame{
+  padding:5px;
+  min-height:0;
+  overflow:hidden;
+  background:#fff;
+}
+.doping-story .story-media-gallery .report-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  object-position:center;
+  image-rendering:auto;
+  transform:none;
+  filter:none;
+  background:#fff;
+}
+.doping-story .story-media-gallery figcaption{
+  margin-top:6px;
+  min-height:22px;
+  line-height:1.35;
+}
+.page-hero-photo-frame img[src*="/media/doping/"]{
+  height:auto;
+  max-height:330px;
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
+}
+
+/* 02–05 — single images stay large, legible and uncropped. */
+#story-front-end-quality .story-media-gallery .story-figure:only-child{width:min(100%,650px)}
+#story-controls-calibration .story-media-gallery .story-figure:only-child,
+#story-lc-msms .story-media-gallery .story-figure:only-child,
+#story-gc-msms .story-media-gallery .story-figure:only-child{width:min(100%,820px)}
+
+/* 06 — two-panel SPE / HRMS collage. */
+#story-peptides-hrms .story-media-gallery{
+  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+}
+#story-peptides-hrms .story-media-gallery .story-figure{grid-column:auto}
+#story-peptides-hrms .story-media-gallery .report-frame{height:255px}
+#story-peptides-hrms .story-media-gallery .report-frame img{height:100%;object-fit:contain}
+
+/* 07 — apparatus + wide chromatogram, intentionally asymmetric. */
+#story-hplc-irms-prep .story-media-gallery{
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.45fr);
+}
+#story-hplc-irms-prep .story-media-gallery .story-figure{grid-column:auto}
+#story-hplc-irms-prep .story-media-gallery .report-frame{height:255px}
+#story-hplc-irms-prep .story-media-gallery .story-figure:nth-child(1) .report-frame img{
+  height:100%;
+  object-fit:cover;
+}
+#story-hplc-irms-prep .story-media-gallery .story-figure:nth-child(2) .report-frame img{
+  height:100%;
+  object-fit:contain;
+}
+
+/* 08 — IRMS system + isotope-context figure as a balanced diptych. */
+#story-isotope-ratio .story-media-gallery{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+#story-isotope-ratio .story-media-gallery .story-figure{grid-column:auto}
+#story-isotope-ratio .story-media-gallery .report-frame{height:260px}
+#story-isotope-ratio .story-media-gallery .story-figure:nth-child(1) .report-frame img{
+  height:100%;
+  object-fit:cover;
+}
+#story-isotope-ratio .story-media-gallery .story-figure:nth-child(2) .report-frame img{
+  height:100%;
+  object-fit:contain;
+}
+
+/* 09 — three-image EPO bento collage. */
+#story-epo-analysis .story-media-gallery{
+  grid-template-columns:repeat(12,minmax(0,1fr));
+}
+#story-epo-analysis .story-media-gallery .story-figure:nth-child(1){
+  grid-column:1 / span 7;
+}
+#story-epo-analysis .story-media-gallery .story-figure:nth-child(2){
+  grid-column:8 / -1;
+}
+#story-epo-analysis .story-media-gallery .story-figure:nth-child(3){
+  grid-column:1 / -1;
+}
+#story-epo-analysis .story-media-gallery .story-figure:nth-child(-n+2) .report-frame{height:245px}
+#story-epo-analysis .story-media-gallery .story-figure:nth-child(3) .report-frame{height:235px}
+#story-epo-analysis .story-media-gallery .story-figure:nth-child(1) .report-frame img,
+#story-epo-analysis .story-media-gallery .story-figure:nth-child(3) .report-frame img{
+  height:100%;
+  object-fit:contain;
+}
+#story-epo-analysis .story-media-gallery .story-figure:nth-child(2) .report-frame img{
+  height:100%;
+  object-fit:cover;
+}
+
+/* 10 — portrait ABP screenshot remains readable instead of being stretched. */
+#story-athlete-passport .story-media-gallery .story-figure:only-child{
+  width:min(100%,480px);
+}
