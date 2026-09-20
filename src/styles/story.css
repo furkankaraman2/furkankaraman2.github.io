@@ -277,3 +277,119 @@ html[data-scroll-direction="up"] .patent-stack .science-story.is-visible>.line-a
   height:auto;
   object-fit:contain;
 }
+
+
+/* MTA sections 08–10: compact editorial collage layout. */
+#story-wet-chemistry-diversity .story-media-gallery,
+#story-coal-thermal .story-media-gallery,
+#story-coal-characterization .story-media-gallery{
+  gap:12px;
+  align-items:start;
+  width:100%;
+}
+
+/* 08 — two-photo diptych */
+#story-wet-chemistry-diversity .story-media-gallery{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+#story-wet-chemistry-diversity .story-media-gallery .story-figure{
+  grid-column:auto;
+  width:100%;
+}
+#story-wet-chemistry-diversity .story-media-gallery .report-frame{
+  height:250px;
+  padding:5px;
+  overflow:hidden;
+  background:#fff;
+}
+#story-wet-chemistry-diversity .story-media-gallery .report-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+/* 09 — asymmetric two-tile collage, sized to the source shapes */
+#story-coal-thermal .story-media-gallery{
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.35fr);
+}
+#story-coal-thermal .story-media-gallery .story-figure{
+  grid-column:auto;
+  width:100%;
+}
+#story-coal-thermal .story-media-gallery .report-frame{
+  height:260px;
+  padding:5px;
+  overflow:hidden;
+  background:#fff;
+}
+#story-coal-thermal .story-media-gallery .story-figure:nth-child(1) .report-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+#story-coal-thermal .story-media-gallery .story-figure:nth-child(2) .report-frame img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+
+/* 10 — four-photo bento collage */
+#story-coal-characterization .story-media-gallery{
+  grid-template-columns:repeat(12,minmax(0,1fr));
+}
+#story-coal-characterization .story-media-gallery .story-figure{
+  width:100%;
+  min-width:0;
+  justify-self:stretch;
+}
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(1){
+  grid-column:1 / span 5;
+}
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(2){
+  grid-column:6 / -1;
+}
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(3){
+  grid-column:1 / span 8;
+}
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(4){
+  grid-column:9 / -1;
+  width:100%;
+  justify-self:stretch;
+}
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(-n+2) .report-frame{
+  height:235px;
+}
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(n+3) .report-frame{
+  height:260px;
+}
+#story-coal-characterization .story-media-gallery .report-frame{
+  padding:5px;
+  overflow:hidden;
+  background:#fff;
+}
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(1) .report-frame img,
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(4) .report-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(2) .report-frame img,
+#story-coal-characterization .story-media-gallery .story-figure:nth-child(3) .report-frame img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+
+/* Keep captions visually attached to their collage tile. */
+#story-wet-chemistry-diversity .story-media-gallery figcaption,
+#story-coal-thermal .story-media-gallery figcaption,
+#story-coal-characterization .story-media-gallery figcaption{
+  margin-top:6px;
+  min-height:22px;
+  line-height:1.35;
+}
