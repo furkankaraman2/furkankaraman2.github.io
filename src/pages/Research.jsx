@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ChevronDown, ShieldCheck } from 'lucide-react'
-import { copy, phases, researchMetrics, researchStory, researchWorkflow } from '../content/portfolio'
+import { copy, phases, researchFeatureMedia, researchMetrics, researchStory, researchWorkflow } from '../content/portfolio'
 import { ContactStrip, Eyebrow, PageHero, SectionHead, StoryMedia, StorySection } from '../site/components'
 import { t } from '../site/utils'
 
@@ -23,7 +23,7 @@ function ExpandableWorkflow({lang}) {
 export default function Research({lang}) {
   const c=copy[lang]
   return <>
-    <PageHero eyebrow={c.research.eyebrow} title={c.research.title} intro={c.research.subtitle} art="spme"/>
+    <PageHero eyebrow={c.research.eyebrow} title={c.research.title} intro={c.research.subtitle} art="spme" image={researchFeatureMedia.hlbStructure} imageAlt={lang==='en'?'HLB extractive-phase structure used in my SPME research':'SPME araştırmamda kullanılan HLB ekstraktif faz yapısı'}/>
     <section className="metrics section-pad">{researchMetrics.map(m=><div data-reveal key={m.value}><strong>{m.value}</strong><span>{t(m.label,lang)}</span></div>)}</section>
 
     <section className="research-intro two-col section-pad" data-reveal>
