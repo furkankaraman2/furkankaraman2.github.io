@@ -10,7 +10,13 @@ export function ExperienceIndex({lang}) {
   const spme=experiences.find(x=>x.slug==='spme-moi-ms')
   const doping=experiences.find(x=>x.slug==='doping-control')
   const mta=experiences.find(x=>x.slug==='mta')
-  return <><PageHero eyebrow="EXPERIENCE · ANALYTICAL WORKFLOWS" title={c.experience.title} intro={c.experience.intro} art="sample"/>
+  return <><section className="page-hero experience-index-hero">
+    <div data-reveal><Eyebrow>EXPERIENCE · ANALYTICAL WORKFLOWS</Eyebrow><h1>{c.experience.title}</h1><p>{c.experience.intro}</p></div>
+    <div className="experience-hero-collage" data-reveal aria-label={lang==='en'?'Original analytical laboratory photographs':'Orijinal analitik laboratuvar fotoğrafları'}>
+      <figure className="experience-hero-wide"><img loading="eager" decoding="async" src="/media/experience/experience-analytical-01.png?v=20260920-1" alt={lang==='en'?'Original analytical laboratory instrument photograph':'Orijinal analitik laboratuvar cihaz fotoğrafı'}/></figure>
+      <figure className="experience-hero-detail"><img loading="eager" decoding="async" src="/media/experience/experience-analytical-02.png?v=20260920-1" alt={lang==='en'?'Original analytical interface detail photograph':'Orijinal analitik arayüz detay fotoğrafı'}/></figure>
+    </div>
+  </section>
   <section className="experience-research-feature section-pad" data-reveal>
     <div className="experience-research-copy"><Eyebrow>{lang==='en'?'FLAGSHIP RESEARCH · METU · 2025–2026':'ANA ARAŞTIRMA · ODTÜ · 2025–2026'}</Eyebrow><h2>{lang==='en'?'SPME–MOI–MS method development for L-histidine determination':'L-histidin tayini için SPME–MOI–MS yöntem geliştirme'}</h2><p>{t(spme.summary,lang)}</p><Link className="button outline" to="/research/spme-moi-ms">{lang==='en'?'Open ten-part case study':'10 bölümlü çalışmayı aç'}<ArrowRight/></Link></div>
     <div className="experience-research-panel">
