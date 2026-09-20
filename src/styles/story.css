@@ -639,3 +639,41 @@ html[data-scroll-direction="up"] .patent-stack .science-story.is-visible>.line-a
   width:auto;
   max-width:min(100%,281px);
 }
+
+
+/* Supplied SPME flagship media: preserve original proportions and avoid upscaling blur. */
+.page-hero-photo-frame img[src*="spme-hlb-structure"]{
+  display:block;
+  width:auto;
+  max-width:min(100%,186px);
+  height:auto;
+  max-height:378px;
+  margin:0 auto;
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
+  transform:none!important;
+  filter:none!important;
+  image-rendering:auto;
+}
+.experience-research-panel{display:grid;gap:18px;align-items:start}
+.experience-research-figure{
+  margin:0;
+  width:100%;
+  display:grid;
+  place-items:center;
+  background:#fff;
+  border:1px solid var(--line);
+  padding:10px;
+  box-shadow:0 18px 46px rgba(7,26,43,.07);
+}
+.experience-research-figure img{
+  display:block;
+  width:min(100%,715px);
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  transform:none!important;
+  filter:none!important;
+  image-rendering:auto;
+}
