@@ -238,7 +238,7 @@ export const mtaExperience = {
   ]
 }
 
-const mtaPhoto = (number) => `/media/mta/mta-${String(number).padStart(2, '0')}${number === 1 ? '.jpg' : '.webp'}?v=20260919-3`
+const mtaPhoto = (number) => `/media/mta/mta-${String(number).padStart(2, '0')}${number === 1 ? '.jpg' : '.webp'}?v=20260920-1`
 const originalMtaCaption = {
   en: 'Original photograph from my MTA internship, 2024.',
   tr: 'MTA stajımdan orijinal fotoğraf, 2024.'
@@ -258,6 +258,12 @@ const mtaPhotoLayout = {
   11: 'landscape',
   12: 'landscape',
   13: 'landscape',
+  14: 'landscape',
+  15: 'landscape',
+  16: 'landscape',
+  17: 'landscape',
+  18: 'wide',
+  19: 'portrait',
 }
 const mtaMedia = (number) => ({
   src: mtaPhoto(number),
@@ -278,6 +284,8 @@ const mtaOriginalPhotoMap = {
   'icp-oes': [4],
   'wet-chemistry-foundation': [10],
   'wet-chemistry-diversity': [12, 13],
+  'coal-thermal': [14, 15],
+  'coal-characterization': [16, 17, 18, 19],
 }
 
 mtaExperience.sections.forEach(section => {

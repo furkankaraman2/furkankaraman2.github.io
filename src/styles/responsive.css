@@ -47,3 +47,25 @@
   .mta-role-gallery .story-figure{width:min(100%,430px);justify-self:center}
   .page-hero-photo-frame img[src*="/media/mta/"]{height:auto;max-height:none}
 }
+
+
+/* MTA final coal-lab mosaic: responsive reset. */
+@media(max-width:760px){
+  #story-coal-thermal .story-media-gallery,
+  #story-coal-characterization .story-media-gallery{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  #story-coal-thermal .story-media-gallery .story-figure,
+  #story-coal-characterization .story-media-gallery .story-figure:nth-child(1),
+  #story-coal-characterization .story-media-gallery .story-figure:nth-child(2),
+  #story-coal-characterization .story-media-gallery .story-figure:nth-child(3),
+  #story-coal-characterization .story-media-gallery .story-figure:nth-child(4){
+    grid-column:1;
+    width:100%;
+    justify-self:center;
+  }
+  #story-coal-characterization .story-media-gallery .story-figure:nth-child(4){
+    width:min(100%,430px);
+  }
+}
