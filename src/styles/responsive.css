@@ -211,3 +211,44 @@
   .experience-research-figure{padding:6px}
   .page-hero-photo-frame img[src*="spme-hlb-structure"]{max-width:186px;max-height:378px}
 }
+
+
+/* Experience hero collage and compact Home MTA image on smaller screens. */
+@media(max-width:1050px){
+  .experience-index-hero{
+    grid-template-columns:1fr;
+  }
+  .experience-hero-collage{
+    width:min(100%,690px);
+    min-height:345px;
+    justify-self:start;
+  }
+  .home-mta-media.real-photo-feature{
+    width:min(100%,680px);
+    padding:14px 14px 50px;
+  }
+}
+@media(max-width:650px){
+  .experience-hero-collage{
+    min-height:0;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(95px,.42fr);
+    gap:10px;
+    align-items:end;
+  }
+  .experience-hero-wide{
+    width:100%;
+    justify-self:stretch;
+  }
+  .experience-hero-detail{
+    position:static;
+    width:100%;
+  }
+  .experience-hero-collage figure{
+    padding:4px;
+  }
+  .home-mta-media.real-photo-feature{
+    width:100%;
+    padding:10px 10px 46px;
+  }
+}
