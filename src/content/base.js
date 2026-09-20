@@ -105,8 +105,8 @@ export const education = [
 ]
 
 export const interests = [
-  { en: 'AI-assisted prototyping and web development', tr: 'Yapay zekâ destekli prototipleme ve web geliştirme' },
-  { en: 'Aerobic activity and regular walking', tr: 'Aerobik aktivite ve düzenli yürüyüş' },
-  { en: 'Pencil drawing and caricature', tr: 'Karakalem ve karikatür çizimi' },
-  { en: 'Electronics, Arduino and emerging technologies', tr: 'Elektronik, Arduino ve gelişen teknolojiler' },
+  { en: 'Walks about 30,000 steps per week', tr: 'Haftada yaklaşık 30 bin adım yürüyüş yapar' },
+  { en: 'Enjoys pencil drawing and acrylic painting', tr: 'Karakalem ve akrilik boya ile resim yapmayı sever' },
+  { en: 'Enjoys aerobic exercise', tr: 'Aerobik spor yapmayı sever' },
+  { en: 'Wants to study electrical topics', tr: 'Elektrik konularını çalışmak ister' },
 ]
