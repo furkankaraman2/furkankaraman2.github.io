@@ -1,3 +1,8 @@
+export const researchFeatureMedia = {
+  hlbStructure: '/media/spme/spme-hlb-structure.png?v=20260920-1',
+  hlbFormulation: '/media/spme/spme-hlb-formulation-table.png?v=20260920-1',
+}
+
 export const researchMetrics = [
   { value: '0.987', label: { en: 'Calibration R²', tr: 'Kalibrasyon R²' } },
   { value: '13%', label: { en: 'Lowest RSD · HLB-SAX', tr: 'En düşük RSD · HLB-SAX' } },
