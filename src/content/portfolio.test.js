@@ -32,24 +32,26 @@ describe('portfolio content integrity', () => {
       expect(imageCredits[item.image]).toBeTruthy()
     }
 
-    expect(doping.heroImage).toBe('/media/doping/doping-01.webp?v=20260920-1')
+    expect(doping.heroImage).toBe('/media/doping/doping-01.webp?v=20260920-2')
     const dopingImages = Object.fromEntries(doping.sections.map(item => [item.id, item.images?.map(x => x.src)]))
     expect(dopingImages).toMatchObject({
-      'front-end-quality': ['/media/doping/doping-02.webp?v=20260920-1'],
-      'controls-calibration': ['/media/doping/doping-03.webp?v=20260920-1'],
-      'lc-msms': ['/media/doping/doping-04.webp?v=20260920-1'],
-      'gc-msms': ['/media/doping/doping-05.webp?v=20260920-1'],
-      'peptides-hrms': ['/media/doping/doping-06.webp?v=20260920-1', '/media/doping/doping-07.webp?v=20260920-1'],
-      'hplc-irms-prep': ['/media/doping/doping-08.webp?v=20260920-1', '/media/doping/doping-09.webp?v=20260920-1'],
-      'isotope-ratio': ['/media/doping/doping-10.webp?v=20260920-1', '/media/doping/doping-11.webp?v=20260920-1'],
-      'epo-analysis': ['/media/doping/doping-12.webp?v=20260920-1', '/media/doping/doping-13.webp?v=20260920-1', '/media/doping/doping-14.webp?v=20260920-1'],
-      'athlete-passport': ['/media/doping/doping-15.webp?v=20260920-1'],
+      'laboratory-chain': ['/media/doping/wada-logo.svg?v=20260920-2'],
+      'front-end-quality': ['/media/doping/doping-02.webp?v=20260920-2'],
+      'controls-calibration': ['/media/doping/doping-03.webp?v=20260920-2'],
+      'lc-msms': ['/media/doping/doping-04.webp?v=20260920-2'],
+      'gc-msms': ['/media/doping/doping-05.webp?v=20260920-2'],
+      'peptides-hrms': ['/media/doping/doping-06.webp?v=20260920-2', '/media/doping/doping-07.webp?v=20260920-2'],
+      'hplc-irms-prep': ['/media/doping/doping-08.webp?v=20260920-2', '/media/doping/doping-09.webp?v=20260920-2'],
+      'isotope-ratio': ['/media/doping/doping-10.webp?v=20260920-2', '/media/doping/doping-11.webp?v=20260920-2'],
+      'epo-analysis': ['/media/doping/doping-12.webp?v=20260920-2', '/media/doping/doping-13.webp?v=20260920-2', '/media/doping/doping-14.webp?v=20260920-2'],
+      'athlete-passport': ['/media/doping/doping-15.webp?v=20260920-2'],
     })
-    expect(doping.sections.find(x => x.id === 'laboratory-chain')).toMatchObject({ art: 'doping' })
+    expect(doping.sections.find(x => x.id === 'laboratory-chain').images?.[0]?.src).toBe('/media/doping/wada-logo.svg?v=20260920-2')
     expect(JSON.stringify(doping)).not.toMatch(/upload\.wikimedia\.org/)
     for (const file of Array.from({ length: 15 }, (_, i) => `doping-${String(i + 1).padStart(2, '0')}.webp`)) {
       expect(existsSync(`public/media/doping/${file}`)).toBe(true)
     }
+    expect(existsSync('public/media/doping/wada-logo.svg')).toBe(true)
 
     expect(mta.heroImage).toBe('/media/mta/mta-01.jpg?v=20260920-1')
     expect(mta.roleImages.map(x => x.src)).toEqual(['/media/mta/mta-02.webp?v=20260920-1', '/media/mta/mta-03.webp?v=20260920-1'])

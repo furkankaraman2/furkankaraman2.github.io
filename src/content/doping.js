@@ -238,7 +238,7 @@ export const dopingExperience = {
 }
 
 
-const dopingPhoto = (number) => `/media/doping/doping-${String(number).padStart(2, '0')}.webp?v=20260920-1`
+const dopingPhoto = (number) => `/media/doping/doping-${String(number).padStart(2, '0')}.webp?v=20260920-2`
 const dopingCaption = {
   en: 'Figure/photo from my Turkish Doping Control Center internship report, 2025.',
   tr: 'Türkiye Doping Kontrol Merkezi staj raporumdan görsel/fotoğraf, 2025.'
@@ -265,11 +265,20 @@ const dopingMedia = (number) => ({
   caption: dopingCaption,
   layout: dopingPhotoLayout[number],
 })
+const wadaLogoMedia = {
+  src: '/media/doping/wada-logo.svg?v=20260920-2',
+  caption: {
+    en: 'World Anti-Doping Agency (WADA) logo.',
+    tr: 'Dünya Dopingle Mücadele Ajansı (WADA) logosu.'
+  },
+  layout: 'wide',
+}
 
 dopingExperience.heroImage = dopingPhoto(1)
 dopingExperience.heroLayout = dopingPhotoLayout[1]
 
 const dopingPhotoMap = {
+  'laboratory-chain': [wadaLogoMedia],
   'front-end-quality': [2],
   'controls-calibration': [3],
   'lc-msms': [4],
@@ -285,7 +294,7 @@ dopingExperience.sections.forEach(section => {
   const imageNumbers = dopingPhotoMap[section.id]
   if (!imageNumbers) return
   Object.assign(section, {
-    images: imageNumbers.map(dopingMedia),
+    images: imageNumbers.map(item => typeof item === 'number' ? dopingMedia(item) : item),
     image: undefined,
     caption: undefined,
     art: undefined,

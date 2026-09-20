@@ -176,3 +176,24 @@
     max-height:none;
   }
 }
+
+
+/* Doping/MTA visual polish responsive overrides. */
+@media(max-width:1050px){
+  .mta-feature-media.real-photo-feature{
+    min-height:0;
+    padding:24px;
+  }
+  .mta-feature-media.real-photo-feature>img{
+    max-height:none;
+  }
+}
+@media(max-width:650px){
+  #story-laboratory-chain .story-media-gallery .story-figure:only-child,
+  #story-front-end-quality .story-media-gallery .story-figure:only-child{
+    width:100%;
+  }
+  .mta-feature-media.real-photo-feature{
+    padding:16px;
+  }
+}
