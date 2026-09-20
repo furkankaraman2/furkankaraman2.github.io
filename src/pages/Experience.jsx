@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { copy, experiences, patentSections, researchStory } from '../content/portfolio'
+import { copy, experiences, patentSections, researchFeatureMedia, researchStory } from '../content/portfolio'
 import { realPhotos } from '../content/imageCredits'
 import { ContactStrip, Eyebrow, LineArt, MethodTags, NotFound, PageHero, PhotoCredit, SectionHead, StorySection } from '../site/components'
 import { t } from '../site/utils'
@@ -12,8 +12,11 @@ export function ExperienceIndex({lang}) {
   const mta=experiences.find(x=>x.slug==='mta')
   return <><PageHero eyebrow="EXPERIENCE · ANALYTICAL WORKFLOWS" title={c.experience.title} intro={c.experience.intro} art="sample"/>
   <section className="experience-research-feature section-pad" data-reveal>
-    <div><Eyebrow>{lang==='en'?'FEATURED RESEARCH EXPERIENCE':'ÖNE ÇIKAN ARAŞTIRMA DENEYİMİ'}</Eyebrow><h2>{t(spme.title,lang)}</h2><p>{t(spme.summary,lang)}</p><Link className="button outline" to="/research/spme-moi-ms">{lang==='en'?'Open ten-part case study':'10 bölümlü çalışmayı aç'}<ArrowRight/></Link></div>
-    <div className="experience-research-steps">{[0,4,7,9].map(idx=><div key={researchStory[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(researchStory[idx].short,lang)}</strong><p>{t(researchStory[idx].title,lang)}</p></div>)}</div>
+    <div className="experience-research-copy"><Eyebrow>{lang==='en'?'FLAGSHIP RESEARCH · METU · 2025–2026':'ANA ARAŞTIRMA · ODTÜ · 2025–2026'}</Eyebrow><h2>{lang==='en'?'SPME–MOI–MS method development for L-histidine determination':'L-histidin tayini için SPME–MOI–MS yöntem geliştirme'}</h2><p>{t(spme.summary,lang)}</p><Link className="button outline" to="/research/spme-moi-ms">{lang==='en'?'Open ten-part case study':'10 bölümlü çalışmayı aç'}<ArrowRight/></Link></div>
+    <div className="experience-research-panel">
+      <figure className="experience-research-figure"><img loading="eager" decoding="async" src={researchFeatureMedia.hlbFormulation} alt={lang==='en'?'HLB extractive-phase formulation table from my SPME research':'SPME araştırmamdaki HLB ekstraktif faz formülasyon tablosu'}/></figure>
+      <div className="experience-research-steps">{[0,4,7,9].map(idx=><div key={researchStory[idx].id}><span>{String(idx+1).padStart(2,'0')}</span><strong>{t(researchStory[idx].short,lang)}</strong><p>{t(researchStory[idx].title,lang)}</p></div>)}</div>
+    </div>
   </section>
   <section className="experience-placement-feature section-pad" data-reveal>
     <div className="placement-feature-media real-photo-feature"><img loading="lazy" decoding="async" width="1200" height="860" src={realPhotos.lcms} alt={lang==='en'?'Representative real LC–MS laboratory instrumentation':'Temsilî gerçek LC–MS laboratuvar cihazı'}/><span>ANTI-DOPING · ANALYTICAL WORKFLOWS</span><PhotoCredit src={realPhotos.lcms}/></div>
